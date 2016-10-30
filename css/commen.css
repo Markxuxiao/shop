@@ -367,4 +367,25 @@
     font: 400 15px/44px "microsoft yahei";
     color: #fff;
 }
+.site-nav-h-item .dd-inner {
+	display: none;
+}
+.site-nav-h-item .dd-inner.hover{
+	display: block;
+}
+.site-nav-h-item .dd-inner .item {
+	height: 85px;
+}
+.site-nav-h-item .dorpdown-layer {
+	position: absolute;
+	left: 209px;
+	top: 45px;
+	width: 779px;
+	height: 422px;
+	border: 1px solid #b61d1d;
+	overflow: hidden;
+}
+.site-nav-h-item .dorpdown-layer.hover {
+	display: block;
+}
 /*.site-nav 网站导航-end*/
