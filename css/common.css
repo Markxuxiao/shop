@@ -1,16 +1,16 @@
 /*common start*/
-    .fl{
-    	float: left;
-    }
-    .fr{
-    	float: right;
-    }
     .w {
         text-decoration: none;
         width: 1200px;
         cursor: auto;
         filter: auto;
         margin: auto;
+    }
+    .margin-t10 {
+        margin-top: 10px;
+    }
+    .margin-t20{
+        margin-top: 20px;
     }
 /*common end*/
 
