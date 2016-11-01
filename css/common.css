@@ -15,6 +15,12 @@
     .margin-t30{
         margin-top: 30px;
     }
+    .G_linear {
+        -moz-transition: all 0.2s linear;
+        -webkit-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
 /*common end*/
 
 /*.site-top start*/

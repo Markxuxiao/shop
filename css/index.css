@@ -12,7 +12,10 @@
 	-o-transition: all .5s ease;
 	transition: all .5s ease;
 }
-
+.ico-index-dyp, .ico-index-tg, .ico-index-cz, .ico-index-jp, .ico-index-zc, .ico-index-jfq, .ico-index-ms, .ico-index-jianli, .ico-index-lf, .ico-index-sj, .ico-index-bj, .ico-index-jl {
+    left: 19px;
+    top: 11px;
+}
 .ico-index-floor {
     display: block;
     float: left;
@@ -22,7 +25,10 @@
     margin-right: 5px;
     background-position: 0 -218px;
 }
-
+.ico-index-lf {background-position: 0 -147px;}
+.ico-index-sj {background-position: -38px -149px;}
+.ico-index-bj {background-position: -72px -147px;}
+.ico-index-jl {background-position: -108px -147px;}
 
 /*.index-slide-Box start*/
 	.index-slide-Box{width:100%;height:423px;overflow:hidden;position:relative;/* border:1px solid #ddd; */}
@@ -196,3 +202,279 @@
 	    font-weight: normal;
 	}
 /*.index-floor end*/
+
+/*.index-package start*/
+	/*促销*/
+	.index-package .chuxiao-modul {
+	    width: 900px;
+	    float: left;
+	}
+	.index-package .chuxiao-modul.floorbox .mt {
+	    position: relative;
+	    height: 25px;
+	    border-bottom: 3px solid #3a3837;
+	    margin-bottom: 10px;
+	}
+	.index-package .chuxiao-modul .mt h2{
+		color: #333;
+		font-family: "microsoft yahei";
+		line-height: 20px;
+		font-size: 16px;
+	}
+	.index-package .chuxiao-modul .mt .more {
+	    position: absolute;
+	    font-size: 14px;
+	    top: 0px;
+	    right: 0px;
+	}
+
+	.index-package .chuxiao-modul .mc {
+	    width: 898px;
+	    height: 239px;
+	    overflow: hidden;
+	    border: 1px solid #E8E8E7;
+	}
+
+	.index-package .chuxiao-modul .mc {
+	    width: 898px;
+	    height: 239px;
+	    overflow: hidden;
+	    border: 1px solid #E8E8E7;
+	}
+	.index-package .chuxiao-modul ul {
+
+	}
+	.index-package .chuxiao-modul li {
+	    float: left;
+	    width: 167px;
+	    margin: 12px 0 0 10px;
+	    _width:170px;
+	}
+	.index-package .chuxiao-modul .p-img,
+	.index-package .chuxiao-modul .p-name,
+	.index-package .chuxiao-modul .p-price {
+	    margin-bottom: 2px;
+	}
+	.index-package .chuxiao-modul .p-name {
+	    height: 34px;
+	    overflow: hidden;
+	    line-height: 17px;
+	}
+	.index-package .chuxiao-modul .p-name a {
+	    color: #555;
+	}
+	.index-package .chuxiao-modul .p-price {
+	    color:red;
+	    font-size: 14px;
+	}
+	.index-package .chuxiao-modul .p-img img{
+	    width: 173px;
+	    height: 158px;
+	}
+	/* /促销 */
+	#sjform {
+	    margin-left: 23px;
+	    width: 277px;
+	    float: right;
+	    _margin-left:17px;
+	}
+	#sjform .mt {
+	    border-left: 1px solid #E8E8E7;
+	    border-top: 3px solid red;
+	    margin-top: 46px;
+	}
+	#sjform .mt li {
+	    position: relative;
+	    float: left;
+	    display: inline;
+	    width: 68px;
+	    height: 35px;
+	    border-right: 1px solid #E8E8E7;
+	    border-bottom: 1px solid #E8E8E7;
+	    overflow: hidden;
+	    padding-top: 41px;
+	    line-height: 28px;
+	    text-align: center;
+	    text-decoration: none;
+	}
+	#sjform .mt {
+	    border-left: 1px solid #E8E8E7;
+	    border-top: 3px solid red;
+	    margin-top: 25px;
+	}
+	#sjform .mt li {
+	    position: relative;
+	    float: left;
+	    display: inline;
+	    width: 68px;
+	    height: 35px;
+	    border-right: 1px solid #E8E8E7;
+	    border-bottom: 1px solid #E8E8E7;
+	    overflow: hidden;
+	    padding-top: 41px;
+	    line-height: 28px;
+	    text-align: center;
+	    text-decoration: none;
+	}
+	#sjform .mc {
+	    padding: 10px 20px 20px 20px;
+	    border: 1px solid #E8E8E7;
+	    margin-top: -1px;
+	}
+	#sjform .mc h3 {
+		margin: 0 0 9px 0;
+	}
+	#sjform .form-group {
+	    margin-bottom: 10px;
+	}
+	#sjform .sjform_input {
+	    display: block;
+	    width: 225px;
+	    padding: 0 5px;
+	    height: 30px;
+	    color: #555;
+	    background-color: #fff;
+	    background-image: none;
+	    border: 1px solid #ccc;
+	    border-radius: 4px;
+	    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	    -webkit-transition: border-color ease-in-out .15s;
+	}
+	#sjform .sjform_button {
+	    height: 32px;
+	    background-color: #FF991C;
+	    color: #FFF;
+	    width: 100%;
+	    border: medium none;
+	    cursor: pointer;
+	}
+	#sjform .sjform_button:hover{
+	    background-color: #f25618;
+	}
+/*.index-package end*/
+
+/*.index-design start*/
+	/*明星设计*/
+	.index-design {
+	    font-family: microsoft yahei;
+	    height: 450px;
+	    overflow: hidden;
+	}
+	.index-design .floorbox {
+		height: 427px;
+		overflow: hidden;
+	}
+	.index-design .floorbox .hd {
+		position: relative;
+		width: 100%;
+		height: 27px;
+		font-size: 12px;
+		border-bottom: 3px solid #000;
+		font-family: microsoft yahei;
+		margin-bottom: 10px;
+		font-weight: bold;
+	}
+	.index-design .mxsjs {
+	    float: left;
+	    margin-right: 30px;
+	    width: 388px;
+	}
+	.index-design .mxsjs .mt span a:hover {
+	    text-decoration: none;
+	}
+
+	.index-design .mxsjs .mc {
+	    display: none;
+	}
+	.index-design .mxsjs .mc.on{
+	    display: block;
+	}
+	.index-design .mxsjs .mc p {
+	    padding: 10px 21px;
+	    font-size: 13px;
+	    line-height: 25px;
+	    font-weight: 400;
+	    background-color: #edf8f7;
+	}
+	.index-design .mxsjs .mc h1 {
+	    text-align: center;
+	    font-size: 16px;
+	    color: red;
+	    margin: 15px 0;
+	}
+	.index-design .sjs li{
+	    float: left;
+	    width: 126px;
+	    height: 126px;
+	    margin: 0 3px 4px 0;
+	}
+	.index-design .sjs li img {
+	    width: 100%;
+	    height: 100%;
+	}
+	/*装修必看*/
+	.index-design .zxbk {
+	    float: left;
+	    margin-right: 30px;
+	    width: 434px;
+	    overflow: hidden;
+	}
+	.index-design .zxbk .mc img{
+	    width: 435px;
+	    height: 131px;
+	}
+	.index-design .zxbk .mc>a:hover{
+	    text-decoration:none;
+	}
+	.index-design .zxbk .mc h3 {
+	    text-align: center;
+	    margin: 15px 7px 13px;
+	}
+	.index-design .zxbk .mc p {
+	    border-bottom: 1px solid #ccc;
+	    padding-bottom: 3px;
+	    height: 53px;
+	    color: #666;
+	    overflow: hidden;
+	}
+	.index-design .zxbk .mc li {
+	    margin-top: 8px;
+	    position: relative;
+	}
+	.index-design .zxbk .mc li span{
+	    position: absolute;
+	    right: 0;
+	}
+	/*装修指南*/
+	.index-design .zxzn {
+	    float: left;
+	    width: 318px;
+	    _width:310px;
+	    overflow: hidden;
+	}
+	.index-design .zxzn .tw {
+	    display: block;
+	    position: relative;
+	    padding-left: 100px;
+	    height: 90px;
+	    margin-bottom: 10px;
+	    overflow: hidden;
+	}
+	.index-design .zxzn .tw:hover{
+	    text-decoration:none;
+	}
+	.index-design .zxzn .tw img{
+	    position: absolute;
+	    width: 88px;
+	    height: 88px;
+	    left: 0;
+	}
+	.index-design .zxzn .tw h4 {
+		margin: 0 0 4px 0;
+	}
+	.index-design .zxzn .tw p {
+	    color: #666;
+	    line-height: 17px;
+	}
+/*.index-design end*/
