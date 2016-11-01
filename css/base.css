@@ -108,7 +108,7 @@ em,i,u {
 body {
     font: 12px/150% Arial,Verdana,"\5b8b\4f53";
     color: #666;
-    background: #fff
+    background: #fff;
 }
 
 a {
@@ -121,7 +121,7 @@ a:hover {
 }
 
 .m,.mb,.mc,.mt,.p-detail,.p-img,.p-market,.p-name,.p-price,.sm,.smb,.smc,.smt {
-    overflow: hidden
+    overflow: hidden;
 }
 
 .img-error {
