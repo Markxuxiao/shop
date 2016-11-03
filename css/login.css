@@ -27,6 +27,7 @@
         color:red;
     }
 /*common end*/
+
 .site-header {
     height: 85px;
 }
@@ -93,6 +94,7 @@
     background-color: #fff;
     height: 700px;
 }
+
 .login-in .w {
     position: relative;
 }
@@ -137,7 +139,8 @@
     background: #fff;
     text-align: right;
     top: 1px;
-    left: 5px;
+    left: 1px;
+    padding-left: 5px;
     font-size: 14px;
 }
 .login-in .form-input {

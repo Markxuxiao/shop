@@ -46,7 +46,8 @@ $(function() {
 		}
 	});
 
-	$("#form_register").validate({
+	var Form_register = $("#form_register");
+	Form_register.validate({
 		errorElement: "em",
 		rules: {
 			username: {
@@ -74,38 +75,41 @@ $(function() {
 			phone_verification: "required"
 		}
 	});
+	(function  () {
+		//获取短信验证码
+		var validCode=true;
+		$("#msgs").click (function  () {
+			if(!$("#phone").valid()) return $("#phone").focus();//未验证通过不执行发送短信
+			var time=30;
+			var code=$(this);
+			if (validCode) {
+				validCode=false;
+				$("#msgs").attr("style","background-color:#ccc");
+				code.text("30秒");
+				var t=setInterval(function  () {
+					time--;
+					code.text(time+"秒");
+					if (time==0) {
+						clearInterval(t);
+						$("#msgs").attr("style","");
+						code.text("重新获取");
+						validCode=true;
+					}
+				},1000)
+				
+			// 获取短信请求
+			// $.ajax({
+			//  　　type: "POST", //用POST方式传输
+			//  　　dataType: "text", //数据格式:JSON
+			//  　　url: 'Login.ashx', //目标地址
+			// 　　 data: "dealType=" + dealType +"&uid=" + uid + "&code=" + code,
+			// 　　 error: function (XMLHttpRequest, textStatus, errorThrown) { },
+			//  　　success: function (msg){ }
+			//  });
 
+			}
+		})
+
+	})();
 
 });
-
-$(function  () {
-	//获取短信验证码
-	var validCode=true;
-	$("#msgs").click (function  () {
-		var time=30;
-		var code=$(this);
-		if (validCode) {
-			validCode=false;
-			var t=setInterval(function  () {
-				time--;
-				code.html(time+"秒");
-				if (time==0) {
-					clearInterval(t);
-				code.html("重新获取");
-					validCode=true;
-				}
-			},1000)
-			
-		// 获取短信请求
-		// $.ajax({
-		//  　　type: "POST", //用POST方式传输
-		//  　　dataType: "text", //数据格式:JSON
-		//  　　url: 'Login.ashx', //目标地址
-		// 　　 data: "dealType=" + dealType +"&uid=" + uid + "&code=" + code,
-		// 　　 error: function (XMLHttpRequest, textStatus, errorThrown) { },
-		//  　　success: function (msg){ }
-		//  });
-
-		}
-	})
-})
