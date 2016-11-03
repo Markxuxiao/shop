@@ -1,5 +1,3 @@
-//本文件 登录注册模块共用
-
 (function( factory ) {
 	if ( typeof define === "function" && define.amd ) {
 		define( ["jquery", "../jquery.validate"], factory );
@@ -35,7 +33,6 @@
 
 $(function() {
 	$("#username").focus();
-	// 表单验证
 	$("#form_login").validate({
 		errorElement: "em",
 		rules: {
@@ -82,7 +79,7 @@ $(function() {
 });
 
 $(function  () {
-	//获取短信验证码倒计时
+	//获取短信验证码
 	var validCode=true;
 	$("#msgs").click (function  () {
 		var time=30;
@@ -102,8 +99,8 @@ $(function  () {
 		// 获取短信请求
 		// $.ajax({
 		//  　　type: "POST", //用POST方式传输
-		//  　　dataType: "", //数据格式:JSON
-		//  　　url: '', //目标地址
+		//  　　dataType: "text", //数据格式:JSON
+		//  　　url: 'Login.ashx', //目标地址
 		// 　　 data: "dealType=" + dealType +"&uid=" + uid + "&code=" + code,
 		// 　　 error: function (XMLHttpRequest, textStatus, errorThrown) { },
 		//  　　success: function (msg){ }
