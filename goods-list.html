@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta name="renderer" content="webkit"> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<meta name="keywords" content="家盛时代-首页-国际建材旗帜-武汉建材、家盛时代建材广场"> 
+<meta name="description" content="家盛时代-首页-国际建材旗帜-武汉建材、家盛时代建材广场"> 
+<meta name="author" content="Yjt"> 
+<meta name="copyright" content="Yjt Inc. 保留所有权利">
+<title>家盛时代-商品列表-国际建材旗帜-武汉建材、家盛时代建材广场</title>
+<link rel="stylesheet" type="text/css" href="./css/base.css">
+<link rel="stylesheet" type="text/css" href="./css/common.css">
+<link rel="stylesheet" type="text/css" href="./js/plugin/zTree/zTreeStyle.css">
+<link rel="stylesheet" type="text/css" href="./css/goods-list.css">
+</head>
+<body>
+<!-- site-top -->
+<div class="site-top">
+	<div class="w">
+		<ul class="fl">	
+			<li>
+				<a class="site-top-manage" href="#">商家管理中心</a>
+			</li>
+		</ul>
+	    <ul class="fr">
+	        <li class="fore1" id="ttbar-login">
+	            <a href="javascript:login();" class="link-login style-red">请先登录</a>&nbsp;&nbsp;
+	            <a href="javascript:regist();" class="link-regist">免费注册</a></li>
+	        <li class="spacer"></li>
+	        <li class="dorpdown" id="ttbar-atte">
+	            <div class="dt cw-icon">
+	                <i class="ci-right">
+	                    <s>◇</s>
+	                </i>我的订单</div>
+	            <div class="dd dorpdown-layer"></div>
+	            <div class="dd dorpdown-layer">
+	                <div class="dd-spacer"></div>
+	                <div class="dd-inner" id="ttbar-atte-main">
+	                    <div class="dd-spacer"></div>
+	                    <div class="dd-inner">
+	                        <ul class="dorpdown-item">
+	                        	<li><a href="">待付款订单</a></li>
+	                        	<li><a href="">待确认订单</a></li>
+	                        	<li><a href="">待评价订单</a></li>
+	                        </ul>
+	                    </div>
+	                </div>
+	            </div>
+	        </li>
+	        <li class="spacer"></li>
+	        <li class="dorpdown" id="ttbar-serv">
+	            <div class="dt cw-icon">
+	                <i class="ci-right">
+	                    <s>◇</s>
+	                </i>客户服务</div>
+	            <div class="dd dorpdown-layer">
+	                <div class="dd-spacer"></div>
+	                <div class="dd-inner">
+	                    <ul class="dorpdown-item">
+	                    	<li><a href="">帮助</a></li>
+	                    	<li><a href="">客服</a></li>
+	                    	<li><a href="">支付</a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </li>
+	        <li class="spacer"></li>
+	        <li class="dorpdown" id="ttbar-navs">
+	            <div class="dt cw-icon">
+	                <i class="ci-right">
+	                    <s>◇</s>
+	                </i>内部系统</div>
+	            <div class="dd dorpdown-layer">
+	                <div class="dd-spacer"></div>
+	                <div class="dd-inner">
+	                    <ul class="dorpdown-item">
+	                    	<li><a href="">OA系统</a></li>
+	                    	<li><a href="">代客户注册</a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </li>
+	    </ul>
+	    <span class="clr"></span>
+	</div>
+</div>
+<!-- site-header -->
+<div class="site-header">
+	<div class="w">
+		<div class="logo">
+			<a href="index.html">
+				<img src="./images/common/201605231508457806ADMIN.png">
+			</a>
+		</div>
+		<div class="site-header-search">
+			<form >
+			    <input class="site-header-search-text" maxlength="60"  placeholder="请输入您要搜索的商品关键字" >
+			    <input class="site-header-search-button" value="搜索" type="submit">
+			</form>
+			<div class="site-header-search-keyword">
+				热门搜索：
+				<ul>
+					<li><a href="#">卫浴</a></li>
+					<li><a href="#">瓷砖</a></li>
+					<li><a href="#">家具</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+		<div class="site-header-btn">
+			<div class="shopcart">
+				<i class="shopcart-icon-left"></i>
+				<i class="shopcart-icon-right">></i>
+				<a target="_blank" href="#">
+					购物车结算
+				</a>
+
+			</div>
+		</div>
+		<span class="clr"></span>
+	</div>
+</div>
+<!-- site-nav -->
+<nav class="site-nav">
+    <div class="w">
+        <div class="site-nav-h">
+        	<div class="dt dorpdown">
+        		<a href="#">所有商品分类</a>
+        		<i class="arrow"></i>
+        	</div>
+
+            <div class="site-nav-h-item dd">
+            	<div class="dd-inner">
+					<div class="item">
+						<h2>建材厨卫类</h2>
+						<img src="./images/common/category-pic-1.jpg">
+					</div>
+					<div class="item">
+						<h2>家居电器类</h2>
+						<img src="./images/common/category-pic-2.jpg">
+					</div>
+					<div class="item">
+						<h2>智能家居类</h2>
+						<img src="./images/common/category-pic-3.jpg">
+					</div>
+					<div class="item">
+						<h2>家装施工类</h2>
+						<img src="./images/common/category-pic-4.jpg">
+					</div>
+					<div class="item">
+						<h2>家饰其他类</h2>
+						<img src="./images/common/category-pic-5.jpg">
+					</div>
+            	</div>
+            	<div class="dorpdown-layer">
+					<div class="item-sub">
+						<div class="subitems">
+							<dl>
+								<dt>
+									<a href="#">第三方</a>
+									<i>></i>
+								</dt>
+								<dd>
+									<a href="#">第三方</a>
+							
+									<a href="#">第三方</a>
+							
+									<a href="#">第三方</a>
+								
+									<a href="#">第三方</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt>
+									<a href="#">第三方</a>
+									<i>></i>
+								</dt>
+								<dd>
+									<a href="#">第三方</a>
+									<a href="#">第三方</a>
+									<a href="#">第三方</a>
+									<a href="#">第三方</a>
+									<a href="#">第三方</a>
+									<a href="#">第三方</a>
+									<a href="#">第三方</a>
+									<a href="#">第三方</a>
+									<a href="#">第三方</a>
+									<a href="#">第三方</a>
+									<a href="#">第三方</a>
+									<a href="#">第三方</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt>
+									<a href="#">第三方</a>
+									<i>></i>
+								</dt>
+								<dd>
+									<a href="#">第三方</a>
+							
+									<a href="#">第三方</a>
+							
+									<a href="#">第三方</a>
+								
+									<a href="#">第三方</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt>
+									<a href="#">第三方</a>
+									<i>></i>
+								</dt>
+								<dd>
+									<a href="#">第三方</a>
+							
+									<a href="#">第三方</a>
+							
+									<a href="#">第三方</a>
+								
+									<a href="#">第三方</a>
+								</dd>
+							</dl>
+
+						</div>
+						<div class="item-brands">
+							<div class="brands-inner">
+								<a href="#"><img src="./images/index/index_bands1.jpg"></a>
+								<a href="#"><img src="./images/index/index_bands2.png"></a>
+								<a href="#"><img src="./images/index/index_bands3.jpg"></a>
+								<a href="#"><img src="./images/index/index_bands5.jpg"></a>
+								<a href="#"><img src="./images/index/index_bands6.jpg"></a>
+								<a href="#"><img src="./images/index/index_bands7.jpg"></a>
+								<a href="#"><img src="./images/index/index_bands8.jpg"></a>
+							</div>	
+						</div>
+					</div>
+         			<div class="item-sub">
+         				<div class="subitems">
+         					<dl>
+         						<dt>
+         							<a href="#">玩儿啥地方</a>
+         							<i>></i>
+         						</dt>
+         						<dd>
+         							<a href="#">第三方</a>
+         					
+         							<a href="#">第三方</a>
+         					
+         							<a href="#">第三方</a>
+         						
+         							<a href="#">第三方</a>
+         						</dd>
+         					</dl>
+         					<dl>
+         						<dt>
+         							<a href="#">第三方</a>
+         							<i>></i>
+         						</dt>
+         						<dd>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         						</dd>
+         					</dl>
+         					<dl>
+         						<dt>
+         							<a href="#">第三方</a>
+         							<i>></i>
+         						</dt>
+         						<dd>
+         							<a href="#">第三方</a>
+         					
+         							<a href="#">第三方</a>
+         					
+         							<a href="#">第三方</a>
+         						
+         							<a href="#">第三方</a>
+         						</dd>
+         					</dl>
+         					<dl>
+         						<dt>
+         							<a href="#">第三方</a>
+         							<i>></i>
+         						</dt>
+         						<dd>
+         							<a href="#">第三方</a>
+         					
+         							<a href="#">第三方</a>
+         					
+         							<a href="#">第三方</a>
+         						
+         							<a href="#">第三方</a>
+         						</dd>
+         					</dl>
+
+         				</div>
+         				<div class="item-brands">
+         					<div class="brands-inner">
+         						<a href="#"><img src="./images/index/index_bands1.jpg"></a>
+         						<a href="#"><img src="./images/index/index_bands2.png"></a>
+         						<a href="#"><img src="./images/index/index_bands3.jpg"></a>
+         						<a href="#"><img src="./images/index/index_bands5.jpg"></a>
+         						<a href="#"><img src="./images/index/index_bands6.jpg"></a>
+         						<a href="#"><img src="./images/index/index_bands7.jpg"></a>
+         						<a href="#"><img src="./images/index/index_bands8.jpg"></a>
+         					</div>	
+         				</div>
+         			</div>
+         			<div class="item-sub">
+         				<div class="subitems">
+         					<dl>
+         						<dt>
+         							<a href="#">的说法是</a>
+         							<i>></i>
+         						</dt>
+         						<dd>
+         							<a href="#">第三方</a>
+         					
+         							<a href="#">第三方</a>
+         					
+         							<a href="#">第三方</a>
+         						
+         							<a href="#">第三方</a>
+         						</dd>
+         					</dl>
+         					<dl>
+         						<dt>
+         							<a href="#">第三方</a>
+         							<i>></i>
+         						</dt>
+         						<dd>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         						</dd>
+         					</dl>
+         					<dl>
+         						<dt>
+         							<a href="#">第三方</a>
+         							<i>></i>
+         						</dt>
+         						<dd>
+         							<a href="#">第三方</a>
+         					
+         							<a href="#">第三方</a>
+         					
+         							<a href="#">第三方</a>
+         						
+         							<a href="#">第三方</a>
+         						</dd>
+         					</dl>
+         					<dl>
+         						<dt>
+         							<a href="#">第三方</a>
+         							<i>></i>
+         						</dt>
+         						<dd>
+         							<a href="#">第三方</a>
+         					
+         							<a href="#">第三方</a>
+         					
+         							<a href="#">第三方</a>
+         						
+         							<a href="#">第三方</a>
+         						</dd>
+         					</dl>
+
+         				</div>
+         				<div class="item-brands">
+         					<div class="brands-inner">
+         						<a href="#"><img src="./images/index/index_bands1.jpg"></a>
+         						<a href="#"><img src="./images/index/index_bands2.png"></a>
+         						<a href="#"><img src="./images/index/index_bands3.jpg"></a>
+         						<a href="#"><img src="./images/index/index_bands5.jpg"></a>
+         						<a href="#"><img src="./images/index/index_bands6.jpg"></a>
+         						<a href="#"><img src="./images/index/index_bands7.jpg"></a>
+         						<a href="#"><img src="./images/index/index_bands8.jpg"></a>
+         					</div>	
+         				</div>
+         			</div>
+         			<div class="item-sub">
+         				<div class="subitems">
+         					<dl>
+         						<dt>
+         							<a href="#">sdfsdfsf</a>
+         							<i>></i>
+         						</dt>
+         						<dd>
+         							<a href="#">第三方</a>
+         					
+         							<a href="#">第三方</a>
+         					
+         							<a href="#">第三方</a>
+         						
+         							<a href="#">第三方</a>
+         						</dd>
+         					</dl>
+         					<dl>
+         						<dt>
+         							<a href="#">第三方</a>
+         							<i>></i>
+         						</dt>
+         						<dd>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         						</dd>
+         					</dl>
+         					<dl>
+         						<dt>
+         							<a href="#">第三方</a>
+         							<i>></i>
+         						</dt>
+         						<dd>
+         							<a href="#">第三方</a>
+         					
+         							<a href="#">第三方</a>
+         					
+         							<a href="#">第三方</a>
+         						
+         							<a href="#">第三方</a>
+         						</dd>
+         					</dl>
+         					<dl>
+         						<dt>
+         							<a href="#">第三方</a>
+         							<i>></i>
+         						</dt>
+         						<dd>
+         							<a href="#">第三方</a>
+         					
+         							<a href="#">第三方</a>
+         					
+         							<a href="#">第三方</a>
+         						
+         							<a href="#">第三方</a>
+         						</dd>
+         					</dl>
+
+         				</div>
+         				<div class="item-brands">
+         					<div class="brands-inner">
+         						<a href="#"><img src="./images/index/index_bands1.jpg"></a>
+         						<a href="#"><img src="./images/index/index_bands2.png"></a>
+         						<a href="#"><img src="./images/index/index_bands3.jpg"></a>
+         						<a href="#"><img src="./images/index/index_bands5.jpg"></a>
+         						<a href="#"><img src="./images/index/index_bands6.jpg"></a>
+         						<a href="#"><img src="./images/index/index_bands7.jpg"></a>
+         						<a href="#"><img src="./images/index/index_bands8.jpg"></a>
+         					</div>	
+         				</div>
+         			</div>
+         			<div class="item-sub">
+         				<div class="subitems">
+         					<dl>
+         						<dt>
+         							<a href="#">第三方</a>
+         							<i>></i>
+         						</dt>
+         						<dd>
+         							<a href="#">第三方</a>
+         					
+         							<a href="#">第三方</a>
+         					
+         							<a href="#">第三方</a>
+         						
+         							<a href="#">第三方</a>
+         						</dd>
+         					</dl>
+         					<dl>
+         						<dt>
+         							<a href="#">第三方</a>
+         							<i>></i>
+         						</dt>
+         						<dd>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+ 
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         							<a href="#">第三方</a>
+         						</dd>
+         					</dl>
+         					<dl>
+         						<dt>
+         							<a href="#">第三方</a>
+         							<i>></i>
+         						</dt>
+         						<dd>
+         							<a href="#">第三方</a>
+         					
+         							<a href="#">第三方</a>
+         					
+         							<a href="#">第三方</a>
+         						
+         							<a href="#">第三方</a>
+         						</dd>
+         					</dl>
+         					<dl>
+         						<dt>
+         							<a href="#">第三方</a>
+         							<i>></i>
+         						</dt>
+         						<dd>
+         							<a href="#">第三方</a>
+         		
+         							<a href="#">第三方</a>
+         						</dd>
+         					</dl>
+
+         				</div>
+         				<div class="item-brands">
+         					<div class="brands-inner">
+         						<a href="#"><img src="./images/index/index_bands1.jpg"></a>
+         						<a href="#"><img src="./images/index/index_bands2.png"></a>
+         						<a href="#"><img src="./images/index/index_bands3.jpg"></a>
+         						<a href="#"><img src="./images/index/index_bands5.jpg"></a>
+         						<a href="#"><img src="./images/index/index_bands6.jpg"></a>
+         						<a href="#"><img src="./images/index/index_bands7.jpg"></a>
+         						<a href="#"><img src="./images/index/index_bands8.jpg"></a>
+         					</div>	
+         				</div>
+         			</div>
+            	</div>
+
+            </div>
+
+        </div>
+        <div class="site-nav-items">
+        	<ul>
+        	    <li><a href="#">首页</a></li>
+        	    <li><a href="#" class="current">装修设计院</a></li>
+        	    <li><a href="#">家居商城</a></li>
+        	    <li><a href="#">装修施工队</a></li>
+        	    <li><a href="#">装修监理</a></li>
+        	    <li><a href="#">供应链与服务</a></li>
+        	    <li><a href="#">装修商学院</a></li>
+        	    <li><a href="#">客户VIP</a></li>
+        	    <li><a href="#">当期促销</a></li>
+        	</ul>
+        </div>
+    </div>
+</nav>
+
+<div class="main">
+   <div class="w clearfix">
+      <!-- goods-tree -->
+      <div class="goods-tree fl">
+         <div class="hd">
+            分类筛选
+         </div>
+         <div class="bd">
+            <ul id="goodstree" class="ztree"></ul>
+         </div>
+         
+      </div>
+
+
+   </div>
+</div>
+
+
+
+
+
+
+<!-- site-foot -->
+<footer class="margin-t30">
+	<div class="site-foot">
+		<div class="w">
+		    <ul>
+		        <li>
+		            <dl>
+		                <dt>帮助中心</dt>
+		                <dd>
+		                    <a href="#" title="如何注册成为会员">如何注册成为会员</a></dd>
+		                <dd>
+		                    <a href="#" title="忘记密码">忘记密码</a></dd>
+		                <dd>
+		                    <a href="#" title="搜索功能">搜索功能</a></dd>
+		                <dd>
+		                    <a href="#" title="购买和定制商品">购买和定制商品</a></dd>
+		            </dl>
+		        </li>
+		        <li>
+		            <dl>
+		                <dt>店主之家</dt>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-46.html" title="我要开店">我要开店</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-47.html" title="管理商品">管理商品</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-48.html" title="我要推广">我要推广</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-49.html" title="会员等级">会员等级</a></dd>
+		            </dl>
+		        </li>
+		        <li>
+		            <dl>
+		                <dt>支付中心</dt>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-50.html" title="支付方式">支付方式</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-51.html" title="关于积分">关于积分</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-52.html" title="如何提现">如何提现</a></dd>
+		            </dl>
+		        </li>
+		        <li>
+		            <dl>
+		                <dt>客服中心</dt>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-53.html" title="联系我们">联系我们</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-54.html" title="售前咨询">售前咨询</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-55.html" title="如何投诉">如何投诉</a></dd>
+		            </dl>
+		        </li>
+		        <li>
+		            <dl>
+		                <dt>友情链接</dt>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-56.html" title="合作及洽谈">合作及洽谈</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-57.html" title="本站链接代码">本站链接代码</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-58.html" title="销售联盟">销售联盟</a></dd>
+		            </dl>
+		        </li>
+		        <li>
+		            <dl>
+		                <dt>关于我们</dt>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-59.html" title="公司简介">公司简介</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-60.html" title="诚聘英才">诚聘英才</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-61.html" title="法律声明">法律声明</a></dd>
+		            </dl>
+		        </li>
+		    </ul>
+		</div>
+	</div>
+
+    <div class="w " style="text-align: center;margin:5px auto;">
+    	<a href="#">首页</a>&nbsp;&nbsp;|&nbsp;&nbsp;网站备案编号：鄂ICP备14020050号-1&nbsp;&nbsp;|&nbsp;&nbsp;ICP经营许可证编号：鄂B2-20150042	
+    </div>
+</footer>
+
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="./js/plugin/zTree/jquery.ztree.core.min.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+<script type="text/javascript" src="./js/goods-list.js"></script>
+</body>
+</html>
