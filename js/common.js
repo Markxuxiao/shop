@@ -9,7 +9,7 @@ $(function() {
             $(".site-nav-h-item .dd-inner").removeClass("hover");
             $(".dorpdown-layer").removeClass("hover");
         }
-    )
+    );
     $(".site-nav-h-item .dd-inner").children(".item").hover(
         function() {
             $(this).addClass("hover").siblings(".item").removeClass("hover");

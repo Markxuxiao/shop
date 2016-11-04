@@ -32,7 +32,7 @@
 
 /*.index-slide-Box start*/
 	.index-slide-Box{width:100%;height:423px;overflow:hidden;position:relative;/* border:1px solid #ddd; */}
-	.index-slide-Box .hd{height: 25px;/* overflow:hidden; */float: left; /* 自适应内容宽度 */position: absolute;left: 50%;padding-left: -76px;/* right:50%; */bottom: 10px;z-index:1;}
+	.index-slide-Box .hd{height: 25px;/* overflow:hidden; */float: left; /* è‡ªé€‚åº”å†…å®¹å®½åº¦ */position: absolute;left: 50%;padding-left: -76px;/* right:50%; */bottom: 10px;z-index:1;}
 	.index-slide-Box .hd ul{position: relative;left: -50%;}
 	.index-slide-Box .hd ul li{filter:alpha(opacity=70);opacity:.7; color:#fff; float:left; margin-right:2px;background:#3e3e3e;border-radius: 50%;width:25px; height:25px; line-height: 25px; text-align:center; cursor:pointer; }
 	.index-slide-Box .hd ul li.on{ background:#f00; color:#fff; }
@@ -204,7 +204,7 @@
 /*.index-floor end*/
 
 /*.index-package start*/
-	/*促销*/
+	/*ä¿ƒé”€*/
 	.index-package .chuxiao-modul {
 	    width: 900px;
 	    float: left;
@@ -271,7 +271,7 @@
 	    width: 173px;
 	    height: 158px;
 	}
-	/* /促销 */
+	/* /ä¿ƒé”€ */
 	#sjform {
 	    margin-left: 23px;
 	    width: 277px;
@@ -355,15 +355,15 @@
 /*.index-package end*/
 
 /*.index-design start*/
-	/*明星设计*/
+	/*æ˜Žæ˜Ÿè®¾è®¡*/
 	.index-design {
 	    font-family: microsoft yahei;
-	    height: 450px;
+	    height: 455px;
 	    overflow: hidden;
 	}
 	.index-design .floorbox {
-		height: 427px;
-		overflow: hidden;
+		/* height: 427px; */
+		/* overflow: hidden; */
 	}
 	.index-design .floorbox .hd {
 		position: relative;
@@ -413,12 +413,12 @@
 	    width: 100%;
 	    height: 100%;
 	}
-	/*装修必看*/
+	/*è£…ä¿®å¿…çœ‹*/
 	.index-design .zxbk {
 	    float: left;
 	    margin-right: 30px;
 	    width: 434px;
-	    overflow: hidden;
+	    /* overflow: hidden; */
 	}
 	.index-design .zxbk .mc img{
 	    width: 435px;
@@ -439,14 +439,14 @@
 	    overflow: hidden;
 	}
 	.index-design .zxbk .mc li {
-	    margin-top: 8px;
+	    margin-top: 9px;
 	    position: relative;
 	}
 	.index-design .zxbk .mc li span{
 	    position: absolute;
 	    right: 0;
 	}
-	/*装修指南*/
+	/*è£…ä¿®æŒ‡å—*/
 	.index-design .zxzn {
 	    float: left;
 	    width: 318px;
@@ -458,7 +458,7 @@
 	    position: relative;
 	    padding-left: 100px;
 	    height: 90px;
-	    margin-bottom: 10px;
+	    margin-bottom: 14px;
 	    overflow: hidden;
 	}
 	.index-design .zxzn .tw:hover{

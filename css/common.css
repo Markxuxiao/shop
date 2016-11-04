@@ -494,6 +494,26 @@
     }
 /*.site-nav end*/
 
+/*.site-crumbs-bar start*/
+.site-crumbs-bar .w{
+    height: 22px;
+    padding: 8px 0;
+    *word-spacing: -1px/*IE6、7*/;
+    text-align: left;
+}
+
+.site-crumbs-bar span {
+    font-size: 12px;
+    line-height: 20px;
+    font-family: "宋体";
+    color: #9c9c9c;
+    display: inline-block;
+    *display: inline/* IE6,7*/;
+    height: 20px;
+    zoom: 1;
+}
+/*.site-crumbs-bar start*/
+
 /*.site-foot start*/
     .site-foot {
         border-top: 1px solid #f5f5f5;

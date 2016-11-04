@@ -1,6 +1,5 @@
 
-$(document).ready(function(){
-
+$(function(){
    var zTreeObj;
    // zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
    var setting = {
@@ -49,4 +48,22 @@ $(document).ready(function(){
       window.location.href= URL; 
       // alert(treeNode.tId + ", " + treeNode.name);
    };
+});
+
+// 商品筛选
+$(function(){
+   $(".goods-selector-filter .more").each(function(i){
+      $(this).click(function(){
+         var that = $(this);
+            if (that.hasClass("on")){
+               that.find("span").text("+更多");
+               that.removeClass('on');
+               $(".goods-selector-filter .datashow").eq(i).removeClass("all");
+            }else{
+               that.find("span").text("-收起");
+               that.addClass('on');
+               $(".goods-selector-filter .datashow").eq(i).addClass("all");
+            }
+      })
+   })
 });
