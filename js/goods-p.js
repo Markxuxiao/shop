@@ -7,27 +7,6 @@ $(function(){
           $(".jqzoom").attr('rel', $(this).find("img").attr("big"));
        });
 
-    //触及显示缩略图   
-    // $('.goods-pic > .thumb').hover(
-    //     function(){
-    //         $(this).next().css('display','block');
-    //     },
-    //     function(){
-    //         $(this).next().css('display','none');
-    //     }
-    // );
-
-
-    // 查看大图
-        $('[nc_type="thumb-image"]').die().live('click',function(){
-            src = $(this).find('img').attr('src');
-            max_src = src.replace('_small.', '_max.');
-            $(this).parent().hide().next().children('[nc_type="origin-image"]').append('<img src="'+max_src+'" />').end().show();
-        });
-        $('[nc_type="origin-image"]').die().live('click',function(){
-            $(this).html('').parent().hide().prev().show();
-        });
-
     // 规格选择
     $('dl[nctype="nc-spec"]').find('a').each(function(){
         $(this).click(function(){
@@ -153,4 +132,21 @@ $(function(){
     
 
 
+});
+
+
+$(document).ready(function(){
+    //热销排行切换
+    $('#hot_sales_tab').on('mouseenter', function() {
+        $(this).addClass('current');
+        $('#hot_collect_tab').removeClass('current');
+        $('#hot_sales_list').removeClass('hide');
+        $('#hot_collect_list').addClass('hide');
+    });
+    $('#hot_collect_tab').on('mouseenter', function() {
+        $(this).addClass('current');
+        $('#hot_sales_tab').removeClass('current');
+        $('#hot_sales_list').addClass('hide');
+        $('#hot_collect_list').removeClass('hide');
+    });
 });
