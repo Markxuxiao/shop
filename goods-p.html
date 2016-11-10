@@ -649,16 +649,14 @@
             </dl>
          </div>
          <div class="goods-p-key">
-            <dl nctype="nc-spec">
+            <dl Jsmark="goods-spec">
                <dt>颜色：</dt>
                <dd>
                <ul nctyle="ul_sign">
-                  <!-- 图片类型规格-->
-                  <li class="sp-img"><a href="javascript:void(0);" class="" title="蓝色"><img src="../shop/images/temp/01_small.jpg"><i></i></a></li>
-                  <!-- 图片类型规格-->
-                  <li class="sp-img"><a href="javascript:void(0);" class="hovered" title="绿色"><img src="../shop/images/temp/02_small.jpg"><i></i></a></li>
-                  <!-- 图片类型规格-->
-                  <li class="sp-img"><a href="javascript:void(0);" class="" title="橙色"><img src="../shop/images/temp/03_small.jpg"><i></i></a></li>
+               <!-- data-goods_id="23" 为商品id 数据来源php js控制跳转该商品页面，js页面设置接口请搜索 goods_url -->
+                  <li class="sp-img"><a href="javascript:void(0);" class="" title="蓝色" data-goods_id="23"><img src="../shop/images/temp/01_small.jpg"><i></i></a></li>
+                  <li class="sp-img"><a href="javascript:void(0);" class="hovered" title="绿色" data-goods_id="24"><img src="../shop/images/temp/02_small.jpg"><i></i></a></li>
+                  <li class="sp-img"><a href="javascript:void(0);" class="" title="橙色" data-goods_id="25"><img src="../shop/images/temp/03_small.jpg"><i></i></a></li>
                </ul>
                </dd>
             </dl>
@@ -666,11 +664,11 @@
                <dt>购买数量：</dt>
                <dd class="goods-p-input-number">
                <input type="text" name="" id="quantity" value="1" size="3" class="text w30">
-               <a href="javascript:void(0)" class="increase">+</a><a href="javascript:void(0)" class="decrease">-</a><em>(当前库存<strong>100</strong>件)</em></dd>
+               <a href="javascript:void(0)" class="increase">+</a><a href="javascript:void(0)" class="decrease">-</a><em>(当前库存<strong Jsmark="goods_stock">100</strong>件)</em></dd>
             </dl>
             <div class="xu-btn">
-               <a href="javascript:void(0);" class="buynow " title="立即购买">立即购买</a>
-               <a href="javascript:void(0);" class="addcart " title="添加购物车">添加购物车</a>
+               <a href="javascript:void(0);" class="buynow " title="立即购买" Jsmark="buynow_submit">立即购买</a>
+               <a href="javascript:void(0);" class="addcart " title="添加购物车" Jsmark="addcart_submit">添加购物车</a>
             </div>
          </div>
       </div>
@@ -723,9 +721,9 @@
 
          <div class="goods-title-nav">
             <ul id="categorymenu">
-               <li class="current"><a href="#id-goods-p-rate">商品详情</a></li>
-               <li class=""><a href="#id-goods-p-comment">商品评价</a></li>
-               <li class=""><a href="#id-goods-p-salelog">销售记录</a></li>
+               <li class="current"><a id="tabGoodsIntro" href="javascript:void(0);">商品详情</a></li>
+               <li class=""><a id="tabGoodsRate" href="javascript:void(0);">商品评价</a></li>
+               <li class=""><a id="tabGoodsTraded" href="javascript:void(0);">销售记录</a></li>
             </ul>
          </div>
 

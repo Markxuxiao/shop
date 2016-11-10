@@ -31,6 +31,42 @@
 //        }
 //     });
 // }
+// 全局函数
+var G = {
+    is_login:function(){
+        if(true){
+           return true; 
+       }else{
+        alert("请登录");
+        return false;
+       }
+        
+    }
+    //goods_id:商品id
+    //quantity:商品数量
+    ,addcart:function(goods_id, quantity){
+        if (!quantity) return false;
+
+        var url = 'index.php?act=cart&op=add';
+        console.log("已添加到购物车"+ goods_id + quantity);
+        // $.getJSON(url, {'goods_id':goods_id, 'quantity':quantity}, function(data){
+        //     if(data != null){
+        //         if (data.state){
+                    //更新购物车
+        //             this.load_cart_information();
+        //         }else{
+        //             alert(data.msg);
+        //         }
+        //     }
+        // });
+    }
+    // 头部加载购物车信息
+    ,load_cart_information:function(){
+        alert("load_cart_information")
+    }
+};
+
+
 $(function() {
     //首页导航模块下拉
     $(".site-nav-h").hover(
