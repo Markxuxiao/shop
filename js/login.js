@@ -73,13 +73,33 @@ $(function() {
 				required: true
 			},
 			phone_verification: "required"
-		}
+		},
+		messages: {
+		      phone: {
+		        minlength: "请输入11位手机号码",
+		        maxlength: "请输入11位手机号码"
+		      }
+		    }
+
 	});
 	(function  () {
 		//获取短信验证码
 		var validCode=true;
 		$("#msgs").click (function  () {
 			if(!$("#phone").valid()) return $("#phone").focus();//未验证通过不执行发送短信
+			var error = true;
+			//异步验证验证码是否正确,正确则赋值变量error = false;
+			// $.ajax({
+			//  　　type: "",
+			//  　　dataType: "", 
+			//  　　url: '',
+			// 　　 data: ",
+			// 　　 error: function (XMLHttpRequest, textStatus, errorThrown) { error = false; },
+			//  　　success: function (msg){ }
+			//  });
+			if(error) return layer.alert('验证码错误，请重新填写！');
+
+
 			var time=30;
 			var code=$(this);
 			if (validCode) {
@@ -113,3 +133,4 @@ $(function() {
 	})();
 
 });
+
