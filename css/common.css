@@ -15,6 +15,25 @@
     .margin-t30{
         margin-top: 30px;
     }
+    .w10 { width:10px;}
+    .w20 { width:20px;}
+    .w30 { width:30px;}
+    .w40 { width:40px !important;}
+    .w50 { width:50px !important;}
+    .w60 { width:60px !important;}
+    .w65 { width:65px !important;}
+    .w70 { width:70px !important;}
+    .w80 { width:80px !important;}
+    .w90 { width:90px;}
+    .w96 {width: 96px;}
+    .w100 { width:100px;}
+    .w110 { width:110px;}
+    .w120 { width:120px !important;}
+    .w130 { width:130px;}
+    .w150 { width:150px !important;}
+    .w160 { width:160px;}
+    .w180 { width:180px;}
+    .w200 { width:200px !important;}
     .G_linear {
         -moz-transition: all 0.2s linear;
         -webkit-transition: all 0.2s linear;
