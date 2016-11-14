@@ -33,6 +33,10 @@
 // }
 // 全局函数
 var G = {
+    // 格式化为带小数点的形式
+    // param num 原始数据
+    // param ext 小数位位数
+    // return 格式化后的数据
     number_format:function(num, ext){
         if(ext < 0){
             return num;
