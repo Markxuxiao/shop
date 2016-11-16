@@ -49,7 +49,7 @@ label.error i { margin-right: 4px;}
 .ncc-bottom { width: 100%; padding: 20px 0; overflow: hidden;}
 
 
-.ncc-receipt-info { color: #777; padding: 9px 19px; border: solid 1px #EEE;}
+.ncc-receipt-info {color: #777;padding: 9px 19px;border: solid 1px #EEE;margin: 10px 0;-webkit-box-shadow: 0 0 15px rgba(0,0,0,0.1);box-shadow: 0 0px 15px rgba(0,0,0,0.1);}
 .ncc-receipt-info-title { font-size: 0; *word-spacing:-1px/*IE6、7*/; display: block; height: 22px; padding: 4px 0;}
 .ncc-receipt-info-title h3,
 .ncc-receipt-info-title a { font: 16px/20px arial,"microsoft yahei"; color: #333; vertical-align: middle; letter-spacing: normal; word-spacing: normal; display: inline-block;}

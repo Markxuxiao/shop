@@ -3,7 +3,7 @@ $(function(){
     calc_cart_price();
 
     /**
-     * 购物车减少商品数量
+     * 减少购物车商品数量
      */
     function decrease_quantity(){
         var item = $(this).next();
@@ -16,7 +16,7 @@ $(function(){
     $('table[Jsmark="table_cart"]').on('click','.decrement',decrease_quantity);
 
     /**
-     * 购物车增加商品数量
+     * 增加购物车商品数量
      */
     function add_quantity(){
         var item = $(this).prev();
@@ -27,26 +27,21 @@ $(function(){
     $('table[Jsmark="table_cart"]').on('click','.increment',add_quantity);
 
     /**
-     * 更改购物车数量
+     * 修改购物车数量
      */
     function change_quantity(){
         var cart_id = $(this).parent().parent().parent().attr('data-cart_id');
         // 更新-号样式
         if(this.value>1){$(this).prev().removeClass('disabled')}else{$(this).prev().addClass('disabled')};
+        // 单个商品总价
         var subtotal = $(this).parent().parent().parent().find('em[Jsmark="eachGoodsTotal"]');
 
         //暂存为局部变量，否则如果用户输入过快有可能造成前后值不一致的问题
         var _value = this.value;
-
-        //接口模拟数据
-        var result = {
-            state : 'true',// 'true' 'invalid' | 'shortage' | 'error'
-            goods_price : 179,//商品单价
-            goods_num : 1,// 最大可售库存
-            subtotal : _value*179,//实际值为 购买个数*单价 php实时计算
-            msg:'错误信息'
-        }
-        // $.getJSON('index.php?act=cart&op=update&cart_id=' + cart_id + '&quantity=' + _value, function(result){
+        var data = {"cart_id":cart_id,"quantity":_value};
+        
+        //验证购物车商品更改数量是否有库存并更新购物车视图
+        $.getJSON('index.php?act=cart&op=update&cart_id=' + cart_id + '&quantity=' + _value,data, function(result){
             $(this).attr('data-changed', _value);
             if(result.state == 'true' ){
                 $('#item' + cart_id + '_price').html(G.number_format(result.goods_price,2));
@@ -76,8 +71,9 @@ $(function(){
                 alert(result.msg);
                 $(this).val($(this).attr('data-changed'));
             }
-        // });
-        calc_cart_price();
+            calc_cart_price();
+        });
+        
     }
     $('table[Jsmark="table_cart"]').on('keyup','.itxt',change_quantity);
 
@@ -103,8 +99,6 @@ $(function(){
         calc_cart_price();
     });
 
-
-
     // 提交订单
     $('#next_submit').on('click',function(){
         if ($('table').find('input[Jsmark="eachGoodsCheckBox"]:checked').size() == 0) {
@@ -115,6 +109,21 @@ $(function(){
         }
     });
 
+    //收藏商品
+    $("a[Jsmark='fav']").on('click',function(){
+        var that = this;
+        var goods_id= $(this).parent().parent().data("goods_id");
+        console.log(goods_id);
+        if(goods_id){
+            G.collect_goods(goods_id,function(){
+                $(that).unbind('click')
+                        .html('已收藏')
+                        .css({ color: "#777777", cursor:"default" });
+            })
+        };
+    });
+
+
 
     /**
      * 删除购物车
@@ -123,15 +132,8 @@ $(function(){
     function drop_cart_item(){
         var cart_id = $(this).parent().parent().attr('data-cart_id');
         var parent_tr = $('#cart_item_' + cart_id).parent();
-        console.log(1);
 
-        //接口模拟数据
-        var result = {
-            state: true,
-            quantity: 1,
-            msg:"未删除成功"
-        };
-        // $.getJSON('index.php?act=cart&op=del&cart_id=' + cart_id, function(result){
+        $.getJSON('index.php?act=cart&op=del&cart_id=' + cart_id, function(result){
             if(result.state){
                 //删除成功
                 if(result.quantity == 0){//判断购物车是否为空
@@ -146,7 +148,7 @@ $(function(){
             }else{
                 alert(result.msg);
             }
-        // });
+        });
     }
     $('table[Jsmark="table_cart"]').on('click','.goods-cart-dropitem',drop_cart_item);
 

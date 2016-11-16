@@ -54,12 +54,12 @@ $(function(){
   $("#addr_list_btn").on('click',function(){
     //判断是否选择新添加地址
     if($('#add_addr').attr('checked')){
-
+      console.log(1);
       $.ajax({
         type: "POST",
         dataType: "json",
-        url: '/retData/data2',
-        data: address_id,
+        url: '/retData/data1',
+        data: '',
         error: function (err) {alert(err.responseText);},
         success: function (data){
           if (!data.errNum) {
