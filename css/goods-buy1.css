@@ -49,19 +49,19 @@ label.error i { margin-right: 4px;}
 .ncc-bottom { width: 100%; padding: 20px 0; overflow: hidden;}
 
 
-.ncc-receipt-info { color: #777; padding: 9px 19px; border: solid 1px #EEE;}
+.ncc-receipt-info {color: #777;padding: 9px 19px;border: solid 1px #EEE;margin: 10px 0;-webkit-box-shadow: 0 0 15px rgba(0,0,0,0.1);box-shadow: 0 0px 15px rgba(0,0,0,0.1);}
 .ncc-receipt-info-title { font-size: 0; *word-spacing:-1px/*IE6、7*/; display: block; height: 22px; padding: 4px 0;}
 .ncc-receipt-info-title h3,
 .ncc-receipt-info-title a { font: 16px/20px arial,"microsoft yahei"; color: #333; vertical-align: middle; letter-spacing: normal; word-spacing: normal; display: inline-block;}
 .ncc-receipt-info-title a { font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: #27A9E3; margin-left: 10px;}
 .ncc-receipt-info-title h3, .ncc-receipt-info-title a { *display: inline/*IE6,7*/;}
 .ncc-receipt-info-title h3 strong { font: bold 18px/20px Verdana; color: #F30; margin-left: 4px;}
-.ncc-receipt-info.current_box { color: #534535; filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#3FFFF5CC', endColorstr='#3FFFF5CC');background:rgba(255,245,204,0.25); padding: 7px 17px; border: solid 3px #D93600;}
+.ncc-receipt-info.current_box {color: #534535;filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#3FFFF5CC', endColorstr='#3FFFF5CC');background: rgba(232, 232, 232, 0.25);padding: 7px 17px;border: solid 3px #D93600;}
 
 /* 表单提交样式 */
 .ncc-form-default { }
 .ncc-form-default dl { font-size: 0; *word-spacing:-1px/*IE6、7*/; line-height: 20px; clear: both; padding: 0; margin: 0; overflow: hidden;}
-.ncc-form-default dl:hover { background-color: #FFF5CC;}
+.ncc-form-default dl:hover {background-color: #efefef;}
 .ncc-form-default dl:hover .hint { color: #666;}
 .ncc-form-default dl.bottom { border-bottom-width: 0px;}
 .ncc-form-default dl dt { font-size: 12px; vertical-align: top; letter-spacing: normal; word-spacing: normal; text-align: right; display: inline-block; width: 15%; padding: 10px 1% 10px 0; margin: 0;}
@@ -84,7 +84,7 @@ label.error i { margin-right: 4px;}
 .ncc-candidate-items input[type="radio"], 
 .ncc-candidate-items .radio { margin: 0 5px;}
 .ncc-candidate-items label { line-height: 20px; display: inline-block;}
-.ncc-candidate-items span { line-height: 20px; vertical-align: middle; display: inline-block; height: 20px;}
+.ncc-candidate-items span {font-size: 14px;line-height: 20px;vertical-align: middle;display: inline-block;heig;height: 20px;}
 .ncc-candidate-items .true-name { font-weight: 600; margin-right: 10px;}
 .ncc-candidate-items .address { text-overflow: ellipsis; white-space: nowrap; max-width: 500px; margin-right: 20px; overflow: hidden;}
 .ncc-candidate-items .phone { margin-right: 20px;}

@@ -77,7 +77,12 @@ $.mockjax({
     responseText: {
       "errNum": 0,//0 为成功 1或其他为失败
       "retMsg": "success",
+<<<<<<< HEAD
       "retData": ""
+=======
+      "retData": [{id:1,name:"王某",province:"湖北省",city:"武汉市",county:"东西湖区",street:"三秀路士大夫士大夫",phone:11231231131,default:true},
+      ]
+>>>>>>> origin/dev
     }
   });
 
