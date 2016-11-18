@@ -111,298 +111,214 @@
 </div>
 
 <div class="goods-buy">
-   <div class="w">
-         <div class="goods-buy-title">
-            <h3>填写核对购物信息</h3>
-            <h5>请仔细核对填写收货、发票等信息，以确保物流快递及时准确投递。</h5>
-         </div>
-         <!-- 收货地址 -->
-         <div class="ncc-receipt-info" id="address-box">
-            <div class="ncc-receipt-info-title">
-               <h3>收货人信息</h3>
-               <a href="javascript:void(0)" class="edit" id="edit_reciver" >[修改]</a>
+  <div class="w">
+    <div class="goods-cart-title">
+      <h3>填写核对购物信息</h3>
+      <h5>请仔细核对填写收货、发票等信息，以确保物流快递及时准确投递。</h5>
+    </div>
+    <!-- 收货地址 -->
+    <div class="goods-cart-receipt-info" id="address-box">
+      <div class="goods-cart-receipt-info-title">
+         <h3>收货人信息</h3>
+         <a href="javascript:void(0)" class="edit" id="edit_reciver" >[修改]</a>
+      </div>
+      <div class="goods-cart-candidate-items">
+         <ul id="addr_list">
+            <li class="receive_add address_item">
+            <!--value = 默认地址id -->
+               <input  type="hidden" value="1" id="addr_check">
+               <span class="true-name">王某</span>
+               <span class="address">河北省   秦皇岛市  卢龙县&nbsp;士大夫士大夫</span>
+               <span class="phone">12312313111</span>
+            </li>
+         </ul>
+         <div id="add_addr_box" style="display: none;">
+            <div class="goods-cart-form-default">
+               <form method="POST" id="addr_form" action="index.php"  style="display: none;">
+                <input type="hidden" value="buy" name="act">
+                <input type="hidden" value="add_addr" name="op">
+                <input type="hidden" name="form_submit" value="ok">
+                <dl>
+                   <dt><i class="required">*</i>收货人姓名：</dt>
+                   <dd>
+                   <input type="text" class="text w100" name="true_name" maxlength="20" id="true_name" value="">
+                   </dd>
+                </dl>
+                <dl>
+                   <dt><i class="required">*</i>所在地区：</dt>
+                   <dd>
+                     <div id="element_id">
+                       <select class="province"></select>
+                       <select class="city"></select>
+                       <select class="area"></select>
+                     </div>
+                   </dd>
+                </dl>
+                <dl>
+                   <dt><i class="required">*</i>详细地址：</dt>
+                   <dd>
+                   <input type="text" class="text w500" name="address" id="address" maxlength="80" value="">
+                   <p class="hint">
+                      请填写真实地址，不需要重复填写所在地区
+                   </p>
+                   </dd>
+                </dl>
+                <dl>
+                   <dt><i class="required">*</i>手机号码：</dt>
+                   <dd>
+                   <input type="text" class="text w200" name="mob_phone" id="mob_phone" maxlength="15" value="">&nbsp;&nbsp;(或)&nbsp;固定电话：        
+                   <input type="text" class="text w200" id="tel_phone" name="tel_phone" maxlength="20" value="">
+                   </dd>
+                </dl>
+               </form>
             </div>
-            <div class="ncc-candidate-items">
-               <ul id="addr_list">
-                  <li class="receive_add address_item">
-                  <!--value = 默认地址id -->
-                     <input  type="hidden" value="1">
-                     <span class="true-name">王某</span>
-                     <span class="address">河北省   秦皇岛市  卢龙县&nbsp;士大夫士大夫</span>
-                     <span class="phone">12312313111</span>
-                  </li>
-               </ul>
-               <div id="add_addr_box" style="display: none;">
-                  <div class="ncc-form-default">
-                     <form method="POST" id="addr_form" action="index.php"  style="display: none;">
-                      <input type="hidden" value="buy" name="act">
-                      <input type="hidden" value="add_addr" name="op">
-                      <input type="hidden" name="form_submit" value="ok">
-                      <dl>
-                         <dt><i class="required">*</i>收货人姓名：</dt>
-                         <dd>
-                         <input type="text" class="text w100" name="true_name" maxlength="20" id="true_name" value="">
-                         </dd>
-                      </dl>
-                      <dl>
-                         <dt><i class="required">*</i>所在地区：</dt>
-                         <dd>
-                         <div id="region">
-                            <select class="w110">
-                               <option>-请选择-</option>
-                               <option value="1">北京</option>
-                               <option value="2">天津</option>
-                               <option value="3">河北省</option>
-                               <option value="4">山西省</option>
-                               <option value="5">内蒙古自治区</option>
-                               <option value="6">辽宁省</option>
-                               <option value="7">吉林省</option>
-                               <option value="8">黑龙江省</option>
-                               <option value="9">上海</option>
-                               <option value="10">江苏省</option>
-                               <option value="11">浙江省</option>
-                               <option value="12">安徽省</option>
-                               <option value="13">福建省</option>
-                               <option value="14">江西省</option>
-                               <option value="15">山东省</option>
-                               <option value="16">河南省</option>
-                               <option value="17">湖北省</option>
-                               <option value="18">湖南省</option>
-                               <option value="19">广东省</option>
-                               <option value="20">广西壮族自治区</option>
-                               <option value="21">海南省</option>
-                               <option value="22">重庆</option>
-                               <option value="23">四川省</option>
-                               <option value="24">贵州省</option>
-                               <option value="25">云南省</option>
-                               <option value="26">西藏自治区</option>
-                               <option value="27">陕西省</option>
-                               <option value="28">甘肃省</option>
-                               <option value="29">青海省</option>
-                               <option value="30">宁夏回族自治区</option>
-                               <option value="31">新疆维吾尔自治区</option>
-                               <option value="32">台湾省</option>
-                               <option value="33">香港特别行政区</option>
-                               <option value="34">澳门特别行政区</option>
-                               <option value="35">海外</option>
-                            </select>
-                            <input type="hidden" value="" name="city_id" id="city_id">
-                            <input type="hidden" name="area_id" id="area_id" class="area_ids">
-                            <input type="hidden" name="area_info" id="area_info" class="area_names">
-                         </div>
-                         </dd>
-                      </dl>
-                      <dl>
-                         <dt><i class="required">*</i>详细地址：</dt>
-                         <dd>
-                         <input type="text" class="text w500" name="address" id="address" maxlength="80" value="">
-                         <p class="hint">
-                            请填写真实地址，不需要重复填写所在地区
-                         </p>
-                         </dd>
-                      </dl>
-                      <dl>
-                         <dt><i class="required">*</i>手机号码：</dt>
-                         <dd>
-                         <input type="text" class="text w200" name="mob_phone" id="mob_phone" maxlength="15" value="">&nbsp;&nbsp;(或)&nbsp;固定电话：        
-                         <input type="text" class="text w200" id="tel_phone" name="tel_phone" maxlength="20" value="">
-                         </dd>
-                      </dl>
-                     </form>
-                  </div>
-                  <div class="hr16">
-                     <a id="addr_list_btn" class="ncc-btn ncc-btn-red" href="javascript:void(0);">保存收货人信息</a>
-                  </div>
-               </div>
+            <div class="hr16">
+               <a id="addr_list_btn" class="xx-btn xx-btn-red" href="javascript:void(0);">保存收货人信息</a>
             </div>
          </div>
-         <!-- 支付 -->
-         <div class="ncc-receipt-info" id="paymentCon">
-            <div class="ncc-receipt-info-title">
-               <h3>支付方式</h3>
-               <a href="javascript:void(0)" class="edit" id="edit_payment" >[修改]</a>
-            </div>
-            <div class="ncc-candidate-items" id="payment_type_default">
-               <ul>
-                  <input  type="hidden" value="online" id="payment_type" >
-                  <li>在线支付</li>
-               </ul>
-            </div>
-            <div id="payment_list" class="ncc-candidate-items" style="display:none">
-               <ul>
-                  <li>
-                  <input type="radio" value="online" name="payment_type" id="payment_type_online" checked >
-                  <label for="payment_type_online">在线支付</label>
-                  </li>
-                  <li>
-                  <input type="radio" value="offline" name="payment_type" id="payment_type_offline">
-                  <label for="payment_type_offline">线下支付</label>
-                  </li>
-               </ul>
-               <div class="hr16">
-                  <a href="javascript:void(0);" class="ncc-btn ncc-btn-red" id="payment_type_btn">保存支付方式</a>
-               </div>
-            </div>
+      </div>
+    </div>
+    <!-- 支付 -->
+    <div class="goods-cart-receipt-info" id="paymentCon">
+      <div class="goods-cart-receipt-info-title">
+         <h3>支付方式</h3>
+         <a href="javascript:void(0)" class="edit" id="edit_payment" >[修改]</a>
+      </div>
+      <div class="goods-cart-candidate-items" id="payment_type_default">
+         <ul>
+            <input  type="hidden" value="online" id="payment_type" >
+            <li>在线支付</li>
+         </ul>
+      </div>
+      <div id="payment_list" class="goods-cart-candidate-items" style="display:none">
+         <ul>
+            <li>
+            <input type="radio" value="online" name="payment_type" id="payment_type_online" checked >
+            <label for="payment_type_online">在线支付</label>
+            </li>
+            <li>
+            <input type="radio" value="offline" name="payment_type" id="payment_type_offline">
+            <label for="payment_type_offline">线下支付</label>
+            </li>
+         </ul>
+         <div class="hr16">
+            <a href="javascript:void(0);" class="xx-btn xx-btn-red" id="payment_type_btn">保存支付方式</a>
          </div>
-         <!-- 商品清单 -->
-         <form method="post" id="order_form" name="order_form" action="index.php">
-            <div class="ncc-receipt-info">
-               <div class="ncc-receipt-info-title">
-                  <h3>商品清单</h3>
-                  <a href="index.php?act=cart">返回购物车</a>
-               </div>
-               <table class="ncc-table-style">
-               <thead>
+      </div>
+    </div>
+    <!-- 商品清单 -->
+    <form method="post" id="order_form" name="order_form" action="index.php">
+      <div class="goods-cart-receipt-info">
+         <div class="goods-cart-receipt-info-title">
+            <h3>商品清单</h3>
+            <a href="index.php?act=cart">返回购物车</a>
+         </div>
+         <table class="goods-cart-table-style">
+            <thead>
                <tr>
-                  <th class="w20">
-                  </th>
-                  <th>
-                  </th>
-                  <th>
-                     商品
-                  </th>
-                  <th class="w120">
-                     单价(元)
-                  </th>
-                  <th class="w120">
-                     数量
-                  </th>
-                  <th class="w120">
-                     小计
-                  </th>
+                  <th class="w30"></th>
+                  <th></th>
+                  <th>商品</th>
+                  <th class="w120">单价(元)</th>
+                  <th class="w120">数量</th>
+                  <th class="w120">小计</th>
                </tr>
-               </thead>
-               <tbody>
+            </thead>
+            <tbody>
                <tr>
                   <th colspan="20">
-                     <i class="icon-home"></i><a target="_blank" href="http://localhost/shopnc/shop/index.php?act=show_store&amp;op=index&amp;store_id=1">官方店铺</a>
-                     <div class="store-sale">
-                                           
-                     </div>
+                     <a target="_blank" href="#">官方店铺</a>
                   </th>
                </tr>
-               <tr id="cart_item_1" class="shop-list ">
+               <tr id="cart_item_1" class="shop-list active">
                   <td>
                      <input type="hidden" value="1|44" name="cart_id[]">
                   </td>
-                  <td class="w60">
-                     <a href="http://localhost/shopnc/shop/index.php?act=goods&amp;op=index&amp;goods_id=43" target="_blank" class="ncc-goods-thumb"><img src="http://localhost/shopnc/data/upload/shop/store/goods/1/1_04418211211965600_60.jpg" alt="2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色"></a>
+                  <td>
+                     <a href="#" target="_blank" class="goods-cart-goods-thumb"><img src="../shop/images/temp/01_mid.jpg" alt="2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色"></a>
                   </td>
                   <td class="tl">
-                     <dl class="ncc-goods-info">
-                        <dt><a href="http://localhost/shopnc/shop/index.php?act=goods&amp;op=index&amp;goods_id=43" target="_blank">2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色</a></dt>
+                     <dl class="goods-cart-goods-info">
+                        <dt><a href="#" target="_blank">2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色</a></dt>
                         <dd>
                         </dd>
                      </dl>
                   </td>
-                  <td class="w120">
+                  <td >
                      ￥<em>179.00</em>
                   </td>
-                  <td class="w60">
+                  <td>
                      44
                   </td>
-                  <td class="w120">
-                               ￥<em id="item1_subtotal" nc_type="eachGoodsTotal">7876.00</em>
+                  <td>
+                     ￥<em id="item1_subtotal" nc_type="eachGoodsTotal">7876.00</em>
                   </td>
                </tr>
-               <!-- S bundling goods list -->
-               <!-- E bundling goods list -->
-               <tr id="cart_item_2" class="shop-list ">
+               <tr id="cart_item_2" class="shop-list active">
                   <td>
-                     <input type="hidden" value="2|1" name="cart_id[]">
+                     <input type="hidden" value="1|44" name="cart_id[]">
                   </td>
-                  <td class="w60">
-                     <a href="http://localhost/shopnc/shop/index.php?act=goods&amp;op=index&amp;goods_id=51" target="_blank" class="ncc-goods-thumb"><img src="http://localhost/shopnc/data/upload/shop/store/goods/1/1_04418242684128103_60.jpg" alt="春装 披肩式 超短款 针织 衫开衫 女装 青鸟 灰色"></a>
+                  <td>
+                     <a href="#" target="_blank" class="goods-cart-goods-thumb"><img src="../shop/images/temp/01_mid.jpg" alt="2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色"></a>
                   </td>
                   <td class="tl">
-                     <dl class="ncc-goods-info">
-                        <dt><a href="http://localhost/shopnc/shop/index.php?act=goods&amp;op=index&amp;goods_id=51" target="_blank">春装 披肩式 超短款 针织 衫开衫 女装 青鸟 灰色</a></dt>
+                     <dl class="goods-cart-goods-info">
+                        <dt><a href="#" target="_blank">2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色</a></dt>
                         <dd>
                         </dd>
                      </dl>
                   </td>
-                  <td class="w120">
-                     ￥<em>129.00</em>
+                  <td >
+                     ￥<em>179.00</em>
                   </td>
-                  <td class="w60">
-                     1
+                  <td>
+                     44
                   </td>
-                  <td class="w120">
-                               ￥<em id="item2_subtotal" nc_type="eachGoodsTotal">129.00</em>
+                  <td>
+                     ￥<em id="item1_subtotal" nc_type="eachGoodsTotal">7876.00</em>
                   </td>
                </tr>
-               <!-- S bundling goods list -->
-               <!-- E bundling goods list -->
-               <tr id="cart_item_3" class="shop-list ">
+               <tr id="cart_item_3" class="shop-list active">
                   <td>
-                     <input type="hidden" value="3|1" name="cart_id[]">
+                     <input type="hidden" value="1|44" name="cart_id[]">
                   </td>
-                  <td class="w60">
-                     <a href="http://localhost/shopnc/shop/index.php?act=goods&amp;op=index&amp;goods_id=50" target="_blank" class="ncc-goods-thumb"><img src="http://localhost/shopnc/data/upload/shop/store/goods/1/1_04418241398474746_60.jpg" alt="春装 披肩式 超短款 针织 衫开衫 女装 青鸟 橙色"></a>
+                  <td>
+                     <a href="#" target="_blank" class="goods-cart-goods-thumb"><img src="../shop/images/temp/01_mid.jpg" alt="2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色"></a>
                   </td>
                   <td class="tl">
-                     <dl class="ncc-goods-info">
-                        <dt><a href="http://localhost/shopnc/shop/index.php?act=goods&amp;op=index&amp;goods_id=50" target="_blank">春装 披肩式 超短款 针织 衫开衫 女装 青鸟 橙色</a></dt>
+                     <dl class="goods-cart-goods-info">
+                        <dt><a href="#" target="_blank">2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色</a></dt>
                         <dd>
                         </dd>
                      </dl>
                   </td>
-                  <td class="w120">
-                     ￥<em>129.00</em>
+                  <td >
+                     ￥<em>179.00</em>
                   </td>
-                  <td class="w60">
-                     1
-                  </td>
-                  <td class="w120">
-                               ￥<em id="item3_subtotal" nc_type="eachGoodsTotal">129.00</em>
-                  </td>
-               </tr>
-               <!-- S bundling goods list -->
-               <!-- E bundling goods list -->
-               <tr id="cart_item_4" class="shop-list ">
                   <td>
-                     <input type="hidden" value="4|1" name="cart_id[]">
+                     44
                   </td>
-                  <td class="w60">
-                     <a href="http://localhost/shopnc/shop/index.php?act=goods&amp;op=index&amp;goods_id=49" target="_blank" class="ncc-goods-thumb"><img src="http://localhost/shopnc/data/upload/shop/store/goods/1/1_04418240955916042_60.jpg" alt="春装 披肩式 超短款 针织 衫开衫 女装 青鸟 黑色"></a>
-                  </td>
-                  <td class="tl">
-                     <dl class="ncc-goods-info">
-                        <dt><a href="http://localhost/shopnc/shop/index.php?act=goods&amp;op=index&amp;goods_id=49" target="_blank">春装 披肩式 超短款 针织 衫开衫 女装 青鸟 黑色</a></dt>
-                        <dd>
-                        </dd>
-                     </dl>
-                  </td>
-                  <td class="w120">
-                     ￥<em>129.00</em>
-                  </td>
-                  <td class="w60">
-                     1
-                  </td>
-                  <td class="w120">
-                               ￥<em id="item4_subtotal" nc_type="eachGoodsTotal">129.00</em>
+                  <td>
+                     ￥<em id="item1_subtotal" nc_type="eachGoodsTotal">7876.00</em>
                   </td>
                </tr>
-               <!-- S bundling goods list -->
-               <!-- E bundling goods list -->
-               <!-- S zengpin list -->
-               <!-- E zengpin list -->
                <tr>
-                  <td class="w10">
+                  <td>
                   </td>
                   <td class="tl" colspan="2">
-                     买家留言：
-                     <input type="text" value="" class="text w340" name="pay_message[1]" maxlength="150">
-                &nbsp;
+                     <div style="text-align: left;">
+                        买家留言：
+                        <input type="text" style="width: 340px;" value="" class="text" name="pay_message[1]" maxlength="150">      
+                     </div>
                   </td>
                   <td class="tl" colspan="10">
-                     <div class="ncc-form-default">
+                     <div class="goods-cart-form-default">
                      </div>
                   </td>
                </tr>
                <tr>
                   <td class="tr" colspan="20">
-                     <div class="ncc-store-account">
+                     <div class="goods-cart-store-account">
                         <dl class="freight">
                            <dt>运费：</dt>
                            <dd>￥<em id="eachStoreFreight_1">0.00</em></dd>
@@ -411,8 +327,6 @@
                            <dt>商品金额：</dt>
                            <dd>￥<em id="eachStoreGoodsTotal_1">8263.00</em></dd>
                         </dl>
-                        <!-- S voucher list -->
-                        <!-- E voucher list -->
                         <dl class="total">
                            <dt>本店合计：</dt>
                            <dd>￥<em store_id="1" nc_type="eachStoreTotal">8263.00</em></dd>
@@ -420,52 +334,147 @@
                      </div>
                   </td>
                </tr>
-               <!-- S 预存款 -->
-               <!-- E 预存款 -->
-               </tbody>
-               <tfoot>
+            </tbody>
+            <tbody>
+               <tr>
+                  <th colspan="20">
+                     <a target="_blank" href="#">xxxxx官方店铺</a>
+                  </th>
+               </tr>
+               <tr id="cart_item_4" class="shop-list active">
+                  <td>
+                     <input type="hidden" value="1|44" name="cart_id[]">
+                  </td>
+                  <td>
+                     <a href="#" target="_blank" class="goods-cart-goods-thumb"><img src="../shop/images/temp/01_mid.jpg" alt="2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色"></a>
+                  </td>
+                  <td class="tl">
+                     <dl class="goods-cart-goods-info">
+                        <dt><a href="#" target="_blank">2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色</a></dt>
+                        <dd>
+                        </dd>
+                     </dl>
+                  </td>
+                  <td >
+                     ￥<em>179.00</em>
+                  </td>
+                  <td>
+                     44
+                  </td>
+                  <td>
+                     ￥<em id="item1_subtotal" nc_type="eachGoodsTotal">7876.00</em>
+                  </td>
+               </tr>
+               <tr id="cart_item_5" class="shop-list active">
+                  <td>
+                     <input type="hidden" value="1|44" name="cart_id[]">
+                  </td>
+                  <td>
+                     <a href="#" target="_blank" class="goods-cart-goods-thumb"><img src="../shop/images/temp/01_mid.jpg" alt="2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色"></a>
+                  </td>
+                  <td class="tl">
+                     <dl class="goods-cart-goods-info">
+                        <dt><a href="#" target="_blank">2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色</a></dt>
+                        <dd>
+                        </dd>
+                     </dl>
+                  </td>
+                  <td >
+                     ￥<em>179.00</em>
+                  </td>
+                  <td>
+                     44
+                  </td>
+                  <td>
+                     ￥<em id="item1_subtotal" nc_type="eachGoodsTotal">7876.00</em>
+                  </td>
+               </tr>
+               <tr id="cart_item_6" class="shop-list active">
+                  <td>
+                     <input type="hidden" value="1|44" name="cart_id[]">
+                  </td>
+                  <td>
+                     <a href="#" target="_blank" class="goods-cart-goods-thumb"><img src="../shop/images/temp/01_mid.jpg" alt="2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色"></a>
+                  </td>
+                  <td class="tl">
+                     <dl class="goods-cart-goods-info">
+                        <dt><a href="#" target="_blank">2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色</a></dt>
+                        <dd>
+                        </dd>
+                     </dl>
+                  </td>
+                  <td >
+                     ￥<em>179.00</em>
+                  </td>
+                  <td>
+                     44
+                  </td>
+                  <td>
+                     ￥<em id="item1_subtotal" nc_type="eachGoodsTotal">7876.00</em>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                  </td>
+                  <td class="tl" colspan="2">
+                     <div style="text-align: left;">
+                        买家留言：
+                        <input type="text" style="width: 340px;" value="" class="text" name="pay_message[1]" maxlength="150">      
+                     </div>
+                  </td>
+                  <td class="tl" colspan="10">
+                     <div class="goods-cart-form-default">
+                     </div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="tr" colspan="20">
+                     <div class="goods-cart-store-account">
+                        <dl class="freight">
+                           <dt>运费：</dt>
+                           <dd>￥<em id="eachStoreFreight_1">0.00</em></dd>
+                        </dl>
+                        <dl>
+                           <dt>商品金额：</dt>
+                           <dd>￥<em id="eachStoreGoodsTotal_1">8263.00</em></dd>
+                        </dl>
+                        <dl class="total">
+                           <dt>本店合计：</dt>
+                           <dd>￥<em store_id="1" nc_type="eachStoreTotal">8263.00</em></dd>
+                        </dl>
+                     </div>
+                  </td>
+               </tr>
+            </tbody>
+            <tfoot>
                <tr>
                   <td colspan="20">
-                     <div class="ncc-all-account">
+                     <div class="goods-cart-all-account">
                         订单总金额：￥<em id="orderTotal"></em>元
                      </div>
                   </td>
                </tr>
-               </tfoot>
-               </table>
-            </div>
-            <div class="ncc-bottom">
-               <a href="javascript:void(0)" id="submitOrder" class="ncc-btn fr" style="cursor: not-allowed;">提交订单</a>
-            </div>
-            <input value="buy" type="hidden" name="act">
-            <input value="buy_step2" type="hidden" name="op">
-            <!-- 来源于购物车标志 -->
-            <input value="1" type="hidden" name="ifcart">
-            <!-- offline/online -->
-            <input value="online" name="pay_name" id="pay_name" type="hidden">
-            <!-- 是否保存增值税发票判断标志 -->
-            <input value="ByKGt81uycvGzKiyz0MGUPrH3KduFTG4Bry" name="vat_hash" type="hidden">
-            <!-- 收货地址ID -->
-            <input value="1" name="address_id" id="address_id" type="hidden">
-            <!-- 城市ID(运费) -->
-            <input value="75" name="buy_city_id" id="buy_city_id" type="hidden">
-            <!-- 记录所选地区是否支持货到付款 第一个前端JS判断 第二个后端PHP判断 -->
-            <input value="0" id="allow_offpay" name="allow_offpay" type="hidden">
-            <input value="1wC8SBmAuS56GOmBZyF6kFQxCGTJMTHuT5x_1YY" id="offpay_hash" name="offpay_hash" type="hidden">
-            <!-- 默认使用的发票 -->
-            <input value="1" name="invoice_id" id="invoice_id" type="hidden">
-            <input value="http://localhost/shopnc/shop/index.php?act=cart" name="ref_url" type="hidden">
-         </form>
+            </tfoot>
+         </table>
+      </div>
+      <!-- 收货地址ID -->
+      <input value="1" name="address_id" id="address_id" type="hidden">
+      <!-- 支付方式 -->
+      <input value="online" name="pay_name" id="pay_name" type="hidden">
+      <div class="goods-cart-bottom">
+         <a href="javascript:void(0)" id="submitOrder" class="xx-btn xx-btn-red fr">提交订单</a>
+      </div>
+    </form>
 
 
 
-   </div>
+  </div>
 </div>
 
 <script id="temp_address_default" type="text/html">
    {{each retData as value i}}
    <li class="receive_add address_item">
-      <input  type="hidden" value="{{value.id}}">
+      <input  type="hidden" value="{{value.id}}" id="addr_check">
       <span class="true-name">{{value.name}}</span>
       <span class="address">{{value.province}}{{value.city}}{{value.county}}</span>
       <span class="phone">{{value.phone}}</span>
@@ -475,7 +484,7 @@
 <script id="temp_address" type="text/html">
    {{each retData as value i}}
    <li class="receive_add address_item">
-      <input  type="radio" class="radio" name="addr" id="addr_{{value.id}}" value="{{value.id}}"{{if value.default}}checked{{/if}}>
+      <input  type="radio" class="radio" name="addr" id="addr_{{value.id}}" value="{{value.id}}" {{if value.default}}checked{{/if}}>
       <label for="addr_{{value.id}}">
          <span class="true-name">{{value.name}}</span>
          <span class="address">{{value.province}}{{value.city}}{{value.county}}&nbsp;{{value.street}}</span>
@@ -605,16 +614,11 @@
     	<a href="#">首页</a>&nbsp;&nbsp;|&nbsp;&nbsp;网站备案编号：鄂ICP备14020050号-1&nbsp;&nbsp;|&nbsp;&nbsp;ICP经营许可证编号：鄂B2-20150042	
     </div>
 </footer>
-<script type="text/javascript">
-   // php 更换为下面的
-   // var SITEURL = "<?php echo SHOP_SITE_URL; ?>";
-   // var FREIGHT_HASH = "<?php echo $output['freight_hash'];?>";
-   // var ADDRESS_ID = "<?php echo $output['address_info']['address_id']";
-   // var ADDRESS_CITY_ID = "<?php echo $output['address_info']['city_id'];?>";
-   // var ADDRESS_AREA_ID = "<?php echo $output['address_info']['area_id'];?>";
-</script>
+
 <script type="text/javascript" src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
 <script type="text/javascript" src="./js/plugin/artTemplate.js"></script>
+<script type="text/javascript" src="./js/plugin/cxselect/jquery.cxselect.min.js"></script>
 <script type="text/javascript" src="./js/common.js"></script>
 <script type="text/javascript" src="./js/goods-buy1.js"></script>
 
