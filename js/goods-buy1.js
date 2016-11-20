@@ -3,65 +3,68 @@ $(function(){
 
   /////////////////////////////////////////todo
   // 地址省市选择
-  // $('#element_id').cxSelect({
-  //   url: './js/plugin/cxselect/cityData.min.js',
-  //   selects: ['province', 'city', 'area'],
-  //   emptyStyle: 'none'
-  // });
+  $("#selectCity").selectCity();
+
+  if(typeof(jQuery.validator.addMethod) == 'function'){//添加自动检测是否是最后一级地区
+    jQuery.validator.addMethod("checkarea", function(value, element) {
+      return this.optional(element) || (typeof(nc_a[value]) == 'undefined');//当数组不存在时确定选到最后
+    }, "请选择所在地区");
+  }
 
   $('#addr_form').validate({
       rules : {
-          true_name : {
-              required : true
-          },
-          area_id : {
-              required : true,
-              min   : 1,
-              checkarea:true
-          },
-          address : {
-              required : true
-          },
-          mob_phone : {
-              required : checkPhone,
-              minlength : 11,
-              maxlength : 11,
-              digits : true
-          },
-          tel_phone : {
-              required : checkPhone,
-              minlength : 6,
-              maxlength : 20
-          }
+        true_name : {
+         required : true
+        },
+        area_id : {
+          required : true,
+          min   : 1,
+          checkarea:true
+        },
+        address : {
+          required : true
+        },
+        mob_phone : {
+          required : checkPhone,
+          minlength : 11,
+          maxlength : 11,
+          digits : true
+        },
+        tel_phone : {
+          required : checkPhone,
+          minlength : 6,
+          maxlength : 20
+        }
       },
       messages : {
-          true_name : {
-              required : '<i class="icon-exclamation-sign"></i>必填项'
-          },
-          area_id : {
-              required : '<i class="icon-exclamation-sign"></i>必选项',
-              min  : '<i class="icon-exclamation-sign"></i>必选项',
-              checkarea : '<i class="icon-exclamation-sign"></i>必选项'
-          },
-          address : {
-              required : '<i class="icon-exclamation-sign"></i>必填项'
-          },
-          mob_phone : {
-              required : '<i class="icon-exclamation-sign"></i>必填项',
-              minlength: '<i class="icon-exclamation-sign"></i>必须为11位数字',
-              maxlength: '<i class="icon-exclamation-sign"></i>必须为11位数字',
-              digits : '<i class="icon-exclamation-sign"></i>必须为数字'
-          },
-          tel_phone : {
-              required : '<i class="icon-exclamation-sign"></i>必填项',
-              minlength: '<i class="icon-exclamation-sign"></i>最小6位数字',
-              maxlength: '<i class="icon-exclamation-sign"></i>最大20位数字'
-          }
+      true_name : {
+      required : '<i class="icon-exclamation-sign"></i>请填写收货人姓名'
       },
-      groups : {
+      area_id : {
+      required : '<i class="icon-exclamation-sign"></i>请选择所在地区',
+      min  : '<i class="icon-exclamation-sign"></i>请选择所在地区',
+      checkarea : '<i class="icon-exclamation-sign"></i>请选择所在地区'
+      },
+      address : {
+      required : '<i class="icon-exclamation-sign"></i>请填写收货人详细地址'
+      },
+      mob_phone : {
+      required : '<i class="icon-exclamation-sign"></i>手机号码或固定电话请至少填写一个',
+      minlength: '<i class="icon-exclamation-sign"></i>手机号码只能是11位',
+          maxlength: '<i class="icon-exclamation-sign"></i>手机号码只能是11位',
+          digits : '<i class="icon-exclamation-sign"></i>手机号码只能是11位'
+        },
+        tel_phone : {
+          required : '<i class="icon-exclamation-sign"></i>手机号码或固定电话请至少填写一个',
+          minlength: '<i class="icon-exclamation-sign"></i>',
+          maxlength: '<i class="icon-exclamation-sign"></i>'
+        }
+        },
+        groups : {
           phone:'mob_phone tel_phone'
-      }
+        }
   });
+
   function checkPhone(){
       return ($('input[name="mob_phone"]').val() == '' && $('input[name="tel_phone"]').val() == '');
   }
@@ -138,6 +141,8 @@ $(function(){
           if (!data.errNum) {
             alert("添加成功");
             render_temp_address_default(data);
+            //计算运费
+            showShippingPrice(city_id,area_id);
           }else{
             alert(data.retMsg)
           }
@@ -185,6 +190,56 @@ $(function(){
     $("#address_id").val($("#addr_check").val());
   }
 
+  //运费计算
+    //初始化运费
+    showShippingPrice();
+    //异步显示每个店铺运费 city_id计算运费area_id计算是否支持货到付款
+    function showShippingPrice() {
+      $('#buy_city_id').val('');
+      var freight_hash = $("#addr_list").attr("freight_hash");
+      var city_id = $("#addr_check").attr("city_id");
+      var area_id = $("#addr_check").attr("area_id");
+        $.post('/index.php?act=buy&op=change_addr', {'freight_hash':freight_hash,city_id:city_id,'area_id':area_id}, function(data){
+          if(data.errNum == 0) {
+              $('#buy_city_id').val(city_id);
+              // $('#allow_offpay').val(data.allow_offpay);
+              // $('#offpay_hash').val(data.offpay_hash);
+              var content = data.retData;
+              var amount = 0;
+                for(var i in content){
+                  $('#eachStoreFreight_'+i).html(G.number_format(content[i],2));
+                  amount = amount + parseFloat(content[i]);
+                }
+                calcOrder();
+          }
+
+        },'json');
+    }
+    /**
+     * 更新商品价格总计
+     */
+    function calcOrder() {
+        var allTotal = 0;
+        $('em[nc_type="eachStoreTotal"]').each(function(){
+            store_id = $(this).attr('store_id');
+            var eachTotal = 0;
+            if ($('#eachStoreFreight_'+store_id).length > 0) {
+              eachTotal += parseFloat($('#eachStoreFreight_'+store_id).html());
+          }
+            if ($('#eachStoreGoodsTotal_'+store_id).length > 0) {
+              eachTotal += parseFloat($('#eachStoreGoodsTotal_'+store_id).html());
+          }
+            if ($('#eachStoreManSong_'+store_id).length > 0) {
+              eachTotal += parseFloat($('#eachStoreManSong_'+store_id).html());
+          }
+            if ($('#eachStoreVoucher_'+store_id).length > 0) {
+              eachTotal += parseFloat($('#eachStoreVoucher_'+store_id).html());
+            }
+            $(this).html(G.number_format(eachTotal,2));
+            allTotal += eachTotal;
+        });
+        $('#orderTotal').html(G.number_format(allTotal,2));
+    }
 
 })
 

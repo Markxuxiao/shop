@@ -10,6 +10,7 @@
 <title>家盛时代-购物车-国际建材旗帜-武汉建材、家盛时代建材广场</title>
 <link rel="stylesheet" type="text/css" href="./css/base.css">
 <link rel="stylesheet" type="text/css" href="./css/common.css">
+<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="./css/goods-buy1.css">
 </head>
 <body>
@@ -123,10 +124,11 @@
          <a href="javascript:void(0)" class="edit" id="edit_reciver" >[修改]</a>
       </div>
       <div class="goods-cart-candidate-items">
-         <ul id="addr_list">
+      <!--下一行由php输出 <?php echo $output['freight_hash'];?> -->
+         <ul id="addr_list" freight_hash="sdfslsjfsdlfsldfkjlsfjhljl">
             <li class="receive_add address_item">
             <!--value = 默认地址id -->
-               <input  type="hidden" value="1" id="addr_check">
+               <input  type="hidden" value="1" id="addr_check" city_id="12" area_id="33">
                <span class="true-name">王某</span>
                <span class="address">河北省   秦皇岛市  卢龙县&nbsp;士大夫士大夫</span>
                <span class="phone">12312313111</span>
@@ -147,11 +149,13 @@
                 <dl>
                    <dt><i class="required">*</i>所在地区：</dt>
                    <dd>
-                     <div id="element_id">
-                       <select class="province"></select>
-                       <select class="city"></select>
-                       <select class="area"></select>
-                     </div>
+                    <div id="selectCity">
+                      <select>
+                      </select>
+                      <input type="hidden" name="city_id" id="city_id">
+                      <input type="hidden" name="area_id" id="area_id">
+                      <input type="hidden" name="area_info" id="area_info">
+                    </div>
                    </dd>
                 </dl>
                 <dl>
@@ -251,7 +255,7 @@
                      44
                   </td>
                   <td>
-                     ￥<em id="item1_subtotal" nc_type="eachGoodsTotal">7876.00</em>
+                     ￥<em id="item1_subtotal" Jsmark="eachGoodsTotal">7876.00</em>
                   </td>
                </tr>
                <tr id="cart_item_2" class="shop-list active">
@@ -275,7 +279,7 @@
                      44
                   </td>
                   <td>
-                     ￥<em id="item1_subtotal" nc_type="eachGoodsTotal">7876.00</em>
+                     ￥<em id="item1_subtotal" Jsmark="eachGoodsTotal">7876.00</em>
                   </td>
                </tr>
                <tr id="cart_item_3" class="shop-list active">
@@ -299,7 +303,7 @@
                      44
                   </td>
                   <td>
-                     ￥<em id="item1_subtotal" nc_type="eachGoodsTotal">7876.00</em>
+                     ￥<em id="item1_subtotal" Jsmark="eachGoodsTotal">7876.00</em>
                   </td>
                </tr>
                <tr>
@@ -362,7 +366,7 @@
                      44
                   </td>
                   <td>
-                     ￥<em id="item1_subtotal" nc_type="eachGoodsTotal">7876.00</em>
+                     ￥<em id="item1_subtotal" Jsmark="eachGoodsTotal">7876.00</em>
                   </td>
                </tr>
                <tr id="cart_item_5" class="shop-list active">
@@ -386,7 +390,7 @@
                      44
                   </td>
                   <td>
-                     ￥<em id="item1_subtotal" nc_type="eachGoodsTotal">7876.00</em>
+                     ￥<em id="item1_subtotal" Jsmark="eachGoodsTotal">7876.00</em>
                   </td>
                </tr>
                <tr id="cart_item_6" class="shop-list active">
@@ -410,7 +414,7 @@
                      44
                   </td>
                   <td>
-                     ￥<em id="item1_subtotal" nc_type="eachGoodsTotal">7876.00</em>
+                     ￥<em id="item1_subtotal" Jsmark="eachGoodsTotal">7876.00</em>
                   </td>
                </tr>
                <tr>
@@ -432,15 +436,15 @@
                      <div class="goods-cart-store-account">
                         <dl class="freight">
                            <dt>运费：</dt>
-                           <dd>￥<em id="eachStoreFreight_1">0.00</em></dd>
+                           <dd>￥<em id="eachStoreFreight_2">0.00</em></dd>
                         </dl>
                         <dl>
                            <dt>商品金额：</dt>
-                           <dd>￥<em id="eachStoreGoodsTotal_1">8263.00</em></dd>
+                           <dd>￥<em id="eachStoreGoodsTotal_2">8263.00</em></dd>
                         </dl>
                         <dl class="total">
                            <dt>本店合计：</dt>
-                           <dd>￥<em store_id="1" nc_type="eachStoreTotal">8263.00</em></dd>
+                           <dd>￥<em store_id="2" nc_type="eachStoreTotal">8263.00</em></dd>
                         </dl>
                      </div>
                   </td>
@@ -474,7 +478,7 @@
 <script id="temp_address_default" type="text/html">
    {{each retData as value i}}
    <li class="receive_add address_item">
-      <input  type="hidden" value="{{value.id}}" id="addr_check">
+      <input  type="hidden" value="{{value.id}}" id="addr_check" city_id={{value.city_id}} area_id={{value.area_id}} >
       <span class="true-name">{{value.name}}</span>
       <span class="address">{{value.province}}{{value.city}}{{value.county}}</span>
       <span class="phone">{{value.phone}}</span>
@@ -484,7 +488,7 @@
 <script id="temp_address" type="text/html">
    {{each retData as value i}}
    <li class="receive_add address_item">
-      <input  type="radio" class="radio" name="addr" id="addr_{{value.id}}" value="{{value.id}}" {{if value.default}}checked{{/if}}>
+      <input  type="radio" class="radio" name="addr" id=addr_{{value.id}} city_id={{value.city_id}} area_id={{value.area_id}}" value="{{value.id}}" {{if value.default}}checked{{/if}}>
       <label for="addr_{{value.id}}">
          <span class="true-name">{{value.name}}</span>
          <span class="address">{{value.province}}{{value.city}}{{value.county}}&nbsp;{{value.street}}</span>
@@ -616,9 +620,9 @@
 </footer>
 
 <script type="text/javascript" src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
-<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+<script type="text/javascript" src="./js/plugin/jquery.validation.min.js"></script>
 <script type="text/javascript" src="./js/plugin/artTemplate.js"></script>
-<script type="text/javascript" src="./js/plugin/cxselect/jquery.cxselect.min.js"></script>
+<script type="text/javascript" src="./js/plugin/selectCity/selectCity.js"></script>
 <script type="text/javascript" src="./js/common.js"></script>
 <script type="text/javascript" src="./js/goods-buy1.js"></script>
 
