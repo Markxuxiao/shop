@@ -1,3 +1,4 @@
+@charset "utf-8";
 /*.goods-tree start*/
 	.goods-tree {
 		width: 208px;
@@ -5,7 +6,7 @@
 		border:1px solid #ccc;
 	}
 	.goods-tree .hd {
-		font-family: "ÃƒÆ’Ã‚Â¥Ãƒâ€šÃ‚Â®ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¹ÃƒÆ’Ã‚Â¤Ãƒâ€šÃ‚Â½ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ";
+		font-family: "微软雅黑";
 		font-size: 12px;
 		padding-top: 8px;
 		padding-right: 5px;

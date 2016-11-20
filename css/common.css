@@ -15,6 +15,25 @@
     .margin-t30{
         margin-top: 30px;
     }
+    .w10 { width:10px;}
+    .w20 { width:20px;}
+    .w30 { width:30px;}
+    .w40 { width:40px !important;}
+    .w50 { width:50px !important;}
+    .w60 { width:60px !important;}
+    .w65 { width:65px !important;}
+    .w70 { width:70px !important;}
+    .w80 { width:80px !important;}
+    .w90 { width:90px;}
+    .w96 {width: 96px;}
+    .w100 { width:100px;}
+    .w110 { width:110px;}
+    .w120 { width:120px !important;}
+    .w130 { width:130px;}
+    .w150 { width:150px !important;}
+    .w160 { width:160px;}
+    .w180 { width:180px;}
+    .w200 { width:200px !important;}
     .G_linear {
         -moz-transition: all 0.2s linear;
         -webkit-transition: all 0.2s linear;
@@ -36,13 +55,15 @@
     a.xx-btn-orange { background-color: #FAA732; border-color: #E1962D #E1962D #BB7D25 #E1962D;}
     a.xx-btn-red { background-color: #DA4F49; border-color: #C44742 #C44742 #A33B37 #C44742;}
     a.xx-btn-black { background-color: #363636; border-color: #313131 #313131 #282828 #313131;}
+    a.xx-btn.disable {cursor: not-allowed;}
     a:hover.xx-btn-blue { background-color: #0044CC; border-color: #003DB7 #003DB7 #003399 #003DB7;}
     a:hover.xx-btn-acidblue { background-color: #2F96B4; border-color: #2A87A2 #2A87A2 #237087 #2A87A2;}
     a:hover.xx-btn-green { background-color: #51A351; border-color: #499249 #499249 #3D7A3D #499249;}
     a:hover.xx-btn-orange { background-color: #F89406; border-color: #DF8505 #DF8505 #BA6F04 #DF8505;}
     a:hover.xx-btn-red { background-color: #BD362F; border-color: #AA312A #AA312A #8E2823 #AA312A;}
     a:hover.xx-btn-black { background-color: #222222; border-color: #1F1F1F #1F1F1F #191919 #1F1F1F;}
-
+    a:hover.xx-btn.disable{ background-color: #F5F5F5; color: #777; border-color: #CFCFCF #CFCFCF #B3B3B3 #CFCFCF;}
+    
 /*common end*/
 
 /*.site-top start*/

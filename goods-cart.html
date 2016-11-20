@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta name="renderer" content="webkit"> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<meta name="keywords" content="家盛时代-首页-国际建材旗帜-武汉建材、家盛时代建材广场"> 
+<meta name="description" content="家盛时代-首页-国际建材旗帜-武汉建材、家盛时代建材广场"> 
+<meta name="author" content="Yjt"> 
+<meta name="copyright" content="Yjt Inc. 保留所有权利">
+<title>家盛时代-购物车-国际建材旗帜-武汉建材、家盛时代建材广场</title>
+<link rel="stylesheet" type="text/css" href="./css/base.css">
+<link rel="stylesheet" type="text/css" href="./css/common.css">
+<link rel="stylesheet" type="text/css" href="./css/goods-buy1.css">
+</head>
+<body>
+<!-- site-top -->
+<div class="site-top">
+	<div class="w">
+		<ul class="fl">	
+			<li>
+				<a class="site-top-manage" href="#">商家管理中心</a>
+			</li>
+		</ul>
+	    <ul class="fr">
+	        <li class="fore1" id="ttbar-login">
+	            <a href="javascript:login();" class="link-login style-red">请先登录</a>&nbsp;&nbsp;
+	            <a href="javascript:regist();" class="link-regist">免费注册</a></li>
+	        <li class="spacer"></li>
+	        <li class="dorpdown" id="ttbar-atte">
+	            <div class="dt cw-icon">
+	                <i class="ci-right">
+	                    <s>◇</s>
+	                </i>我的订单</div>
+	            <div class="dd dorpdown-layer"></div>
+	            <div class="dd dorpdown-layer">
+	                <div class="dd-spacer"></div>
+	                <div class="dd-inner" id="ttbar-atte-main">
+	                    <div class="dd-spacer"></div>
+	                    <div class="dd-inner">
+	                        <ul class="dorpdown-item">
+	                        	<li><a href="">待付款订单</a></li>
+	                        	<li><a href="">待确认订单</a></li>
+	                        	<li><a href="">待评价订单</a></li>
+	                        </ul>
+	                    </div>
+	                </div>
+	            </div>
+	        </li>
+	        <li class="spacer"></li>
+	        <li class="dorpdown" id="ttbar-serv">
+	            <div class="dt cw-icon">
+	                <i class="ci-right">
+	                    <s>◇</s>
+	                </i>客户服务</div>
+	            <div class="dd dorpdown-layer">
+	                <div class="dd-spacer"></div>
+	                <div class="dd-inner">
+	                    <ul class="dorpdown-item">
+	                    	<li><a href="">帮助</a></li>
+	                    	<li><a href="">客服</a></li>
+	                    	<li><a href="">支付</a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </li>
+	        <li class="spacer"></li>
+	        <li class="dorpdown" id="ttbar-navs">
+	            <div class="dt cw-icon">
+	                <i class="ci-right">
+	                    <s>◇</s>
+	                </i>内部系统</div>
+	            <div class="dd dorpdown-layer">
+	                <div class="dd-spacer"></div>
+	                <div class="dd-inner">
+	                    <ul class="dorpdown-item">
+	                    	<li><a href="">OA系统</a></li>
+	                    	<li><a href="">代客户注册</a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </li>
+	    </ul>
+	    <span class="clr"></span>
+	</div>
+</div>
+<!-- site-header -->
+<div class="site-header">
+	<div class="w">
+		<div class="logo">
+			<a href="index.html">
+				<img src="./images/common/201605231508457806ADMIN.png">
+			</a>
+		</div>
+		<div class="site-header-search">
+			<form >
+			    <input class="site-header-search-text" maxlength="60"  placeholder="请输入您要搜索的商品关键字" >
+			    <input class="site-header-search-button" value="搜索" type="submit">
+			</form>
+			<div class="site-header-search-keyword">
+				热门搜索：
+				<ul>
+					<li><a href="#">卫浴</a></li>
+					<li><a href="#">瓷砖</a></li>
+					<li><a href="#">家具</a></li>
+				</ul>
+			</div>
+
+		</div>
+		<span class="clr"></span>
+	</div>
+</div>
+
+<div class="goods-cart">
+   <div class="w ">
+      <div class="goods-cart-title">
+         <h3>我的购物车</h3>
+         <h5>查看购物车商品清单，增加减少商品数量，并勾选想要的商品进入下一步操作。</h5>
+      </div>
+      <form id="form_buy">
+
+         <div class="goods-cart-receipt-info">
+            <div class="goods-cart-receipt-info-title">
+               <h3>商品清单</h3>
+            </div>
+            <table class="goods-cart-table-style" Jsmark="table_cart">
+               <thead>
+                  <tr>
+                     <th class="w30">
+                        <label>
+                        <input type="checkbox" checked value="1" id="selectAll">
+                                
+                        </label>
+                     </th>
+                     <th style="text-align: left;">全选</th>
+                     <th>商品</th>
+                     <th class="w120">单价(元)</th>
+                     <th class="w120">数量</th>
+                     <th class="w120">小计</th>
+                     <th class="w80">操作</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <th colspan="20">
+                        <a target="_blank" href="#">官方店铺</a>
+                     </th>
+                  </tr>
+                  <!-- data-goods_id 商品id data-cart_id 购物车商品id， id="cart_item_1"等于cart_item_ + 购物车商品id -->
+                  <tr id="cart_item_1" nc_group="1" class="shop-list active" data-goods_id="12" data-cart_id="1" >
+                     <td >
+                        <input type="checkbox" checked Jsmark="eachGoodsCheckBox" value="1|1" id="cart_id1" name="cart_id[]">
+                     </td>
+                     <td>
+                        <a href="#" target="_blank" class="goods-cart-goods-thumb"><img src="../shop/images/temp/01_mid.jpg" alt="2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色"></a>
+                     </td>
+                     <td class="tl">
+                        <dl class="goods-cart-goods-info">
+                           <dt><a href="#" target="_blank">2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色</a></dt>
+                           <dd>
+                           </dd>
+                        </dl>
+                     </td>
+                     <td>
+                        ￥<em id="item1_price">100.00</em>
+                     </td>
+                     <td>
+                        <div class="quantity-form">
+                           <a href="JavaScript:void(0);" title="减少商品件数" class="decrement disabled">-</a>
+                           <input id="input_item_1" value="1" autocomplete="off" data-changed="1" type="text" class="itxt">
+                           <a href="JavaScript:void(0);" title="增加商品件数" class="increment">+</a>
+                        </div>
+                     </td>
+                     <td>
+                        ￥<em class="item_subtotal" Jsmark="eachGoodsTotal">100.00</em>
+                     </td>
+                     <td>
+                        <a href="javascript:void(0)" Jsmark="fav">收藏</a><br>
+                        <a href="javascript:void(0)" class="goods-cart-dropitem">删除</a>
+                     </td>
+                  </tr>
+                  <tr id="cart_item_2" nc_group="2" class="shop-list active"  data-goods_id="12" data-cart_id="2" >
+                     <td >
+                        <input type="checkbox" checked Jsmark="eachGoodsCheckBox" value="2|1" id="cart_id2" name="cart_id[]">
+                     </td>
+                     <td>
+                        <a href="#" target="_blank" class="goods-cart-goods-thumb"><img src="../shop/images/temp/01_mid.jpg" alt="2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色"></a>
+                     </td>
+                     <td class="tl">
+                        <dl class="goods-cart-goods-info">
+                           <dt><a href="#" target="_blank">2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色</a></dt>
+                           <dd>
+                           </dd>
+                        </dl>
+                     </td>
+                     <td>
+                        ￥<em id="item1_price">100.00</em>
+                     </td>
+                     <td>
+                        <div class="quantity-form">
+                           <a href="JavaScript:void(0);" title="减少商品件数" class="decrement disabled">-</a>
+                           <input id="input_item_1" value="1" autocomplete="off" data-changed="1" type="text" class="itxt">
+                           <a href="JavaScript:void(0);" title="增加商品件数" class="increment">+</a>
+                        </div>
+                     </td>
+                     <td class="w120">
+                                   ￥<em class="item_subtotal" Jsmark="eachGoodsTotal">100.00</em>
+                     </td>
+                     <td>
+                        <a href="javascript:void(0)" Jsmark="fav">收藏</a><br>
+                        <a href="javascript:void(0)" class="goods-cart-dropitem">删除</a>
+                     </td>
+                  </tr>
+                  <tr id="cart_item_3" nc_group="3" class="shop-list active" data-goods_id="12" data-cart_id="3" >
+                     <td >
+                        <input type="checkbox" checked Jsmark="eachGoodsCheckBox" value="3|1" id="cart_id3" name="cart_id[]">
+                     </td>
+                     <td>
+                        <a href="#" target="_blank" class="goods-cart-goods-thumb"><img src="../shop/images/temp/01_mid.jpg" alt="2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色"></a>
+                     </td>
+                     <td class="tl">
+                        <dl class="goods-cart-goods-info">
+                           <dt><a href="#" target="_blank">2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色</a></dt>
+                           <dd>
+                           </dd>
+                        </dl>
+                     </td>
+                     <td>
+                        ￥<em id="item1_price">100.00</em>
+                     </td>
+                     <td>
+                        <div class="quantity-form">
+                           <a href="JavaScript:void(0);" title="减少商品件数" class="decrement disabled">-</a>
+                           <input id="input_item_1" value="1" autocomplete="off" data-changed="1" type="text" class="itxt">
+                           <a href="JavaScript:void(0);" title="增加商品件数" class="increment">+</a>
+                        </div>
+                     </td>
+                     <td class="w120">
+                                   ￥<em class="item_subtotal" Jsmark="eachGoodsTotal">100.00</em>
+                     </td>
+                     <td>
+                        <a href="javascript:void(0)" Jsmark="fav">收藏</a><br>
+                        <a href="javascript:void(0)" class="goods-cart-dropitem">删除</a>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="tr" colspan="20">
+                        <div class="goods-cart-store-account">
+                           <dl>
+                              <dt>店铺合计：</dt>
+                              <dd>￥<em Jsmark="eachStoreTotal">100.00</em></dd>
+                           </dl>
+                        </div>
+                     </td>
+                  </tr>
+               </tbody>
+               <!-- S two store list -->
+               <tbody>
+                  <tr>
+                     <th colspan="20">
+                        <a target="_blank" href="#">XXXXX店铺</a>
+                     </th>
+                  </tr>
+              
+                  <tr id="cart_item_4" nc_group="4" class="shop-list active" data-goods_id="12" data-cart_id="4" >
+                     <td >
+                        <input type="checkbox" checked Jsmark="eachGoodsCheckBox" value="4|1" id="cart_id4" name="cart_id[]">
+                     </td>
+                     <td>
+                        <a href="#" target="_blank" class="goods-cart-goods-thumb"><img src="../shop/images/temp/01_mid.jpg" alt="2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色"></a>
+                     </td>
+                     <td class="tl">
+                        <dl class="goods-cart-goods-info">
+                           <dt><a href="#" target="_blank">2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色</a></dt>
+                           <dd>
+                           </dd>
+                        </dl>
+                     </td>
+                     <td>
+                        ￥<em id="item1_price">100.00</em>
+                     </td>
+                     <td>
+                        <div class="quantity-form">
+                           <a href="JavaScript:void(0);" title="减少商品件数" class="decrement disabled">-</a>
+                           <input id="input_item_1" value="1" autocomplete="off" data-changed="1" type="text" class="itxt">
+                           <a href="JavaScript:void(0);" title="增加商品件数" class="increment">+</a>
+                        </div>
+                     </td>
+                     <td class="w120">
+                                   ￥<em class="item_subtotal" Jsmark="eachGoodsTotal">100.00</em>
+                     </td>
+                     <td>
+                        <a href="javascript:void(0)" Jsmark="fav">收藏</a><br>
+                        <a href="javascript:void(0)" class="goods-cart-dropitem">删除</a>
+                     </td>
+                  </tr>
+                  <tr id="cart_item_5" nc_group="5" class="shop-list active" data-goods_id="12" data-cart_id="5" >
+                     <td >
+                        <input type="checkbox" checked Jsmark="eachGoodsCheckBox" value="5|1" id="cart_id5" name="cart_id[]">
+                     </td>
+                     <td>
+                        <a href="#" target="_blank" class="goods-cart-goods-thumb"><img src="../shop/images/temp/01_mid.jpg" alt="2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色"></a>
+                     </td>
+                     <td class="tl">
+                        <dl class="goods-cart-goods-info">
+                           <dt><a href="#" target="_blank">2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色</a></dt>
+                           <dd>
+                           </dd>
+                        </dl>
+                     </td>
+                     <td>
+                        ￥<em id="item1_price">100.00</em>
+                     </td>
+                     <td>
+                        <div class="quantity-form">
+                           <a href="JavaScript:void(0);" title="减少商品件数" class="decrement disabled">-</a>
+                           <input id="input_item_1" value="1" autocomplete="off" data-changed="1" type="text" class="itxt">
+                           <a href="JavaScript:void(0);" title="增加商品件数" class="increment">+</a>
+                        </div>
+                     </td>
+                     <td class="w120">
+                                   ￥<em class="item_subtotal" Jsmark="eachGoodsTotal">100.00</em>
+                     </td>
+                     <td>
+                        <a href="javascript:void(0)" Jsmark="fav">收藏</a><br>
+                        <a href="javascript:void(0)" class="goods-cart-dropitem">删除</a>
+                     </td>
+                  </tr>
+                  <tr id="cart_item_6" nc_group="6" class="shop-list active" data-goods_id="12" data-cart_id="6" >
+                     <td >
+                        <input type="checkbox" checked Jsmark="eachGoodsCheckBox" value="6|1" id="cart_id6" name="cart_id[]">
+                     </td>
+                     <td>
+                        <a href="#" target="_blank" class="goods-cart-goods-thumb"><img src="../shop/images/temp/01_mid.jpg" alt="2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色"></a>
+                     </td>
+                     <td class="tl">
+                        <dl class="goods-cart-goods-info">
+                           <dt><a href="#" target="_blank">2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色</a></dt>
+                           <dd>
+                           </dd>
+                        </dl>
+                     </td>
+                     <td>
+                        ￥<em id="item1_price">100.00</em>
+                     </td>
+                     <td>
+                        <div class="quantity-form">
+                           <a href="JavaScript:void(0);" title="减少商品件数" class="decrement disabled">-</a>
+                           <input id="input_item_1" value="1" autocomplete="off" data-changed="1" type="text" class="itxt">
+                           <a href="JavaScript:void(0);" title="增加商品件数" class="increment">+</a>
+                        </div>
+                     </td>
+                     <td class="w120">
+                                   ￥<em class="item_subtotal" Jsmark="eachGoodsTotal">100.00</em>
+                     </td>
+                     <td>
+                        <a href="javascript:void(0)" Jsmark="fav">收藏</a><br>
+                        <a href="javascript:void(0)" class="goods-cart-dropitem">删除</a>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="tr" colspan="20">
+                        <div class="goods-cart-store-account">
+                           <dl>
+                              <dt>店铺合计：</dt>
+                              <dd>￥<em Jsmark="eachStoreTotal">100.00</em></dd>
+                           </dl>
+                        </div>
+                     </td>
+                  </tr>
+               </tbody>
+               <tfoot>
+                  <tr>
+                     <td colspan="20">
+                        <div class="goods-cart-all-account">
+                           商品总价（不含运费）￥<em id="cartTotal">100.00</em>元
+                        </div>
+                     </td>
+                  </tr>
+               </tfoot>
+            </table>
+         </div>
+      </form>
+
+
+
+      <!-- 提交form_buy表单 checkbox的值 如 1|1 商品id|数量-->
+      <div class="goods-cart-bottom">
+         <a id="next_submit" href="javascript:void(0)" class="xx-btn xx-btn-red fr"></i>去结算</a>
+      </div>
+
+   </div>
+</div>  
+
+<!-- site-foot -->
+<footer class="margin-t30">
+	<div class="site-foot">
+		<div class="w">
+		    <ul>
+		        <li>
+		            <dl>
+		                <dt>帮助中心</dt>
+		                <dd>
+		                    <a href="#" title="如何注册成为会员">如何注册成为会员</a></dd>
+		                <dd>
+		                    <a href="#" title="忘记密码">忘记密码</a></dd>
+		                <dd>
+		                    <a href="#" title="搜索功能">搜索功能</a></dd>
+		                <dd>
+		                    <a href="#" title="购买和定制商品">购买和定制商品</a></dd>
+		            </dl>
+		        </li>
+		        <li>
+		            <dl>
+		                <dt>店主之家</dt>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-46.html" title="我要开店">我要开店</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-47.html" title="管理商品">管理商品</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-48.html" title="我要推广">我要推广</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-49.html" title="会员等级">会员等级</a></dd>
+		            </dl>
+		        </li>
+		        <li>
+		            <dl>
+		                <dt>支付中心</dt>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-50.html" title="支付方式">支付方式</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-51.html" title="关于积分">关于积分</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-52.html" title="如何提现">如何提现</a></dd>
+		            </dl>
+		        </li>
+		        <li>
+		            <dl>
+		                <dt>客服中心</dt>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-53.html" title="联系我们">联系我们</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-54.html" title="售前咨询">售前咨询</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-55.html" title="如何投诉">如何投诉</a></dd>
+		            </dl>
+		        </li>
+		        <li>
+		            <dl>
+		                <dt>友情链接</dt>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-56.html" title="合作及洽谈">合作及洽谈</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-57.html" title="本站链接代码">本站链接代码</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-58.html" title="销售联盟">销售联盟</a></dd>
+		            </dl>
+		        </li>
+		        <li>
+		            <dl>
+		                <dt>关于我们</dt>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-59.html" title="公司简介">公司简介</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-60.html" title="诚聘英才">诚聘英才</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-61.html" title="法律声明">法律声明</a></dd>
+		            </dl>
+		        </li>
+		    </ul>
+		</div>
+	</div>
+
+    <div class="w " style="text-align: center;margin:5px auto;">
+    	<a href="#">首页</a>&nbsp;&nbsp;|&nbsp;&nbsp;网站备案编号：鄂ICP备14020050号-1&nbsp;&nbsp;|&nbsp;&nbsp;ICP经营许可证编号：鄂B2-20150042	
+    </div>
+</footer>
+
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+
+<script type="text/javascript" src="./js/common.js"></script>
+<script type="text/javascript" src="./js/goods-cart.js"></script>
+
+<!-- 纯前端模拟接口用 php开发删除 start-->
+<script src="http://cdn.bootcss.com/jquery-mockjax/1.6.2/jquery.mockjax.min.js"></script>
+<script type="text/javascript" src="./mockjax_data.js"></script>
+<!-- 纯前端模拟接口用 php开发删除 start-->
+</body>
+</html>
