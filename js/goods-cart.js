@@ -7,6 +7,7 @@ $(function(){
      */
     function decrease_quantity(){
         var item = $(this).next();
+        item.attr('data-changed',item.val());
         var orig = Number(item.val());
         if(orig > 1){
             item.val(orig - 1);
@@ -20,6 +21,7 @@ $(function(){
      */
     function add_quantity(){
         var item = $(this).prev();
+        item.attr('data-changed',item.val());
         var orig = Number(item.val());
         item.val(orig + 1);
         item.keyup();

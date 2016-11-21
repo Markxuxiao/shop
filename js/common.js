@@ -150,6 +150,23 @@ $(function() {
             $(".dorpdown-layer").children(".item-sub").eq(index).show();
         }
     )
-
+    //如果layer弹窗插件存在则显示ajax加载动画
+    if(layer){
+        $.ajaxSetup({
+            timeout : 5000, //超时时间设置，单位毫秒
+            beforeSend:function(){
+                layer.load();
+            },
+            complete : function(XMLHttpRequest,status){ //请求完成后最终执行参数
+                    layer.closeAll('loading');
+                    if(status=='timeout'){//超时,status还有success,error等值的情况
+                        layer.msg('网络超时！');
+                    };
+                    if(status=='error'){
+                        layer.msg('请求失败！');
+                    }     
+            }
+        });
+    }
 })
         

@@ -1,7 +1,6 @@
 //UI
 $(function(){
 
-  /////////////////////////////////////////todo
   // 地址省市选择
   $("#selectCity").selectCity();
 
@@ -114,7 +113,7 @@ $(function(){
       error: function (err) {alert(err.responseText);},
       success: function (data){
         if (!data.errNum) {
-          alert("删除成功");
+          layer.msg("删除成功");
           render_temp_address(data);
         }else{
           alert(data.retMsg)
@@ -139,10 +138,10 @@ $(function(){
         error: function (err) {alert(err.responseText);},
         success: function (data){
           if (!data.errNum) {
-            alert("添加成功");
+            layer.msg("添加成功");
             render_temp_address_default(data);
             //计算运费
-            showShippingPrice(city_id,area_id);
+            showShippingPrice($('#city_id').val(),$('#area_id').val());
           }else{
             alert(data.retMsg)
           }
