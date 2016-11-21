@@ -2,6 +2,9 @@
 // php开发时不需要加载此文件
 
 //commen.js使用以下数据
+  //获取购物车信息
+
+
 
   //添加商品到购物车
   $.mockjax({
@@ -15,9 +18,15 @@
 
   //收藏商品
   $.mockjax({
-    url: "index.php?act=member_favorites&op=favoritesgoods"
+    url: "/index.php?act=cart&op=ajax_load"
     ,responseText : {
-            done: true,
+            cart_all_price:12312.12,
+            cart_goods_num:5, 
+            list:[
+              {cart_id:1,goods_id:1,goods_url:"./goods-p.html",goods_name:"2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色",goods_image:"../shop/images/temp/01_mid.jpg",goods_price:111.23,goods_num:14}
+              ,{cart_id:2,goods_id:2,goods_url:"./goods-p.html",goods_name:"2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色",goods_image:"../shop/images/temp/01_mid.jpg",goods_price:111.23,goods_num:14}
+              ,{cart_id:3,goods_id:3,goods_url:"./goods-p.html",goods_name:"2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色",goods_image:"../shop/images/temp/01_mid.jpg",goods_price:111.23,goods_num:14}
+            ],
             msg:"操作成功"
     }
   });

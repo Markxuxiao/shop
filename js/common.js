@@ -77,37 +77,38 @@ var G = {
     }
     // 头部加载购物车信息
     ,load_cart_information:function(){
-        alert("load_cart_information")
-        // $.getJSON(SITEURL+'/index.php?act=cart&op=ajax_load&callback=?', function(result){
-        //     var obj = $('.head-user-menu .my-cart');
-        //     if(result){
-        //         var html = '';
-        //         if(result.cart_goods_num >0){
-        //             for (var i = 0; i < result['list'].length; i++){
-        //                 var goods = result['list'][i];
-        //                 html+='<dl id="cart_item_'+goods['goods_id']+'"><dt class="goods-name"><a href="'+goods['goods_url']+'">'+goods['goods_name']+'</a></dt>';
-        //                 html+='<dd class="goods-thumb"><a href="'+goods['goods_url']+'" title="'+goods['goods_name']+'"><img src="'+goods['goods_image']+'"></a></dd>';
-        //                 html+='<dd class="goods-sales"></dd>';
-        //                 html+='<dd class="goods-price"><em>&yen;'+goods['goods_price']+'×'+goods['goods_num']+'</dd>';
-        //                 html+='<dd class="handle"><a href="javascript:void(0);" onClick="drop_topcart_item('+goods['cart_id']+','+goods['goods_id']+');">删除</a></dd>';
-        //                 html+="</dl>";
-        //             }
-        //             obj.find('.incart-goods').html(html);
-        //             obj.find('.incart-goods-box').perfectScrollbar('destroy');
-        //             obj.find('.incart-goods-box').perfectScrollbar();
-        //             html = "共<i>"+result.cart_goods_num+"</i>种商品&nbsp;&nbsp;总计金额：<em>&yen;"+result.cart_all_price+"</em>";
-        //             obj.find('.total-price').html(html);
-        //             if (obj.find('.addcart-goods-num').size()==0) {
-        //                 obj.append('<div class="addcart-goods-num">0</div>');
-        //             }
-        //             obj.find('.addcart-goods-num').html(result.cart_goods_num);
-        //       } else {
-        //         html="<div class='no-order'><span>您的购物车中暂无商品，赶快选择心爱的商品吧！</span></div>";
-        //         obj.find('.incart-goods').html(html);
-        //         obj.find('.total-price').html('');
-        //       }
-        //    }
-        // });
+        $.getJSON('/index.php?act=cart&op=ajax_load', function(result){
+            var obj = $('#settleup').find(".dorpdown-layer");
+            var html = '';
+            if(result){
+                if(result.cart_goods_num >0){
+                    $('#shopping-amount').html(result.cart_goods_num);
+                    html+='<div id="settleup-content"><div class="smt"><h4 class="fl">最新加入的商品</h4></div><div class="smc"><ul>';
+                    for (var i = 0; i < result['list'].length; i++){
+                        var goods = result['list'][i];
+                        html+='<li>'
+                        html+='<div class="p-img fl">'
+                        html+='<a href="'+goods['goods_url']+'" target="_blank"><img src="'+goods['goods_image']+'" width="50" height="50" alt=""></a>'
+                        html+='</div>'
+                        html+='<div class="p-name fl">'
+                        html+='<a href="'+goods['goods_url']+'" title="'+goods['goods_name']+'" target="_blank">'+goods['goods_name']+'</a>'
+                        html+='</div>'
+                        html+='<div class="p-detail fr ar">'
+                        html+='<span class="p-price"><strong>￥'+goods['goods_price']+'</strong>×'+goods['goods_num']+'</span><br>'
+                        html+='<a class="delete" data-goods_id="'+goods['goods_id']+'" data-cart_id="'+goods['cart_id']+'" data-type="RemoveProduct" href="javascript:void(0)">删除</a>'
+                        html+='</div>'
+                        html+='</li>';
+                    }
+                    html+='</ul></div><div class="smb ar"><div class="p-total">共<b>'+result.cart_goods_num+'</b>件商品　共计<strong>￥ '+result.cart_all_price+'</strong></div><a href="./goods-cart.html" title="去购物车" id="btn-payforgoods">去购物车</a></div></div>';
+                    obj.html(html);
+                    $('#shopping-amount').html("0");
+              } else {
+                html='<div class="nogoods">购物车中还没有商品，赶紧选购吧！</div>';
+                $('#shopping-amount').html("0");
+                obj.html(html);
+              }
+           }
+        });
     }
     /** 
     * @description 收藏商品
@@ -150,8 +151,20 @@ $(function() {
             $(".dorpdown-layer").children(".item-sub").eq(index).show();
         }
     )
+    //购物车
+    $("#settleup").hover(
+        function() {
+
+            $(this).addClass("hover");
+            G.load_cart_information();
+        }, 
+        function() {
+            $(this).removeClass("hover");
+
+        }
+    );
     //如果layer弹窗插件存在则显示ajax加载动画
-    if(layer){
+    if(typeof layer !== "undefined"){
         $.ajaxSetup({
             timeout : 5000, //超时时间设置，单位毫秒
             beforeSend:function(){

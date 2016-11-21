@@ -40,7 +40,7 @@
         -o-transition: all 0.2s linear;
         transition: all 0.2s linear;
     }
-    /* 按钮
+    /* æŒ‰é’®
     -------------------------------------------*/
     a.xx-btn-mini { font: normal 12px/20px "Microsoft Yahei"; color: #777; background-color: #F5F5F5; text-align: center; vertical-align: middle; display: inline-block; height: 20px; padding: 0 10px; margin-right: 2px; border-style: solid; border-width: 1px; border-color: #DCDCDC #DCDCDC #B3B3B3 #DCDCDC; cursor: pointer;}
     a:hover.xx-btn-mini { text-decoration: none; color: #333; background-color: #E6E6E6;border-color: #CFCFCF #CFCFCF #B3B3B3 #CFCFCF;}
@@ -196,7 +196,7 @@
     }
 
     .site-top #ttbar-login .link-login {
-        font-family: "verdana,ÃƒÂ§Ã¢â€šÂ¬Ã‚Â¹ÃƒÂ¥Ã‚Â¬Ã‚Â©ÃƒÂ§Ã‚Â¶Ã¢â‚¬Â¹"
+        font-family: "verdana,ÃƒÆ’Ã‚Â§ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¹ÃƒÆ’Ã‚Â¥Ãƒâ€šÃ‚Â¬Ãƒâ€šÃ‚Â©ÃƒÆ’Ã‚Â§Ãƒâ€šÃ‚Â¶ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¹"
     }
 
 
@@ -333,6 +333,7 @@
         height: 36px;
         margin-top: 25px;
         margin-right: 65px;
+        position: relative;
     }
     .site-header-btn .shopcart {
         width: 75px;
@@ -345,6 +346,7 @@
         position: relative;
         cursor: default;
         zoom: 1;
+        z-index: 1;
     }	
 
     .site-header-btn .shopcart-icon-right {
@@ -371,6 +373,129 @@
         background: url(../images/common/shopcart.png) 0 -58px no-repeat;
         _background: url(../images/common/shopcart.png) 0 -91px no-repeat;
     }
+    .site-header-btn .ci-count {
+        position: absolute;
+        top: -4px;
+        left: 104px;
+        display: inline-block;
+        padding: 1px 2px;
+        font-size: 12px;
+        line-height: 12px;
+        color: #fff;
+        background-color: #c81623;
+        border-radius: 7px 7px 7px 0;
+        min-width: 12px;
+        text-align: center;
+    }
+    #settleup.hover .shopcart {
+        padding-bottom: 2px;
+        border-color: #ccc;
+        border-bottom: none;
+        background-color: #fff;
+    }
+
+    #settleup .dorpdown-layer {
+        top: 36px;
+        right: -41px;
+        width: 308px;
+        z-index: 0;
+    }
+    #settleup .dorpdown-layer {
+        display: none;
+        position: absolute;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        -moz-box-shadow: 1px 2px 1px rgba(0,0,0,.1);
+        box-shadow: 1px 2px 1px rgba(0,0,0,.1);
+    }
+    #settleup.hover .dorpdown-layer {
+        display: block;
+    }
+
+    #settleup .prompt {
+        padding: 10px 15px;
+    }
+    #settleup .nogoods {
+        text-align: center;
+        height: 49px;
+        line-height: 49px;
+        color: #999;
+    }
+
+    #settleup-content .smt {
+        height: 25px;
+        padding: 6px 8px;
+        line-height: 25px;
+    }
+    #settleup-content .smc {
+        background: #fff;
+        height: auto!important;
+        height: 344px;
+        max-height: 344px;
+        overflow-y: auto;
+    }
+    #settleup-content {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        background: #fff;
+    }
+    #settleup-content ul {
+        margin-top: -1px;
+    }
+    #settleup-content li {
+        padding: 8px 10px;
+        border-top: 1px dotted #ccc;
+        overflow: hidden;
+        line-height: 17px;
+        vertical-align: bottom;
+    }
+    #settleup-content .p-img {
+        float: left;
+        width: 50px;
+        height: 50px;
+        border: 1px solid #ddd;
+        padding: 0;
+        margin-right: 10px;
+        font-size: 0;
+    }
+    #settleup-content .p-name {
+        float: left;
+        width: 120px;
+        height: 52px;
+    }
+    #settleup-content .p-detail {
+        float: right;
+        text-align: right;
+    }
+    #settleup-content .p-price {
+        font-weight: 700;
+    }
+    #settleup-content .smb {
+        padding: 8px;
+        background: #F5F5F5;
+        _height: 45px;
+        _padding-top: 15px;
+        _padding-bottom: 0;
+    }
+    #settleup-content .smb .p-total {
+        float: left;
+        line-height: 29px;
+    }
+    #settleup-content .smb a {
+        float: right;
+        height: 29px;
+        padding: 0 10px;
+        background: #E4393C;
+        color: #fff;
+        text-align: center;
+        font-weight: 700;
+        line-height: 29px;
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+    }
+
 /*.site-header end*/
 
 /*.site-nav start*/
@@ -541,14 +666,14 @@
 .site-crumbs-bar .w{
     height: 22px;
     padding: 8px 0;
-    *word-spacing: -1px/*IE6、7*/;
+    *word-spacing: -1px/*IE6ã€7*/;
     text-align: left;
 }
 
 .site-crumbs-bar span {
     font-size: 12px;
     line-height: 20px;
-    font-family: "宋体";
+    font-family: "å®‹ä½“";
     color: #9c9c9c;
     display: inline-block;
     *display: inline/* IE6,7*/;

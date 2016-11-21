@@ -141,7 +141,7 @@ $(function(){
             layer.msg("添加成功");
             render_temp_address_default(data);
             //计算运费
-            showShippingPrice($('#city_id').val(),$('#area_id').val());
+            showShippingPrice();
           }else{
             alert(data.retMsg)
           }
