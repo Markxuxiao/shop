@@ -75,6 +75,35 @@ var G = {
             }
         });
     }
+    /** 
+    * @description 头部删除购物车信息
+    * @param {Number} goods_id 登录前使用goods_id
+    * @param {Number} cart_id 登录后使用cart_id
+    * @return
+    */ 
+    ,drop_topcart_item:function(cart_id,goods_id){
+        // var url = 'index.php?act=cart&op=del&cart_id='+cart_id+'&goods_id='+goods_id+'&callback=?';
+        var url = 'index.php?act=cart&op=del'
+        $.getJSON(url, function(result){
+            if(result.state){
+                var obj = $('#settleup').find(".dorpdown-layer");
+                var html = '';
+                //删除成功
+                if(result.quantity == 0){
+                    html='<div class="nogoods">购物车中还没有商品，赶紧选购吧！</div>';
+                    $('#shopping-amount').html("0");
+                    obj.html(html);
+                }else{
+                    $('#shopping-amount').html(result.quantity);
+                    $('#cart_item_' + goods_id).remove();
+                    html='<div class="p-total">共<b>'+result.quantity+'</b>件商品　共计<strong>￥ '+result.amount+'</strong></div><a href="./goods-cart.html" title="去购物车" id="btn-payforgoods">去购物车</a>';
+                    obj.find('.smb').html(html);
+                }
+            }else{
+                alert(result.msg);
+            }
+        });
+    }
     // 头部加载购物车信息
     ,load_cart_information:function(){
         $.getJSON('/index.php?act=cart&op=ajax_load', function(result){
@@ -86,7 +115,7 @@ var G = {
                     html+='<div id="settleup-content"><div class="smt"><h4 class="fl">最新加入的商品</h4></div><div class="smc"><ul>';
                     for (var i = 0; i < result['list'].length; i++){
                         var goods = result['list'][i];
-                        html+='<li>'
+                        html+='<li id="cart_item_'+goods['goods_id']+'" >'
                         html+='<div class="p-img fl">'
                         html+='<a href="'+goods['goods_url']+'" target="_blank"><img src="'+goods['goods_image']+'" width="50" height="50" alt=""></a>'
                         html+='</div>'
@@ -101,7 +130,7 @@ var G = {
                     }
                     html+='</ul></div><div class="smb ar"><div class="p-total">共<b>'+result.cart_goods_num+'</b>件商品　共计<strong>￥ '+result.cart_all_price+'</strong></div><a href="./goods-cart.html" title="去购物车" id="btn-payforgoods">去购物车</a></div></div>';
                     obj.html(html);
-                    $('#shopping-amount').html("0");
+                    $('#shopping-amount').html(result.cart_goods_num);
               } else {
                 html='<div class="nogoods">购物车中还没有商品，赶紧选购吧！</div>';
                 $('#shopping-amount').html("0");
@@ -150,19 +179,29 @@ $(function() {
             $(".dorpdown-layer").children(".item-sub").hide();
             $(".dorpdown-layer").children(".item-sub").eq(index).show();
         }
-    )
-    //购物车
+    );
+
+
+    //购物车展开
     $("#settleup").hover(
         function() {
-
             $(this).addClass("hover");
-            G.load_cart_information();
         }, 
         function() {
             $(this).removeClass("hover");
-
         }
     );
+    $("#settleup").mouseover(function(){// 运行加载购物车
+            G.load_cart_information();
+            $(this).unbind('mouseover');
+        });
+     
+    //购物车删除按钮
+    $("#settleup").on('click','[data-type="RemoveProduct"]',function(){
+        var goods_id = $(this).data("goods_id");
+        G.drop_topcart_item("",goods_id);
+    });
+
     //如果layer弹窗插件存在则显示ajax加载动画
     if(typeof layer !== "undefined"){
         $.ajaxSetup({

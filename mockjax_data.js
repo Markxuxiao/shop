@@ -16,12 +16,12 @@
   });
 
 
-  //收藏商品
+  //加载购物车信息
   $.mockjax({
     url: "/index.php?act=cart&op=ajax_load"
     ,responseText : {
             cart_all_price:12312.12,
-            cart_goods_num:5, 
+            cart_goods_num:3, 
             list:[
               {cart_id:1,goods_id:1,goods_url:"./goods-p.html",goods_name:"2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色",goods_image:"../shop/images/temp/01_mid.jpg",goods_price:111.23,goods_num:14}
               ,{cart_id:2,goods_id:2,goods_url:"./goods-p.html",goods_name:"2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色",goods_image:"../shop/images/temp/01_mid.jpg",goods_price:111.23,goods_num:14}
@@ -31,7 +31,16 @@
     }
   });
 
-
+  //删除购物车信息
+  $.mockjax({
+    url: "index.php?act=cart&op=del"
+    ,responseText : {
+            state:"success",
+            amount:112.12,
+            quantity:2, 
+            msg:"操作成功"
+    }
+  });
 
 
 //goods-cart.js使用以下数据
