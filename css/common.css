@@ -690,6 +690,7 @@
     }
     .site-foot li{
         display: inline-block;
+        float: left;
         margin-left: 5px;
         margin-bottom: 10px;
         width: 16%;

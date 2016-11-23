@@ -128,7 +128,7 @@ $(function(){
       event.preventDefault();
       // 验证表单
       if(!$('#addr_form').valid()) return false;
-      var data = $('#addr_form').serialize();
+      var data = $('#addr_form').serializeJson();
       console.log(data);
       $.ajax({
         type: "POST",

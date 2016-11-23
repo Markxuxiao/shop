@@ -1,4 +1,5 @@
-﻿
+/*Ã¦Â³Â¨Ã¥â€ Å’Ã§â„¢Â»Ã¥Â½â€¢Ã¦Â¨Â¡Ã¥Ââ€”Ã¥â€¦Â±Ã§â€Â¨*/
+
 /*common start*/
     .w {
         text-decoration: none;
@@ -104,19 +105,12 @@ input:-webkit-autofill {
     width: 650px;
 }
 .login-in .login-box {
-        width: 100%;
-        max-width: 360px;
-        height: 430px;
-        position: absolute;
-        margin-top: 20px;
+        width: 360px;
         margin-left: 0px;
+        margin: 0 auto;
+        f8;
         background: #f8f8f8;
-        right: 10%;
         padding: 10px 20px;
-        top: 30px;
-        -webkit-box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        -webkit-transform: translate3d(0, -2px, 0);
 }
 .login-in h2{
     text-align: center;

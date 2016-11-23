@@ -37,7 +37,7 @@
     ,responseText : {
             state:"success",
             amount:112.12,
-            quantity:2, 
+            quantity:1, 
             msg:"操作成功"
     }
   });
@@ -109,3 +109,13 @@
       "retData": {"1":11,"2":12.3}//有几个店铺返回几个运费 店铺:运费
     }
   });
+
+//login2.js使用以下数据
+
+$.mockjax({
+  url: "/retData/login2",
+  responseText: {
+    "errNum": 0,//0 为成功 1为失败
+    "retMsg": "用户名或密码错误！"
+  }
+});

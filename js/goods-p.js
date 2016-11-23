@@ -45,8 +45,17 @@ $(function(){
 
     function buynow (goods_id,quantity){
         if(G.is_login()){
-            console.log("立即购买"+goods_id)
-            // $("#buynow_form").submit();
+            $("#buynow_form").submit();
+        }else{
+            layer.open({
+              type: 2,
+              scrollbar: false,
+              title: false,
+              shadeClose: false,
+              shade: 0.8,
+              area: [ '410px','360px'],
+              content: ['login2.html', 'no'] 
+            }); 
         }
     }
     // 加入购物车

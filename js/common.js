@@ -1,4 +1,4 @@
-
+﻿
 // 全局函数
 var G = {
     // 格式化为带小数点的形式
@@ -47,13 +47,12 @@ var G = {
         return _str;
     }
     ,is_login:function(){
-        if(true){
-           return true; 
-       }else{
-        alert("请登录");
-        return false;
-       }
-        
+        var data = $('#ttbar-login').find(".link-regist").length;
+        if(data){
+            return false; 
+        }else{
+            return true;
+        }
     }
     /** 
     * @description 加入购物车
@@ -70,7 +69,7 @@ var G = {
                     //更新购物车
                     this.load_cart_information();
                 }else{
-                    alert(data.msg);
+                    layer.alert(data.msg);
                 }
             }
         });
@@ -100,7 +99,7 @@ var G = {
                     obj.find('.smb').html(html);
                 }
             }else{
-                alert(result.msg);
+                layer.alert(result.msg);
             }
         });
     }
@@ -151,7 +150,8 @@ var G = {
             $.getJSON(url, {'fid':fav_id}, function(data){
                 if (data.done){
                    callback();
-                }else{alert(data.msg);
+                }else{
+                    layer.alert(data.msg);
                 }
             });
         }
@@ -159,6 +159,24 @@ var G = {
 
 };
 
+// 序列化表单值为json
+$.fn.serializeJson=function(){
+    var serializeObj={};
+    var array=this.serializeArray();
+    var str=this.serialize();
+    $(array).each(function(){
+        if(serializeObj[this.name]){
+            if($.isArray(serializeObj[this.name])){
+                serializeObj[this.name].push(this.value);
+            }else{
+                serializeObj[this.name]=[serializeObj[this.name],this.value];
+            }
+        }else{
+            serializeObj[this.name]=this.value;    
+        }
+    });
+    return serializeObj;
+};
 
 $(function() {
     //首页导航模块下拉
@@ -180,45 +198,43 @@ $(function() {
             $(".dorpdown-layer").children(".item-sub").eq(index).show();
         }
     );
+    //初始化加载购物车
+    G.load_cart_information();
+
+    $( "#settleup" )
+      .mouseenter(function() {
+         $("#settleup").addClass("hover");
+         console.log('in');
+      })
+      .mouseleave(function() {
+         $("#settleup").removeClass("hover");
+         console.log('out');
+      });
 
 
-    //购物车展开
-    $("#settleup").hover(
-        function() {
-            $(this).addClass("hover");
-        }, 
-        function() {
-            $(this).removeClass("hover");
-        }
-    );
-    $("#settleup").mouseover(function(){// 运行加载购物车
-            G.load_cart_information();
-            $(this).unbind('mouseover');
-        });
-     
     //购物车删除按钮
-    $("#settleup").on('click','[data-type="RemoveProduct"]',function(){
+     $(".site-header").on('click','[data-type="RemoveProduct"]',function(){
         var goods_id = $(this).data("goods_id");
         G.drop_topcart_item("",goods_id);
-    });
+     });
 
     //如果layer弹窗插件存在则显示ajax加载动画
-    if(typeof layer !== "undefined"){
-        $.ajaxSetup({
-            timeout : 5000, //超时时间设置，单位毫秒
-            beforeSend:function(){
-                layer.load();
-            },
-            complete : function(XMLHttpRequest,status){ //请求完成后最终执行参数
-                    layer.closeAll('loading');
-                    if(status=='timeout'){//超时,status还有success,error等值的情况
-                        layer.msg('网络超时！');
-                    };
-                    if(status=='error'){
-                        layer.msg('请求失败！');
-                    }     
-            }
-        });
-    }
-})
+    // if(typeof layer !== "undefined"){
+    //     $.ajaxSetup({
+    //         timeout : 5000, //超时时间设置，单位毫秒
+    //         beforeSend:function(){
+    //             layer.load();
+    //         },
+    //         complete : function(XMLHttpRequest,status){ //请求完成后最终执行参数
+    //                 layer.closeAll('loading');
+    //                 if(status=='timeout'){//超时,status还有success,error等值的情况
+    //                     layer.msg('网络超时！');
+    //                 };
+    //                 if(status=='error'){
+    //                     layer.msg('请求失败！');
+    //                 }     
+    //         }
+    //     });
+    // };
+});
         
