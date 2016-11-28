@@ -153,10 +153,6 @@ label.error i { margin-right: 4px;}
 .goods-cart-all-account { font: normal 16px/32px "microsoft yahei", Arial; margin-right: 20px; }
 .goods-cart-all-account em { font-size: 22px; color: #D93600; margin: 0 5px;}
 
-
-
-
-
 /*支付方式*/
 .goods-cart-payment-list { font-size: 0; *word-spacing:-1px/*IE6、7*/;}
 .goods-cart-payment-list li { vertical-align: top; letter-spacing: normal; word-spacing: normal; text-align: center; display: inline-block; width: 120px; padding: 10px 30px; margin: 11px; border: solid 1px #E6E6E6; border-radius: 4px; position: relative; z-index: 1;}
@@ -191,18 +187,6 @@ table.voucher_list td.explain { color: #9499A3; width: 50%; }
 
 .nopay { line-height: 20px; background-color: rgb(254, 243, 224); float: left; color: #C30; margin-left: 60px; _margin-left: 30px; height: 20px; padding: 6px 12px; border: 1px solid #fbd0aa;}
 .nopay a { font-weight: 600; color: #06C; }
-/* 满即送活动 */
-.nc-mansong { background-color:#F7F7F7; border: solid 1px #D8D8D8; padding: 4px;}
-.nc-mansong-container { background-color:#FFF; padding: 10px 10px 10px 80px; margin: 0; position: relative; z-index: 1;}
-.nc-mansong-container:hover { background-color:#F7F7F7;}
-.nc-mansong-ico { background: url(../images/shop/public.png) no-repeat scroll -590px -240px; display:block; width:50px; height:60px; position:absolute; z-index:1; top:20px; left:20px; }
-.nc-mansong-content {}
-.nc-mansong-content dt {}
-.nc-mansong-content dt h3 { color:#555; line-height: 24px; display:inline-block;}
-.nc-mansong-content dt time { color:#999; line-height: 24px; font-size: 14px; font-weight:normal; display:inline-block; margin-left: 10px; margin-bottom: 5px;}
-.nc-mansong-remark { color:#999; line-height: 24px;}
-
-
 
 .tabs-hide { display: none !important;}
 
@@ -217,4 +201,49 @@ table.voucher_list td.explain { color: #9499A3; width: 50%; }
    height: 30px;
    padding: 10px 0;
    text-align: center;
+}
+
+/*goods-buy2.html*/
+/*预付款*/
+.yufu {
+	
+	font-size: 14px;
+}
+.yufu .am-checkbox{
+	float: left;
+	/* width: 179px; */
+}
+ .am-checkbox {
+    display: block;
+    /* min-height: 1.92rem; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    vertical-align: middle;
+}
+.am-checkbox input[type=checkbox], .am-checkbox-inline input[type=checkbox] {
+    float: left;
+    margin-left: -20px;
+    outline: 0;
+}
+input[type=radio], input[type=checkbox] {
+    margin: 4px 0 0;
+    margin-top: 1px \9;
+    line-height: normal;
+}
+input[type=radio], input[type=checkbox] {
+    cursor: pointer;
+    padding: 0;
+    box-sizing: border-box;
+}
+.yufu-dorpdown-layer.hidden{
+	display: none;
+}
+.yufu span {
+	display: block;
+	float: left;
+	margin: 10px 5px;
+}
+.yufu-dorpdown-layer label{
+	font-size: 14px;
 }

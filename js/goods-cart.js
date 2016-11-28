@@ -44,7 +44,7 @@ $(function(){
         
         //验证购物车商品更改数量是否有库存并更新购物车视图
         $.getJSON('index.php?act=cart&op=update&cart_id=' + cart_id + '&quantity=' + _value,data, function(result){
-            $(this).attr('data-changed', _value);
+            $('#input_item_' + cart_id).attr('data-changed', _value);
             if(result.state == 'true' ){
                 $('#item' + cart_id + '_price').html(G.number_format(result.goods_price,2));
                 subtotal.html(G.number_format(result.subtotal,2));
@@ -55,8 +55,8 @@ $(function(){
               subtotal.html(0.00);
               $('#cart_id'+cart_id).remove();
               $('tr[nc_group="'+cart_id+'"]').addClass('item_disabled');
-              $(this).parent().next().html('');
-              $(this).parent().html('已下架');
+              $('#input_item_' + cart_id).parent().next().html('');
+              $('#input_item_' + cart_id).parent().html('已下架');
               alert(result.msg);
               return;
             }
@@ -64,14 +64,14 @@ $(function(){
             if(result.state == 'shortage'){
               $('#item' + cart_id + '_price').html(G.number_format(result.goods_price,2));
               $('#cart_id'+cart_id).val(cart_id+'|'+result.goods_num);
-              $(this).val(result.goods_num);
+              $('#input_item_' + cart_id).val(result.goods_num);
               alert(result.msg);
               return;
             }
              //更新失败
             if(result.state == 'error') {
                 alert(result.msg);
-                $(this).val($(this).attr('data-changed'));
+                $('#input_item_' + cart_id).val($('#input_item_' + cart_id).attr('data-changed'));
             }
             calc_cart_price();
         });

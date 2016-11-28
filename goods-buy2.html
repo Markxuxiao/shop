@@ -13,6 +13,7 @@
 <link rel="stylesheet" type="text/css" href="./css/common.css">
 <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="./css/goods-buy1.css">
+
 </head>
 <body>
 <!-- site-top -->
@@ -113,45 +114,39 @@
 </div>
 
 <div class="goods-buy">
-  <div class="w">
+  <div class="w" style="min-height: 700px ">
 
     <div class="goods-cart-title">
       <h3>支付提交</h3>
       <h5>订单详情内容可通过查看<a href="index.php?act=member_order" target="_blank">我的订单</a>进行核对处理。</h5>
     </div>
-      <input type="hidden" name="pay_sn" value="840533051606555002">
-      <input type="hidden" id="payment_code" name="payment_code" value="">
-      <input type="hidden" name="order_type" value="product_buy">
       <div class="goods-cart-receipt-info">
         <div class="goods-cart-receipt-info-title">
-          <h3>订单提交成功，请您尽快付款！订单号：8000000000000401  应付金额：<strong>￥497.00</strong>
+          <h3>订单提交成功，请您尽快付款！订单号：8000000000000401  应付金额：<strong id="yinfu">￥497.00</strong>
           </h3>
         </div>
         <hr>
-        <div>收货地址：湖北武汉市东西湖区舵落口大市场陶瓷卫浴区东鹏瓷砖 收货人：许啸 159****2001</div>
+        <div>收货地址：湖北武汉市东西湖区舵落口大市场陶瓷卫浴区东鹏瓷砖 收货人：王某 188****2001</div>
         <div>商品名称：芬典 2016新品秋冬装中老年女装呢子大衣中长款纯色妈妈装毛呢外套 墨绿 4XL(建议135-150斤)</div>
       </div>
       <div class="goods-cart-receipt-info">
         <div class="goods-cart-receipt-info-title">
           <h3>预付款支付</h3>
         </div>
-        <div>
-        <label class="weui-cell weui-check__label" for="s12">
-          <div class="weui-cell__hd">
-            <input type="checkbox" name="checkbox1" class="weui-check" id="s12">
-            <i class="weui-icon-checked"></i>
-          </div>
-          <div class="weui-cell__bd">
-            <p>standard is dealicient for u.</p>
-          </div>
-        </label>
-          <span>可用余额：311</span>
+        <div class="yufu clearfix">
+	        <div class="am-checkbox">
+	        	<label><input type="checkbox"> 使用预付款支付，请勾选。</label>
+	        </div>
+	        <span>可用余额：311</span>
         </div>
-        <div>
-          <label>登录密码</label>
-          <input type="" name="">
+        <div class="yufu-dorpdown-layer hidden">
+        <hr>
+        <p>温馨提示：如果您与卖家协商后需要对订单的金额进行修改，请先联系卖家修改订单金额，然后再使用预存款支付，否则会造成部分预存款被暂压。如遇到此情况请先取消订单，然后联系卖家退预存款到您的账户后再重新下单。</p>
+        <br>
+          <label for="user_password">使用预付款请输入登录密码:</label>
+          <input type="password" name="user_password" id="user_password">
           <div class="goods-cart-bottom">
-             <a href="javascript:void(0)" id="" class="xx-btn xx-btn-red fl">确认支付</a>
+             <a href="javascript:void(0)" id="yufu_btn" class="xx-btn xx-btn-red fl">确认支付</a>
           </div>
         </div>
       </div>
@@ -172,11 +167,16 @@
             </div>
           </li>
           <li payment_code="chinabank">
-            <div class="logo" for="pay_4">
+            <div class="logo">
               <img src="http://localhost/shopnc/shop/templates/default/images/payment/chinabank_logo.gif">
             </div>
           </li>
         </ul>
+        <form id="pay" type='get'>
+        	<input type="hidden" name="pay_sn" value="840533051606555002">
+        	<input type="hidden" id="payment_code" name="payment_code" value="">
+        	<input type="hidden" name="order_type" value="product_buy">
+        </form>
       </div>
   </div>
 </div>
@@ -185,7 +185,7 @@
 <!-- site-foot -->
 <footer class="margin-t30">
 	<div class="site-foot">
-		<div class="w">
+		<div class="w clearfix">
 		    <ul>
 		        <li>
 		            <dl>
@@ -299,11 +299,9 @@
 </footer>
 
 <script type="text/javascript" src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="./js/plugin/jquery.validation.min.js"></script>
 <script type="text/javascript" src="./js/plugin/layer/layer.js"></script>
-<script type="text/javascript" src="./js/plugin/artTemplate.js"></script>
 <script type="text/javascript" src="./js/common.js"></script>
-
+<script type="text/javascript" src="./js/goods-buy2.js"></script>
 
 <!-- 纯前端模拟接口用 php开发删除 start-->
 <script src="http://cdn.bootcss.com/jquery-mockjax/1.6.2/jquery.mockjax.min.js"></script>

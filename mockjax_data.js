@@ -60,7 +60,7 @@
     url: "index.php?act=cart&op=update&*"
     ,response: function (settings) {
         this.responseText = {
-            state : 'true',// 'true' 'invalid' | 'shortage' | 'error'
+            state : 'shortage',// 'true' 'invalid' | 'shortage' | 'error'
             goods_price : 100,//商品单价
             goods_num : 1,// 最大可售库存
             subtotal : settings.data.quantity*100,//实际值为 购买个数*单价 php实时计算
@@ -110,6 +110,17 @@
     }
   });
 
+//goods-buy2.js使用以下数据
+
+  $.mockjax({
+    url: "yufu",
+    responseText: {
+      "errNum": 0,//0 为成功 1为失败
+      "retMsg": "预付款支付成功",
+      "retData": {'yinfu':360,"yue":0,"yufu":100.1}//yue扣除预付后当前余额 yufu预付金额
+    }
+  });
+  
 //login2.js使用以下数据
 
 $.mockjax({
