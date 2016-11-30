@@ -32,6 +32,8 @@ label.error i { margin-right: 4px;}
 .goods-cart-table-style tbody tr td.pd-account { background-color: #FFAA01; padding: 2px;}
 .goods-cart-table-style tfoot td {background: #F9F9F9;text-align: right;height: 30px;padding: 20px;}
 
+.goods-cart-table-style tbody th .search-box .search{width: 200px;}
+
 .goods-cart-table-style a { color: #333;}
 .goods-cart-table-style a:hover { color: #C00;}
 .goods-cart-table-style i { margin-right: 4px;}

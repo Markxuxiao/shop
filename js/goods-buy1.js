@@ -122,7 +122,7 @@ $(function(){
     });
   })
   //保存地址
-  $("#addr_list_btn").on('click',function(){
+  $("#addr_list_btn").on('click',function(event){
     //判断是否选择新添加地址
     if($('#add_addr').attr('checked')){
       event.preventDefault();
