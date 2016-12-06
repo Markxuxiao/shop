@@ -56,8 +56,13 @@
     color: #777;
 }
 
+td.norecord {
+    height: 100px;
+    line-height: 100px;
+}
 
 #layer_main .hd{
+    position: relative;
 	padding: 20px;
 	margin-bottom: 20px;
 }
@@ -108,7 +113,7 @@
 }
 .order_main .mt .search {
     position: relative;
-    top: -3px;
+    /* top: -3px; */
 }
 
 .order_main .mt .search .itxt {
@@ -147,8 +152,13 @@
     overflow: hidden;
     background: url(../images/common/order-icon.png) -8px -58px;
 }
-
-
+.order_main .mt .select select {
+    height: 25px;
+    line-height: 25px;
+    padding: 2px 5px 3px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
 /* 内容部分通用表格样式 */
 .order-table-style {line-height:20px;width: 99.9%;border-collapse: collapse;clear: both;}
 .order-table-style thead th {     height: 32px;
@@ -209,3 +219,18 @@
 a.order-btn-rad:hover {
     background: #ec0409;
 }
+
+
+.m-form{line-height:29px;color:#555;}
+.m-form legend{font-size:14px;font-weight:bold;}
+.m-form .formitm{padding:20px 0 0;line-height:30px;}
+.m-form .formitm-1{padding-left:100px;}
+.m-form .lab{float:left;width:90px;margin-right:-90px;text-align:right;font-weight:bold;}
+.m-form .ipt{margin-left:100px;}
+.m-form .ipt *{vertical-align:middle;}
+.m-form .ipt a,.m-form .ipt a:hover{text-decoration:none;color:#3891eb;}
+.m-form .ipt img{height:32px;margin:0 15px 0 5px;}
+.m-form .ipt .domain{margin:0 0 0 5px;font-weight:bold;color:#777;}
+.m-form .ipt p{height:22px;line-height:22px;color:#999;}
+.m-form .tip{padding-top:10px;}
+.m-form .tip input{margin:0 5px 3px 0;}

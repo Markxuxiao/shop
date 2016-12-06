@@ -49,27 +49,27 @@
 /*component start*/
     /* 按钮
     -------------------------------------------*/
-    a.xx-btn-mini { font: normal 12px/20px "Microsoft Yahei"; color: #777; background-color: #F5F5F5; text-align: center; vertical-align: middle; display: inline-block; height: 20px; padding: 0 10px; margin-right: 2px; border-style: solid; border-width: 1px; border-color: #DCDCDC #DCDCDC #B3B3B3 #DCDCDC; cursor: pointer;}
-    a:hover.xx-btn-mini { text-decoration: none; color: #333; background-color: #E6E6E6;border-color: #CFCFCF #CFCFCF #B3B3B3 #CFCFCF;}
-    a.xx-btn { font: normal 14px/20px "Microsoft Yahei"; color: #777; background-color: #F5F5F5; text-align: center; display: inline-block; height: 20px; padding: 4px 16px; border: solid 1px; border-color: #DCDCDC #DCDCDC #B3B3B3 #DCDCDC; cursor: pointer;}
-    a:hover.xx-btn { text-decoration: none; color: #333; background-color: #E6E6E6; border-color: #CFCFCF #CFCFCF #B3B3B3 #CFCFCF;}
-    a.xx-btn-mini i, a.xx-btn i { margin-right: 4px;}
-    a.xx-btn-blue, a.xx-btn-acidblue, a.xx-btn-green, a.xx-btn-orange, a.xx-btn-red, a.xx-btn-black,
-    a:hover.xx-btn-blue, a:hover.xx-btn-acidblue, a:hover.xx-btn-green, a:hover.xx-btn-orange, a:hover.xx-btn-red, a:hover.xx-btn-black { color: #FFF ; text-shadow: 0 -1px 0 rgba(0,0,0,0.10);}
-    a.xx-btn-blue { background-color: #006DCC; border-color: #0062B7 #0062B7 #005299 #0062B7;}
-    a.xx-btn-acidblue { background-color: #49AFCD; border-color: #429DB8 #429DB8 #37839A #429DB8;}
-    a.xx-btn-green { background-color: #5BB75B; border-color: #52A452 #52A452 #448944 #52A452;}
-    a.xx-btn-orange { background-color: #FAA732; border-color: #E1962D #E1962D #BB7D25 #E1962D;}
-    a.xx-btn-red { background-color: #DA4F49; border-color: #C44742 #C44742 #A33B37 #C44742;}
-    a.xx-btn-black { background-color: #363636; border-color: #313131 #313131 #282828 #313131;}
-    a.xx-btn.disable {cursor: not-allowed;}
-    a:hover.xx-btn-blue { background-color: #0044CC; border-color: #003DB7 #003DB7 #003399 #003DB7;}
-    a:hover.xx-btn-acidblue { background-color: #2F96B4; border-color: #2A87A2 #2A87A2 #237087 #2A87A2;}
-    a:hover.xx-btn-green { background-color: #51A351; border-color: #499249 #499249 #3D7A3D #499249;}
-    a:hover.xx-btn-orange { background-color: #F89406; border-color: #DF8505 #DF8505 #BA6F04 #DF8505;}
-    a:hover.xx-btn-red { background-color: #BD362F; border-color: #AA312A #AA312A #8E2823 #AA312A;}
-    a:hover.xx-btn-black { background-color: #222222; border-color: #1F1F1F #1F1F1F #191919 #1F1F1F;}
-    a:hover.xx-btn.disable{ background-color: #F5F5F5; color: #777; border-color: #CFCFCF #CFCFCF #B3B3B3 #CFCFCF;}
+    .xx-btn-mini { font: normal 12px/20px "Microsoft Yahei"; color: #777; background-color: #F5F5F5; text-align: center; vertical-align: middle; display: inline-block; height: 20px; padding: 0 10px; margin-right: 2px; border-style: solid; border-width: 1px; border-color: #DCDCDC #DCDCDC #B3B3B3 #DCDCDC; cursor: pointer;}
+    .xx-btn:hover.xx-btn-mini { text-decoration: none; color: #333; background-color: #E6E6E6;border-color: #CFCFCF #CFCFCF #B3B3B3 #CFCFCF;}
+    .xx-btn { font: normal 14px/20px "Microsoft Yahei"; color: #777; background-color: #F5F5F5; text-align: center; display: inline-block; height: 20px; padding: 4px 16px; border: solid 1px; border-color: #DCDCDC #DCDCDC #B3B3B3 #DCDCDC; cursor: pointer;}
+    .xx-btn:hover.xx-btn { text-decoration: none; color: #333; background-color: #E6E6E6; border-color: #CFCFCF #CFCFCF #B3B3B3 #CFCFCF;}
+    .xx-btn-mini i, .xx-btn i { margin-right: 4px;}
+    .xx-btn-blue, .xx-btn-acidblue, .xx-btn-green, .xx-btn-orange, .xx-btn-red, .xx-btn-black,
+    .xx-btn:hover.xx-btn-blue, .xx-btn:hover.xx-btn-acidblue, .xx-btn:hover.xx-btn-green, .xx-btn:hover.xx-btn-orange, .xx-btn:hover.xx-btn-red, .xx-btn:hover.xx-btn-black { color: #FFF ; text-shadow: 0 -1px 0 rgba(0,0,0,0.10);}
+    .xx-btn-blue { background-color: #006DCC; border-color: #0062B7 #0062B7 #005299 #0062B7;}
+    .xx-btn-acidblue { background-color: #49AFCD; border-color: #429DB8 #429DB8 #37839A #429DB8;}
+    .xx-btn-green { background-color: #5BB75B; border-color: #52A452 #52A452 #448944 #52A452;}
+    .xx-btn-orange { background-color: #FAA732; border-color: #E1962D #E1962D #BB7D25 #E1962D;}
+    .xx-btn-red { background-color: #DA4F49; border-color: #C44742 #C44742 #A33B37 #C44742;}
+    .xx-btn-black { background-color: #363636; border-color: #313131 #313131 #282828 #313131;}
+    .xx-btn.disable {cursor: not-allowed;}
+    .xx-btn:hover.xx-btn-blue { background-color: #0044CC; border-color: #003DB7 #003DB7 #003399 #003DB7;}
+    .xx-btn:hover.xx-btn-acidblue { background-color: #2F96B4; border-color: #2A87A2 #2A87A2 #237087 #2A87A2;}
+    .xx-btn:hover.xx-btn-green { background-color: #51A351; border-color: #499249 #499249 #3D7A3D #499249;}
+    .xx-btn:hover.xx-btn-orange { background-color: #F89406; border-color: #DF8505 #DF8505 #BA6F04 #DF8505;}
+    .xx-btn:hover.xx-btn-red { background-color: #BD362F; border-color: #AA312A #AA312A #8E2823 #AA312A;}
+    .xx-btn:hover.xx-btn-black { background-color: #222222; border-color: #1F1F1F #1F1F1F #191919 #1F1F1F;}
+    .xx-btn:hover.xx-btn.disable{ background-color: #F5F5F5; color: #777; border-color: #CFCFCF #CFCFCF #B3B3B3 #CFCFCF;}
 
     /* 翻页样式 */
     .pagination{ padding: 2px; float: right; }

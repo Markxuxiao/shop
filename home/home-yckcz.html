@@ -204,385 +204,78 @@
 			</div>
 			<div id="layer_main">
 				<div class="hd layer_box">
-					<h3>我的订单</h3>
+					<h3>预存款充值</h3>
+					<a href="#" class="xx-btn xx-btn-red" style="position:absolute;top:14px;left: 111px;">去充值</a>
 				</div>
 				<div class="order_main layer_box">
 					<div class="mt">
 						<ul class="extra-l">
-							<li class="fore1"><a href="#" class="txt curr">全部订单</a></li>
-							<li><a href="#" id="ordertoPay" class="txt">待付款</a></li>
-							<li><a href="#" id="ordertoReceive"  class="txt">待收货</a></li>
-							<li><a href="#" id="ordertoComment" target="_blank" class="txt">待评价</a><a href="#"><em>4</em></a></li>
-							
+							<li class="fore1"><a href="#" class="txt curr">全部明细</a></li>
 						</ul>
-
 						<div class="extra-r">
-							<div class="search">
-								<input id="ip_keyword" type="text" class="itxt" placeholder="订单号">
-								<a href="javascript:;" class="search-btn">搜索<b></b></a>
-							</div>
-						</div>
-						<div class="extra-r">
-							<div class="select">
-								<span>状态查询：</span>
-								<select name="STATE_TYPE">
-									<option value="">所有订单</option>
-									<option selected="selected" value="线上销售订单-待付款">待付款</option>
-									<option value="线上销售订单-待确认">待确认</option>
-									<option value="线上销售订单-待发货">待发货</option>
-									<option value="线上销售订单-已发货">已发货</option>
-									<option value="线上销售订单-待收货">待收货</option>
-									<option value="线上销售订单-已完成">已完成</option>
-									<option value="线上销售订单-已取消">已取消</option>
-								</select>
-							</div>
-						</div>
+							未支付金额：0.1
+						</div>	
+						<div class="extra-r" style="margin-right: 5px;">
+							可用金额：0.1
+						</div>	
 					</div>
 					<div class="mc">
 						<table class="order order-table-style">
 							<thead>
 								<tr>
-									<th colspan="4">订单详情</th>
-									<th>金额</th>
+									<th>充值单号</th>
+									<th>创建时间</th>
+									<th>支付方式</th>
+									<th>充值金额(元)</th>
 									<th>状态</th>
+									<th>操作</th>
 								</tr>
 							</thead>
 							<tbody>
+
 								<tr>
-									<td colspan="19" class="sep-row">
+									<td>
+										YC161115000079
 									</td>
-								</tr>
-								<tr>
-									<th colspan="19">
-										<span class="fl ml10">
-										<!-- order_sn -->
-								            订单号：
-										<span class="goods-num"><em>8000000000000401</em></span></span>
-										<!-- order_time -->
-										<span class="fl ml20">下单时间：<em class="goods-time">2016-11-21 13:53:26</em></span>
-										<!-- store_name -->
-										<span class="fl ml10">
-										<a href="#" target="_blank" title="官方店铺">官方店铺</a></span>
-										<!-- QQ -->
-										<span class="fl" member_id="1">
-										<!-- wang wang -->
-										</span>
-										<!-- 订单查看 -->
-										<span class="fl ml10"><a href="#" target="_blank">查看订单</a></span>
-									</th>
-								</tr>
-								<!-- S 商品列表 -->
-								<tr>
-									<td class="w10 bdl">
-									</td>
-									<td class="w70">
-										<div class="goods-pic-small">
-											<a href="#" target="_blank"><img src="http://localhost/shopnc/data/upload/shop/store/goods/1/1_04418242684128103_60.jpg" width="60" height="60"></a>
-										</div>
+									<td >
+										2016-11-15 16:48:26
 									</td>
 									<td>
-										<dl class="goods-name">
-											<dt><a href="#" target="_blank">春装 披肩式 超短款 针织 衫开衫 女装 青鸟 灰色</a></dt>
-											<dd>
-											</dd>
-										</dl>
-									</td>
-									<td class="goods-price w120">
-										<i>¥129.00 x 1</i>
-									</td>
-									<td class="w120 bdl" rowspan="3">
-										<p class="goods-pay" title="支付方式：在线付款">
-											在线付款
-										</p>
-										<p class="goods-price">
-											<strong>¥497.00</strong>
-										</p>
-										<p class="goods-freight">
-								        	（免运费）
-										</p>
-									</td>
-									<td class="bdl bdr w120" rowspan="3">
-										<p>
-											<span style="color:#999">已取消</span><br>
-										</p>
-										<!-- 取消订单 -->
-										<!-- 物流跟踪 -->
-										<!-- 投诉 -->
-										<!-- 取消订单 -->
-										<!-- 收货 -->
-										<!-- 评价 -->
-										<!-- 已经评价 -->
-										<!-- 锁定-->
-										<!-- 分享  -->
-									</td>
-								</tr>
-								<tr>
-									<td class="w10 bdl">
-									</td>
-									<td class="w70">
-										<div class="goods-pic-small">
-											<a href="#" target="_blank"><img src="http://localhost/shopnc/data/upload/shop/store/goods/1/1_04418242684128103_60.jpg" width="60" height="60"></a>
-										</div>
+										在线支付
 									</td>
 									<td>
-										<dl class="goods-name">
-											<dt><a href="#" target="_blank">2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色</a></dt>
-											<dd>
-											</dd>
-										</dl>
-									</td>
-									<td class="goods-price w120">
-										<i>¥179.00 x 1</i>
-									</td>
-								</tr>
-								<tr>
-									<td class="w10 bdl">
-									</td>
-									<td class="w70">
-										<div class="goods-pic-small">
-											<a href="#" target="_blank"><img src="http://localhost/shopnc/data/upload/shop/store/goods/1/1_04418242684128103_60.jpg" width="60" height="60"></a>
-										</div>
+										+0.01
 									</td>
 									<td>
-										<dl class="goods-name">
-											<dt><a href="#" target="_blank">正品 2014春装新款 女 绣花针织衫 开衫外套浮桑初 蓝色</a></dt>
-											<dd>
-											</dd>
-										</dl>
-									</td>
-									<td class="goods-price w120">
-										<i>¥189.00 x 1</i>
-									</td>
-								</tr>
-							</tbody>
-							<tbody>
-								<tr>
-									<td colspan="19" class="sep-row">
-									</td>
-								</tr>
-								<tr>
-									<th colspan="19">
-										<span class="fl ml10">
-										<!-- order_sn -->
-								            订单号：
-										<span class="goods-num"><em>8000000000000401</em></span></span>
-										<!-- order_time -->
-										<span class="fl ml20">下单时间：<em class="goods-time">2016-11-21 13:53:26</em></span>
-										<!-- store_name -->
-										<span class="fl ml10">
-										<a href="#" target="_blank" title="官方店铺">官方店铺</a></span>
-										<!-- QQ -->
-										<span class="fl" member_id="1">
-										<!-- wang wang -->
-										</span>
-										<!-- 订单查看 -->
-										<span class="fl ml10"><a href="#" target="_blank">查看订单</a></span>
-									</th>
-								</tr>
-								<!-- S 商品列表 -->
-								<tr>
-									<td class="w10 bdl">
-									</td>
-									<td class="w70">
-										<div class="goods-pic-small">
-											<a href="#" target="_blank"><img src="http://localhost/shopnc/data/upload/shop/store/goods/1/1_04418242684128103_60.jpg" width="60" height="60"></a>
-										</div>
+										已成功
 									</td>
 									<td>
-										<dl class="goods-name">
-											<dt><a href="#" target="_blank">春装 披肩式 超短款 针织 衫开衫 女装 青鸟 灰色</a></dt>
-											<dd>
-											</dd>
-										</dl>
-									</td>
-									<td class="goods-price w120">
-										<i>¥129.00 x 1</i>
-									</td>
-									<td class="w120 bdl" rowspan="3">
-										<p class="goods-pay" title="支付方式：在线付款">
-											在线付款
-										</p>
-										<p class="goods-price">
-											<strong>¥497.00</strong>
-										</p>
-										<p class="goods-freight">
-								        	（免运费）
-										</p>
-									</td>
-									<td class="bdl bdr w120" rowspan="3">
 										
-										<!-- 未付款状态 -->
-										<p><a href="#" class="order-btn-rad">去付款</a></p>
-										<p><a href="#">取消订单</a></p>
-										<!-- 已付款 -->
-										<p><span style="color:#999">已付款</span></p>
-										<p><a href="#">查看物流</a></p>
-										<!-- 未收货 -->
-										<p><a href="#" class="order-btn-rad">确认收货</a></p>
-										<p><a href="#">查看物流</a></p>
-										<!-- 已收货 -->
-										<p><span style="color:#999">已完成</span></p>
-										<p><a href="#" class="order-btn-rad" >去评价</a></p>
-										<p><a href="#">申请退\换货</a></p>
-										<!-- 已取消 -->
-										<p><span style="color:#999">已取消</span></p>
-										<!-- 物流跟踪 -->
-										<!-- 投诉 -->
-										<!-- 取消订单 -->
-										<!-- 收货 -->
-										<!-- 评价 -->
-										<!-- 已经评价 -->
-										<!-- 锁定-->
-										<!-- 分享  -->
 									</td>
 								</tr>
 								<tr>
-									<td class="w10 bdl">
+									<td>
+										YC161115000079
 									</td>
-									<td class="w70">
-										<div class="goods-pic-small">
-											<a href="#" target="_blank"><img src="http://localhost/shopnc/data/upload/shop/store/goods/1/1_04418242684128103_60.jpg" width="60" height="60"></a>
-										</div>
+									<td >
+										2016-11-15 16:48:26
 									</td>
 									<td>
-										<dl class="goods-name">
-											<dt><a href="#" target="_blank">2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色</a></dt>
-											<dd>
-											</dd>
-										</dl>
-									</td>
-									<td class="goods-price w120">
-										<i>¥179.00 x 1</i>
-									</td>
-								</tr>
-								<tr>
-									<td class="w10 bdl">
-									</td>
-									<td class="w70">
-										<div class="goods-pic-small">
-											<a href="#" target="_blank"><img src="http://localhost/shopnc/data/upload/shop/store/goods/1/1_04418242684128103_60.jpg" width="60" height="60"></a>
-										</div>
+										在线支付
 									</td>
 									<td>
-										<dl class="goods-name">
-											<dt><a href="#" target="_blank">正品 2014春装新款 女 绣花针织衫 开衫外套浮桑初 蓝色</a></dt>
-											<dd>
-											</dd>
-										</dl>
+										+0.01
 									</td>
-									<td class="goods-price w120">
-										<i>¥189.00 x 1</i>
+									<td>
+										待付款
+									</td>
+									<td>
+										<p><a href="#" class="order-btn-rad">支付</a></p>
+										<p><a href="javascript:if(confirm('确实要删除吗?'))location='http://www.jstimes.com/index.php?fun=formservice&tg=shanchu_ysfk&DH=YC161115000077'" class="order-btn-rad" >删除</a></p>
 									</td>
 								</tr>
 							</tbody>
-							<tbody>
-								<tr>
-									<td colspan="19" class="sep-row">
-									</td>
-								</tr>
-								<tr>
-									<th colspan="19">
-										<span class="fl ml10">
-										<!-- order_sn -->
-								            订单号：
-										<span class="goods-num"><em>8000000000000401</em></span></span>
-										<!-- order_time -->
-										<span class="fl ml20">下单时间：<em class="goods-time">2016-11-21 13:53:26</em></span>
-										<!-- store_name -->
-										<span class="fl ml10">
-										<a href="#" target="_blank" title="官方店铺">官方店铺</a></span>
-										<!-- QQ -->
-										<span class="fl" member_id="1">
-										<!-- wang wang -->
-										</span>
-										<!-- 订单查看 -->
-										<span class="fl ml10"><a href="#" target="_blank">查看订单</a></span>
-									</th>
-								</tr>
-								<!-- S 商品列表 -->
-								<tr>
-									<td class="w10 bdl">
-									</td>
-									<td class="w70">
-										<div class="goods-pic-small">
-											<a href="#" target="_blank"><img src="http://localhost/shopnc/data/upload/shop/store/goods/1/1_04418242684128103_60.jpg" width="60" height="60"></a>
-										</div>
-									</td>
-									<td>
-										<dl class="goods-name">
-											<dt><a href="#" target="_blank">春装 披肩式 超短款 针织 衫开衫 女装 青鸟 灰色</a></dt>
-											<dd>
-											</dd>
-										</dl>
-									</td>
-									<td class="goods-price w120">
-										<i>¥129.00 x 1</i>
-									</td>
-									<td class="w120 bdl" rowspan="3">
-										<p class="goods-pay" title="支付方式：在线付款">
-											在线付款
-										</p>
-										<p class="goods-price">
-											<strong>¥497.00</strong>
-										</p>
-										<p class="goods-freight">
-								        	（免运费）
-										</p>
-									</td>
-									<td class="bdl bdr w120" rowspan="3">
-										<p>
-											<span style="color:#999">已取消</span><br>
-										</p>
-										<!-- 取消订单 -->
-										<!-- 物流跟踪 -->
-										<!-- 投诉 -->
-										<!-- 取消订单 -->
-										<!-- 收货 -->
-										<!-- 评价 -->
-										<!-- 已经评价 -->
-										<!-- 锁定-->
-										<!-- 分享  -->
-									</td>
-								</tr>
-								<tr>
-									<td class="w10 bdl">
-									</td>
-									<td class="w70">
-										<div class="goods-pic-small">
-											<a href="#" target="_blank"><img src="http://localhost/shopnc/data/upload/shop/store/goods/1/1_04418242684128103_60.jpg" width="60" height="60"></a>
-										</div>
-									</td>
-									<td>
-										<dl class="goods-name">
-											<dt><a href="#" target="_blank">2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色</a></dt>
-											<dd>
-											</dd>
-										</dl>
-									</td>
-									<td class="goods-price w120">
-										<i>¥179.00 x 1</i>
-									</td>
-								</tr>
-								<tr>
-									<td class="w10 bdl">
-									</td>
-									<td class="w70">
-										<div class="goods-pic-small">
-											<a href="#" target="_blank"><img src="http://localhost/shopnc/data/upload/shop/store/goods/1/1_04418242684128103_60.jpg" width="60" height="60"></a>
-										</div>
-									</td>
-									<td>
-										<dl class="goods-name">
-											<dt><a href="#" target="_blank">正品 2014春装新款 女 绣花针织衫 开衫外套浮桑初 蓝色</a></dt>
-											<dd>
-											</dd>
-										</dl>
-									</td>
-									<td class="goods-price w120">
-										<i>¥189.00 x 1</i>
-									</td>
-								</tr>
-							</tbody>
+
 							<tbody>
 							      <tr>
 							        <td colspan="20" class="norecord">暂无符合条件的数据记录</td>
