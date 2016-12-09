@@ -1,3 +1,31 @@
+/*表单组件*/
+.m-form{line-height:29px;color:#555;}
+.m-form legend{font-size:14px;font-weight:bold;}
+.m-form .formitm{padding:20px 0 0;line-height:30px;}
+.m-form .formitm-1{padding-left:100px;}
+.m-form .lab{float:left;width:90px;margin-right:-90px;text-align:right;font-weight:bold;}
+.m-form .ipt{margin-left:100px;}
+.m-form .ipt *{vertical-align:middle;}
+.m-form .ipt a,.m-form .ipt a:hover{text-decoration:none;color:#3891eb;}
+.m-form .ipt img{height:32px;margin:0 15px 0 5px;}
+.m-form .ipt .domain{margin:0 0 0 5px;font-weight:bold;color:#777;}
+.m-form .ipt p{height:22px;line-height:22px;color:#999;}
+.m-form .tip{padding-top:10px;}
+.m-form .tip input{margin:0 5px 3px 0;}
+
+/* 表单项属性
+------------------------------------------- */
+input[type="text"], input[type="password"], input.text, input.password { font: 12px/20px Tahoma; color: #777; background-color: #FFF; vertical-align: middle; display: inline-block; height: 20px; padding: 2px 4px; border: solid 1px #CCC; outline: 0 none;}
+input[type="text"]:focus, input.text:focus, textarea:focus { color: #333; border-color: #75B9F0; box-shadow: 0 0 0 2px rgba(82, 168, 236, 0.15); outline: 0 none;}
+input[type="text"].error, input[type="password"].error, textarea.error { border-color: #ED6C4F; box-shadow: 0 0 0 2px rgba(232, 71, 35, 0.15); outline: 0 none;}
+textarea, .textarea { font: 12px/20px Tahoma; color: #777; background-color: #FFF; vertical-align: top; display: inline-block; height: 60px; padding: 4px; border: solid 1px #CCC; outline: 0 none;}
+select { color: #777; background-color: #FFF; vertical-align: top; display: inline-block; height: 26px; padding: 4px; border: solid 1px #CCC;}
+select option { line-height: 20px; height: 20px;}
+input[type="radio"], .radio { vertical-align: middle; display: inline-block; margin-right: 5px;}
+/*表单验证错误提示文字*/
+label.error { font-size: 12px; color: #E84723; margin-left: 8px;}
+label.error i { margin-right: 4px;}
+
 
 #home-main, #home-main .w {
     /* background-color: #f5f5f5; */
@@ -71,6 +99,7 @@ td.norecord {
 }
 .order_main .mt .extra-l {
     float: left;
+    line-height: 25px;
 }
 .order_main .mt .extra-l li {
     padding-right: 20px;
@@ -110,6 +139,7 @@ td.norecord {
 
 .order_main .mt .extra-r {
     float: right;
+    line-height: 25px;
 }
 .order_main .mt .search {
     position: relative;
@@ -128,7 +158,7 @@ td.norecord {
     position: relative;
     float: left;
     width: 52px;
-    height: 23px;
+    height: 25px;
     line-height: 99em;
     overflow: hidden;
     border: 1px solid #ddd;
@@ -221,16 +251,3 @@ a.order-btn-rad:hover {
 }
 
 
-.m-form{line-height:29px;color:#555;}
-.m-form legend{font-size:14px;font-weight:bold;}
-.m-form .formitm{padding:20px 0 0;line-height:30px;}
-.m-form .formitm-1{padding-left:100px;}
-.m-form .lab{float:left;width:90px;margin-right:-90px;text-align:right;font-weight:bold;}
-.m-form .ipt{margin-left:100px;}
-.m-form .ipt *{vertical-align:middle;}
-.m-form .ipt a,.m-form .ipt a:hover{text-decoration:none;color:#3891eb;}
-.m-form .ipt img{height:32px;margin:0 15px 0 5px;}
-.m-form .ipt .domain{margin:0 0 0 5px;font-weight:bold;color:#777;}
-.m-form .ipt p{height:22px;line-height:22px;color:#999;}
-.m-form .tip{padding-top:10px;}
-.m-form .tip input{margin:0 5px 3px 0;}

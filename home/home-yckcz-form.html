@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta name="renderer" content="webkit"> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<meta name="keywords" content="家盛时代-首页-国际建材旗帜-武汉建材、家盛时代建材广场"> 
+<meta name="description" content="家盛时代-首页-国际建材旗帜-武汉建材、家盛时代建材广场"> 
+<meta name="author" content="Yjt"> 
+<meta name="copyright" content="Yjt Inc. 保留所有权利">
+<title>家盛时代-首页-国际建材旗帜-武汉建材、家盛时代建材广场</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css">
+<link rel="stylesheet" type="text/css" href="../js/plugin/layer/skin/layer.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/home-index.css">
+</head>
+<body>
+<!-- site-top -->
+<div class="site-top">
+	<div class="w">
+		<ul class="fl">	
+			<li>
+				<a class="site-top-manage" href="#">商家管理中心</a>
+			</li>
+		</ul>
+	    <ul class="fr">
+	        <li class="fore1" id="ttbar-login">
+	            <a href="javascript:login();" class="link-login style-red">请先登录</a>&nbsp;&nbsp;
+	            <a href="javascript:regist();" class="link-regist">免费注册</a></li>
+	        <li class="spacer"></li>
+	        <li class="dorpdown" id="ttbar-atte">
+	            <div class="dt cw-icon">
+	                <i class="ci-right">
+	                    <s>◇</s>
+	                </i>我的订单</div>
+	            <div class="dd dorpdown-layer"></div>
+	            <div class="dd dorpdown-layer">
+	                <div class="dd-spacer"></div>
+	                <div class="dd-inner" id="ttbar-atte-main">
+	                    <div class="dd-spacer"></div>
+	                    <div class="dd-inner">
+	                        <ul class="dorpdown-item">
+	                        	<li><a href="">待付款订单</a></li>
+	                        	<li><a href="">待确认订单</a></li>
+	                        	<li><a href="">待评价订单</a></li>
+	                        </ul>
+	                    </div>
+	                </div>
+	            </div>
+	        </li>
+	        <li class="spacer"></li>
+	        <li class="dorpdown" id="ttbar-serv">
+	            <div class="dt cw-icon">
+	                <i class="ci-right">
+	                    <s>◇</s>
+	                </i>客户服务</div>
+	            <div class="dd dorpdown-layer">
+	                <div class="dd-spacer"></div>
+	                <div class="dd-inner">
+	                    <ul class="dorpdown-item">
+	                    	<li><a href="">帮助</a></li>
+	                    	<li><a href="">客服</a></li>
+	                    	<li><a href="">支付</a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </li>
+	        <li class="spacer"></li>
+	        <li class="dorpdown" id="ttbar-navs">
+	            <div class="dt cw-icon">
+	                <i class="ci-right">
+	                    <s>◇</s>
+	                </i>内部系统</div>
+	            <div class="dd dorpdown-layer">
+	                <div class="dd-spacer"></div>
+	                <div class="dd-inner">
+	                    <ul class="dorpdown-item">
+	                    	<li><a href="">OA系统</a></li>
+	                    	<li><a href="">代客户注册</a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </li>
+	    </ul>
+	    <span class="clr"></span>
+	</div>
+</div>
+<!-- site-header -->
+<div class="site-header">
+	<div class="w">
+		<div class="logo">
+			<a href="index.html">
+				<img src="../images/common/201605231508457806ADMIN.png">
+			</a>
+		</div>
+		<div class="site-header-search">
+			<form >
+			    <input class="site-header-search-text" maxlength="60"  placeholder="请输入您要搜索的商品关键字" >
+			    <input class="site-header-search-button" value="搜索" type="submit">
+			</form>
+			<div class="site-header-search-keyword">
+				热门搜索：
+				<ul>
+					<li><a href="#">卫浴</a></li>
+					<li><a href="#">瓷砖</a></li>
+					<li><a href="#">家具</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+		<div class="site-header-btn" id="settleup">
+			<div class="shopcart">
+				<i class="shopcart-icon-left"></i>
+				<i class="shopcart-icon-right">></i>
+            <i class="ci-count" id="shopping-amount">0</i>
+				<a target="_blank" href="#">
+					购物车结算
+				</a>
+
+			</div>
+         <div class="dorpdown-layer">
+            <div class="nogoods">购物车中还没有商品，赶紧选购吧！</div>
+
+         </div>
+		</div>
+		<span class="clr"></span>
+	</div>
+</div>
+
+<div id="home-main">
+	<div class="w ">
+		<div id="layer_content" class="clearfix">
+			<div id="layer_sub">
+				<div id="menu">
+					<dl class="fore1">
+						<dt >订单中心</dt>
+						<dd class="curr">
+							<a href="#" target="_self">我的订单</a>
+						</dd>
+						<dd >
+							<a href="#" target="_self">待付款订单</a>
+						</dd>
+						<dd >
+							<a href="#" target="_self">待确认收货</a>
+						</dd>
+						<dd >
+							<a href="#" target="_self">待评价交易</a>
+						</dd>
+					</dl>
+					<dl class="fore2">
+						<dt >交易操作</dt>
+						<dd >
+							<a href="../goods-buy1.html" target="_self">我的购物车</a>
+						</dd>
+						<dd >
+							<a href="#" target="_self">已买到的商品</a>
+						</dd>
+						<dd >
+							<a href="./home-wdsc.html" target="_self">我的收藏</a>
+						</dd>
+						<dd >
+							<a href="./home-pjsd.html" target="_self">评价晒单</a>
+						</dd>
+					</dl>
+					<dl class="fore3">
+						<dt >我的资产</dt>
+						<dd >
+							<a href="./home-yckcz.html" target="_self">预存款充值</a>
+						</dd>
+						<dd >
+							<a href="./home-ycktx.html" target="_self">预存款提现</a>
+						</dd>
+						<dd >
+							<a href="./home-yckmx.html" target="_self">预存款明细</a>
+						</dd>
+						<dd >
+							<a href="./home-djjemx.html" target="_self">冻结金额明细</a>
+						</dd>
+					<!-- <dd >
+							<a href="#" target="_self">积分明细</a>
+						</dd>
+						<dd >
+							<a href="#" target="_self">已兑换的商品</a>
+						</dd>
+						<dd >
+							<a href="#" target="_self">我的代金券</a>
+						</dd> -->
+
+					</dl>
+				<!--<dl class="fore4">
+						<dt >咨询与维权</dt>
+						<dd >
+							<a href="#" target="_self">我的举报</a>
+						</dd>
+						<dd >
+							<a href="#" target="_self">我的咨询</a>
+						</dd>
+						<dd >
+							<a href="#" target="_self">投诉管理</a>
+						</dd>
+					</dl> -->
+					<dl class="fore5">
+						<dt >账号管理</dt>
+						<dd >
+							<a href="#" target="_self">修改密码</a>
+						</dd>
+						<dd >
+							<a href="#" target="_self">修改邮箱</a>
+						</dd>
+						<dd >
+							<a href="#" target="_self">地址管理</a>
+						</dd>
+					</dl>
+				</div>
+
+			</div>
+			<div id="layer_main">
+				<div class="hd layer_box">
+					<h3>预存款充值</h3>
+				</div>
+				<div class="order_main layer_box">
+					<div class="mt">
+						<ul class="extra-l">
+							<li class="fore1"><a href="#" class="txt curr">充值表单</a></li>
+						</ul>
+					</div>
+					<div class="mc">
+						<div class="m-form">
+						    <form id="yckcz" >
+						    	<div class="formitm">
+						    	    <label class="lab">充值金额：</label>
+						    	    <div class="ipt">
+						    	        <input type="text" id="yckcz_m" class="u-ipt" maxlength="8"/><span class="domain">元</span>
+						    	    </div>
+						    	</div>
+						    	<div class="formitm">
+						    	    <label class="lab">支付方式：</label>
+						    	    <div class="ipt">
+						    	        <label><input name="pay_type" type="radio" class="text" value="在线支付" checked="checked">在线支付</label>
+						    	        <label><input name="pay_type" type="radio" class="text" value="线下支付">线下支付</label>
+						    	    </div>
+						    	</div>
+						    	<div class="formitm">
+						    	    <label class="lab">导购：</label>
+						    	    <div class="ipt">
+						    	        <input type="text" class="u-ipt" placeholder="输入以搜索" autocomplete="off"/>
+						    	    </div>
+						    	</div>
+						    	<div class="formitm">
+						    	    <label class="lab">部门名称：</label>
+						    	    <div class="ipt">
+						    	        <input type="text" class="u-ipt" placeholder="输入以搜索" autocomplete="off"/>
+						    	        <p>温馨提示：非自营店充值的预存款店铺名称选择”其他“以及导购名称填“其他”即可</p>
+						    	    </div>
+						    	</div>
+						    	<!-- 如果有默认地址 值就为默认地址 -->
+						    	<input type="hidden" name="yckaddress" id="yckaddress" value="">
+						    </form>
+				            
+						        <!-- 选择地址 -->
+						            <style type="text/css">
+						            	/* 收货人信息 */
+						            	.goods-cart-candidate-items {position: relative; padding: 17px 20px 17px 101px; background: #f7f7f7;}
+						            	.goods-cart-candidate-items ul { overflow: hidden;}
+						            	.goods-cart-candidate-items li { line-height: 20px; display: block; min-height: 20px; padding: 5px 0 6px 0; margin-top: -1px; border-top: dotted 1px #E6E6E6;}
+						            	.goods-cart-candidate-items input[type="radio"], 
+						            	.goods-cart-candidate-items .radio,
+						            	.goods-cart-candidate-items label,
+						            	.goods-cart-candidate-items a { font-size: 12px;  vertical-align: middle; letter-spacing: normal; word-spacing: normal; display: inline-block;}
+						            	.goods-cart-candidate-items .radio,
+						            	.goods-cart-candidate-items label,
+						            	.goods-cart-candidate-items a { *display: inline-block/*IE6,7*/; zoom: 1;}
+						            	.goods-cart-candidate-items input[type="radio"], 
+						            	.goods-cart-candidate-items .radio { margin: 0 5px;}
+						            	.goods-cart-candidate-items label { line-height: 20px; display: inline-block;}
+						            	.goods-cart-candidate-items span {font-size: 14px;line-height: 20px;vertical-align: middle;display: inline-block;heig;height: 20px;}
+						            	.goods-cart-candidate-items .true-name { font-weight: 600; margin-right: 10px;}
+						            	.goods-cart-candidate-items .address { text-overflow: ellipsis; white-space: nowrap; max-width: 500px; margin-right: 20px; overflow: hidden;}
+						            	.goods-cart-candidate-items .phone { margin-right: 20px;}
+						            	.goods-cart-candidate-items label i { font-size: 14px; margin-right: 2px;}
+						            	.goods-cart-candidate-items .del { color: #D93600;}
+						            	.goods-cart-selected-item { background-color: #FFF5CC; font-size: 12px;}
+						            	/* 表单提交样式 */
+						            	.goods-cart-form-default { }
+						            	.goods-cart-form-default dl { font-size: 0; *word-spacing:-1px/*IE6、7*/; line-height: 20px; clear: both; padding: 0; margin: 0; overflow: hidden;}
+						            	.goods-cart-form-default dl:hover {background-color: #efefef;}
+						            	.goods-cart-form-default dl:hover .hint { color: #666;}
+						            	.goods-cart-form-default dl.bottom { border-bottom-width: 0px;}
+						            	.goods-cart-form-default dl dt { font-size: 12px; vertical-align: top; letter-spacing: normal; word-spacing: normal; text-align: right; display: inline-block; width: 10%; padding: 10px 1% 10px 0; margin: 0;}
+						            	.goods-cart-form-default dl dt { *display: inline/*IE6,7*/;}
+						            	.goods-cart-form-default dl dt i.required { font: 12px/16px Tahoma; color: #F30; vertical-align: middle; margin-right: 4px;}
+						            	.goods-cart-form-default dl dd { font-size: 12px; vertical-align: top; letter-spacing: normal; word-spacing: normal; display: inline-block; width: 84%; padding: 10px 0 10px 0; }
+						            	.goods-cart-form-default dl dd { *display: inline/*IE6,7*/;}
+						            	.goods-cart-form-default dl dd p { clear: both;}
+						            	.goods-cart-form-default dl dd select { margin-right: 5px;}
+						            	.goods-cart-candidate-items .address_label {position: absolute;left: 31px;top: 17px;font-weight: bold;}
+						            </style>
+						            	<div class="goods-cart-candidate-items">
+						            	<div class="address_label">收货地址：</div>
+						            	      <!--下一行由php输出 <?php echo $output['freight_hash'];?> -->
+						            	<ul id="addr_list" freight_hash="sdfslsjfsdlfsldfkjlsfjhljl">
+						            	   <li class="receive_add address_item">
+						            	      <input type="radio" class="radio" name="addr" id="addr_1" city_id="23" area_id="34&quot;" value="1" checked="">
+						            	      <label for="addr_1">
+						            	         <span class="true-name">王某</span>
+						            	         <span class="address">湖北省武汉市东西湖区&nbsp;三秀路士大夫士大夫</span>
+						            	         <span class="phone">11231231131</span>
+						            	      </label>
+						            	      <a href="javascript:void(0);" class="del">[ 删除 ]</a>
+						            	   </li>
+						            	   
+						            	   <li class="receive_add address_item">
+						            	      <input type="radio" class="radio" name="addr" id="addr_2" city_id="11" area_id="324&quot;" value="2">
+						            	      <label for="addr_2">
+						            	         <span class="true-name">王xx某</span>
+						            	         <span class="address">湖北省武汉市东西湖区&nbsp;三秀路士大夫士大夫</span>
+						            	         <span class="phone">11231231131</span>
+						            	      </label>
+						            	      <a href="javascript:void(0);" class="del">[ 删除 ]</a>
+						            	   </li>
+						            	   
+						            	   <li class="receive_add addr_item">
+						            	      <input value="0" id="add_addr" class="add_addr" type="radio" name="addr">
+						            	      <label for="add_addr">使用新地址</label>
+						            	   </li></ul>
+						            	         <div id="add_addr_box" style="">
+						            	            <div class="goods-cart-form-default">
+						            	               <form method="POST" id="addr_form" action="index.php" style="display: none;">
+						            	                <input type="hidden" value="buy" name="act">
+						            	                <input type="hidden" value="add_addr" name="op">
+						            	                <input type="hidden" name="form_submit" value="ok">
+						            	                <dl>
+						            	                   <dt><i class="required">*</i>收货人姓名：</dt>
+						            	                   <dd>
+						            	                   <input type="text" class="text w100" name="true_name" maxlength="20" id="true_name" value="">
+						            	                   </dd>
+						            	                </dl>
+						            	                <dl>
+						            	                   <dt><i class="required">*</i>所在地区：</dt>
+						            	                   <dd>
+						            	                    <div id="selectCity">
+						            	                      <select>
+						            	                      </select>
+						            	                      <input type="hidden" name="city_id" id="city_id">
+						            	                      <input type="hidden" value="" name="area_id" id="area_id" class="area_ids">
+						            	                      <input type="hidden" name="area_info" id="area_info" class="area_names">
+						            	                    </div>
+						            	                   </dd>
+						            	                </dl>
+						            	                <dl>
+						            	                   <dt><i class="required">*</i>详细地址：</dt>
+						            	                   <dd>
+						            	                   <input type="text" class="text w500" name="address" id="address" maxlength="80" value="">
+						            	                   <p class="hint">
+						            	                      请填写真实地址，不需要重复填写所在地区
+						            	                   </p>
+						            	                   </dd>
+						            	                </dl>
+						            	                <dl>
+						            	                   <dt><i class="required">*</i>手机号码：</dt>
+						            	                   <dd>
+						            	                   <input type="text" class="text w200" name="mob_phone" id="mob_phone" maxlength="15" value="">&nbsp;&nbsp;(或)&nbsp;固定电话：        
+						            	                   <input type="text" class="text w200" id="tel_phone" name="tel_phone" maxlength="20" value="">
+						            	                   </dd>
+						            	                </dl>
+						            	                <div class="hr16">
+						            	                   <a id="addr_list_btn" class="xx-btn xx-btn-red" href="javascript:void(0);">保存地址</a>
+						            	                </div>
+						            	               </form>
+						            	            </div>
+						            	            
+						            	         </div>
+						            	      </div>
+						        <!-- 选择地址end -->
+
+
+						    <div class="formitm formitm-1"><button id="yckczbtn" class="xx-btn xx-btn-red" type="button" style="height: 30px;">提交</button></div>
+						    
+						</div>
+
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+</div>
+<script id="temp_address" type="text/html">
+   {{each retData as value i}}
+   <li class="receive_add address_item">
+      <input  type="radio" class="radio" name="addr" id=addr_{{value.id}} city_id={{value.city_id}} area_id={{value.area_id}}" value="{{value.id}}" {{if value.default}}checked{{/if}}>
+      <label for="addr_{{value.id}}">
+         <span class="true-name">{{value.name}}</span>
+         <span class="address">{{value.province}}{{value.city}}{{value.county}}&nbsp;{{value.street}}</span>
+         <span class="phone">{{value.phone}}</span>
+      </label>
+      <a href="javascript:void(0);" class="del">[ 删除 ]</a>
+   </li>
+   {{/each}}
+   <li class="receive_add addr_item">
+      <input value="0" id="add_addr" class="add_addr" type="radio" name="addr" {{if retData==''}}checked{{/if}} >
+      <label for="add_addr">使用新地址</label>
+   </li>
+</script>
+
+<!-- site-foot -->
+<footer class="margin-t30">
+	<div class="site-foot">
+		<div class="w clearfix">
+		    <ul>
+		        <li>
+		            <dl>
+		                <dt>帮助中心</dt>
+		                <dd>
+		                    <a href="#" title="如何注册成为会员">如何注册成为会员</a></dd>
+		                <dd>
+		                    <a href="#" title="忘记密码">忘记密码</a></dd>
+		                <dd>
+		                    <a href="#" title="搜索功能">搜索功能</a></dd>
+		                <dd>
+		                    <a href="#" title="购买和定制商品">购买和定制商品</a></dd>
+		            </dl>
+		        </li>
+		        <li>
+		            <dl>
+		                <dt>店主之家</dt>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-46.html" title="我要开店">我要开店</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-47.html" title="管理商品">管理商品</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-48.html" title="我要推广">我要推广</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-49.html" title="会员等级">会员等级</a></dd>
+		            </dl>
+		        </li>
+		        <li>
+		            <dl>
+		                <dt>支付中心</dt>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-50.html" title="支付方式">支付方式</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-51.html" title="关于积分">关于积分</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-52.html" title="如何提现">如何提现</a></dd>
+		            </dl>
+		        </li>
+		        <li>
+		            <dl>
+		                <dt>客服中心</dt>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-53.html" title="联系我们">联系我们</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-54.html" title="售前咨询">售前咨询</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-55.html" title="如何投诉">如何投诉</a></dd>
+		            </dl>
+		        </li>
+		        <li>
+		            <dl>
+		                <dt>友情链接</dt>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-56.html" title="合作及洽谈">合作及洽谈</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-57.html" title="本站链接代码">本站链接代码</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-58.html" title="销售联盟">销售联盟</a></dd>
+		            </dl>
+		        </li>
+		        <li>
+		            <dl>
+		                <dt>关于我们</dt>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-59.html" title="公司简介">公司简介</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-60.html" title="诚聘英才">诚聘英才</a></dd>
+		                <dd>
+		                    <i>
+		                    </i>
+		                    <a href="http://www.jstimes.com/shop/article-61.html" title="法律声明">法律声明</a></dd>
+		            </dl>
+		        </li>
+		    </ul>
+		</div>
+	</div>
+
+    <div class="w " style="text-align: center;margin:5px auto;">
+    	<a href="#">首页</a>&nbsp;&nbsp;|&nbsp;&nbsp;网站备案编号：鄂ICP备14020050号-1&nbsp;&nbsp;|&nbsp;&nbsp;ICP经营许可证编号：鄂B2-20150042	
+    </div>
+</footer>
+
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="../js/plugin/jquery.validation.min.js"></script>
+<script type="text/javascript" src="../js/plugin/layer/layer.js"></script>
+<script type="text/javascript" src="../js/plugin/artTemplate.js"></script>
+<script type="text/javascript" src="../js/plugin/selectCity/selectCity.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript">
+	// 收货地址表单验证模块
+	$(function(){
+
+	  // 地址省市选择
+	  $("#selectCity").selectCity();
+
+	  if(typeof(jQuery.validator.addMethod) == 'function'){//添加自动检测是否是最后一级地区
+	    jQuery.validator.addMethod("checkarea", function(value, element) {
+	      return this.optional(element) || (typeof(nc_a[value]) == 'undefined');//当数组不存在时确定选到最后
+	    }, "请选择所在地区");
+	  }
+
+	  $('#addr_form').validate({
+	      rules : {
+	        true_name : {
+	         required : true
+	        },
+	        area_id : {
+	          required : true,
+	          min   : 1,
+	          checkarea:true
+	        },
+	        address : {
+	          required : true
+	        },
+	        mob_phone : {
+	          required : checkPhone,
+	          minlength : 11,
+	          maxlength : 11,
+	          digits : true
+	        },
+	        tel_phone : {
+	          required : checkPhone,
+	          minlength : 6,
+	          maxlength : 20
+	        }
+	      },
+	      messages : {
+	      true_name : {
+	      required : '<i class="icon-exclamation-sign"></i>请填写收货人姓名'
+	      },
+	      area_id : {
+	      required : '<i class="icon-exclamation-sign"></i>请选择所在地区',
+	      min  : '<i class="icon-exclamation-sign"></i>请选择所在地区',
+	      checkarea : '<i class="icon-exclamation-sign"></i>请选择所在地区'
+	      },
+	      address : {
+	      required : '<i class="icon-exclamation-sign"></i>请填写收货人详细地址'
+	      },
+	      mob_phone : {
+	      required : '<i class="icon-exclamation-sign"></i>手机号码或固定电话请至少填写一个',
+	      minlength: '<i class="icon-exclamation-sign"></i>手机号码只能是11位',
+	          maxlength: '<i class="icon-exclamation-sign"></i>手机号码只能是11位',
+	          digits : '<i class="icon-exclamation-sign"></i>手机号码只能是11位'
+	        },
+	        tel_phone : {
+	          required : '<i class="icon-exclamation-sign"></i>手机号码或固定电话请至少填写一个',
+	          minlength: '<i class="icon-exclamation-sign"></i>',
+	          maxlength: '<i class="icon-exclamation-sign"></i>'
+	        }
+	        },
+	        groups : {
+	          phone:'mob_phone tel_phone'
+	        }
+	  });
+
+	  function checkPhone(){
+	      return ($('input[name="mob_phone"]').val() == '' && $('input[name="tel_phone"]').val() == '');
+	  }
+	});
+	// 收货地址添加模块
+	$(function(){
+	  var $addr_list = $('#addr_list');
+
+	  //修改地址
+	  $('#edit_reciver').on('click',function(){
+	    var that = $(this);
+	    $.ajax({
+	      type: "GET",
+	      dataType: "json",
+	      url: '/retData/data',
+	      error: function (err) {alert(err.responseText);},
+	      success: function (data){
+	        if (!data.errNum) {
+	          $(".edit").hide();
+	          $("#address-box").addClass('current_box');
+	          render_temp_address(data);
+	        }else{
+	          alert(data.retMsg)
+	        }
+	      }
+	    });
+	  });
+	  //选择地址
+	  $addr_list.on('click','input:radio',function(){
+	    var that = $(this);
+	    if(that.hasClass("add_addr")){
+	      $("#addr_form").show();
+	    }else{
+	      $("#addr_form").hide();
+	    };
+	  });
+	  //删除地址
+	  $addr_list.on('click',".del",function(){
+	    var that = $(this);
+	    var address_id = that.parent().find('input:radio').val();
+	    $.ajax({
+	      type: "POST",
+	      dataType: "json",
+	      url: '/retData/data1',
+	      data: address_id,
+	      error: function (err) {alert(err.responseText);},
+	      success: function (data){
+	        if (!data.errNum) {
+	          layer.msg("删除成功");
+	          render_temp_address(data);
+	        }else{
+	          alert(data.retMsg)
+	        }
+	      }
+	    });
+	  })
+	  //保存地址
+	  $("#addr_list_btn").on('click',function(event){
+	    //判断是否选择新添加地址
+	    if($('#add_addr').attr('checked')){
+	      event.preventDefault();
+	      // 验证表单
+	      if(!$('#addr_form').valid()) return false;
+	      var data = $('#addr_form').serializeJson();
+	      $.ajax({
+	        type: "POST",
+	        dataType: "json",
+	        url: '/retData/data1',
+	        data: data,
+	        error: function (err) {alert(err.responseText);},
+	        success: function (data){
+	          if (!data.errNum) {
+	            layer.msg("添加成功");
+	            render_temp_address(data);
+	          }else{
+	            alert(data.retMsg)
+	          }
+	          $("#addr_form").hide();
+	        }
+
+	      });
+
+	    }else{
+	    	//设置为默认地址
+	    	$.ajax({
+	    	  type: "POST",
+	    	  dataType: "json",
+	    	  url: '/retData/data1',
+	    	  data: data,
+	    	  error: function (err) {alert(err.responseText);},
+	    	  success: function (data){
+	    	    if (!data.errNum) {
+	    	      layer.msg("默认地址设置成功");
+	    	      render_temp_address(data);
+	    	    }else{
+	    	      alert(data.retMsg)
+	    	    }
+	    	  }
+	    	 });
+	    }
+	  })
+
+	  /** 
+	  * @description 渲染修改地址界面
+	  * @param {Object} data 地址json数据
+	  * @return
+	  */ 
+	  function render_temp_address(data){
+	    var html = template('temp_address', data);
+	    $addr_list.html(html);
+	    if($('#add_addr').attr('checked')){
+	      $("#addr_form").show();
+	    }
+	  }
+	})
+	//预存款充值表单提交
+	$(function(){
+		$('#yckczbtn').click(function(){
+			var data;
+			//加载选中地址到充值表单
+			if(!$('#add_addr').attr('checked')){
+				 data = $("input[name='addr']:checked").val();
+				$('#yckaddress').val(data);
+			}else{
+				return layer.msg("请保存收货地址")
+			};
+			//验证充值表单
+			if ($('#yckcz_m').val() ==""){return layer.msg("请填写充值金额！")}
+
+			$('#yckcz').submit();
+		})
+	})
+</script>
+
+<!-- 纯前端模拟接口用 php开发删除 start-->
+<script src="http://cdn.bootcss.com/jquery-mockjax/1.6.2/jquery.mockjax.min.js"></script>
+<script type="text/javascript" src="../mockjax_data.js"></script>
+<!-- 纯前端模拟接口用 php开发删除 start-->
+</body>
+</html>

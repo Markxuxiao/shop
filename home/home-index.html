@@ -150,33 +150,33 @@
 					<dl class="fore2">
 						<dt >交易操作</dt>
 						<dd >
-							<a href="#" target="_self">我的购物车</a>
+							<a href="../goods-buy1.html" target="_self">我的购物车</a>
 						</dd>
 						<dd >
 							<a href="#" target="_self">已买到的商品</a>
 						</dd>
 						<dd >
-							<a href="#" target="_self">我的收藏</a>
+							<a href="./home-wdsc.html" target="_self">我的收藏</a>
 						</dd>
 						<dd >
-							<a href="#" target="_self">评价晒单</a>
+							<a href="./home-pjsd.html" target="_self">评价晒单</a>
 						</dd>
 					</dl>
 					<dl class="fore3">
 						<dt >我的资产</dt>
 						<dd >
-							<a href="#" target="_self">预存款充值</a>
+							<a href="./home-yckcz.html" target="_self">预存款充值</a>
 						</dd>
 						<dd >
-							<a href="#" target="_self">预存款提现</a>
+							<a href="./home-ycktx.html" target="_self">预存款提现</a>
 						</dd>
 						<dd >
-							<a href="#" target="_self">预存款明细</a>
+							<a href="./home-yckmx.html" target="_self">预存款明细</a>
 						</dd>
 						<dd >
-							<a href="#" target="_self">冻结金额明细</a>
+							<a href="./home-djjemx.html" target="_self">冻结金额明细</a>
 						</dd>
-						<dd >
+					<!-- <dd >
 							<a href="#" target="_self">积分明细</a>
 						</dd>
 						<dd >
@@ -184,10 +184,10 @@
 						</dd>
 						<dd >
 							<a href="#" target="_self">我的代金券</a>
-						</dd>
+						</dd> -->
 
 					</dl>
-					<dl class="fore4">
+				<!--<dl class="fore4">
 						<dt >咨询与维权</dt>
 						<dd >
 							<a href="#" target="_self">我的举报</a>
@@ -197,6 +197,18 @@
 						</dd>
 						<dd >
 							<a href="#" target="_self">投诉管理</a>
+						</dd>
+					</dl> -->
+					<dl class="fore5">
+						<dt >账号管理</dt>
+						<dd >
+							<a href="./home-xgmm.html" target="_self">修改密码</a>
+						</dd>
+						<dd >
+							<a href="./home-xgyx.html" target="_self">修改邮箱</a>
+						</dd>
+						<dd >
+							<a href="./home-dzgl.html" target="_self">地址管理</a>
 						</dd>
 					</dl>
 				</div>
@@ -217,16 +229,19 @@
 						</ul>
 
 						<div class="extra-r">
-							<div class="search">
-								<input id="ip_keyword" type="text" class="itxt" placeholder="订单号">
-								<a href="javascript:;" class="search-btn">搜索<b></b></a>
-							</div>
+							<form>
+								<div class="search">
+									<input id="ip_keyword" type="text" class="itxt" placeholder="订单号">
+									<button class="search-btn">搜索<b></b></button>
+								</div>
+							</form>
 						</div>
 						<div class="extra-r">
 							<div class="select">
 								<span>状态查询：</span>
-								<select name="STATE_TYPE">
-									<option value="">所有订单</option>
+								<!-- data-url="123.html?"+option的value =  接口地址-->
+								<select name="STATE_TYPE" data-url="123.html?" data-plugin="selectGoUrl">
+									<option value="all">所有订单</option>
 									<option selected="selected" value="线上销售订单-待付款">待付款</option>
 									<option value="线上销售订单-待确认">待确认</option>
 									<option value="线上销售订单-待发货">待发货</option>
@@ -302,18 +317,30 @@
 										</p>
 									</td>
 									<td class="bdl bdr w120" rowspan="3">
-										<p>
-											<span style="color:#999">已取消</span><br>
-										</p>
-										<!-- 取消订单 -->
-										<!-- 物流跟踪 -->
-										<!-- 投诉 -->
-										<!-- 取消订单 -->
-										<!-- 收货 -->
-										<!-- 评价 -->
-										<!-- 已经评价 -->
-										<!-- 锁定-->
-										<!-- 分享  -->
+										<!-- 未付款状态 -->
+										<p><a href="#" class="order-btn-rad">去付款</a></p>
+										<!-- // 描述：使<a>标签按钮具备同步提交post请求功能，比如取消订单，删除某信息 处理成功后刷新页面
+										// data-active="oredr_id|delete" 会被转化为 post提交的data 数组[oredr_id,delete] 给php处理 返回数据格式请参考 
+										//   {
+										//     "errNum": 0,//0 为成功 1为失败
+										//     "retMsg": "操作成功！"
+										//   }
+										// 使用：data api <a href="url" data-active="oredr_id|delete" data-plugin="ajaxbutton">取消订单</a> -->
+										<p><a href="http://localhost/shop/home/123.html" data-active="oredr_id|remove" data-plugin="ajaxbutton">取消订单</a></p>
+										<!-- 已付款 -->
+										<p><span style="color:#999">已付款</span></p>
+										<p><a href="#">查看物流</a></p>
+										<!-- 未收货 -->
+										<p><a href="http://localhost/shop/home/123.html" data-active="oredr_id|remove" data-plugin="ajaxbutton" class="order-btn-rad">确认收货</a></p>
+										<p><a href="#">查看物流</a></p>
+										<!-- 已收货 -->
+										<p><span style="color:#999">已完成</span></p>
+										<p><a href="#" class="order-btn-rad" >去评价</a></p>
+										<!-- <p><span style="color:#999">已评价</span></p> -->
+										<p><a href="#">申请退\换货</a></p>
+										<!-- 已取消 -->
+										<p><span style="color:#999">已取消</span></p>
+
 									</td>
 								</tr>
 								<tr>
@@ -413,27 +440,7 @@
 										
 										<!-- 未付款状态 -->
 										<p><a href="#" class="order-btn-rad">去付款</a></p>
-										<p><a href="#">取消订单</a></p>
-										<!-- 已付款 -->
-										<p><span style="color:#999">已付款</span></p>
-										<p><a href="#">查看物流</a></p>
-										<!-- 未收货 -->
-										<p><a href="#" class="order-btn-rad">确认收货</a></p>
-										<p><a href="#">查看物流</a></p>
-										<!-- 已收货 -->
-										<p><span style="color:#999">已完成</span></p>
-										<p><a href="#" class="order-btn-rad" >去评价</a></p>
-										<p><a href="#">申请退\换货</a></p>
-										<!-- 已取消 -->
-										<p><span style="color:#999">已取消</span></p>
-										<!-- 物流跟踪 -->
-										<!-- 投诉 -->
-										<!-- 取消订单 -->
-										<!-- 收货 -->
-										<!-- 评价 -->
-										<!-- 已经评价 -->
-										<!-- 锁定-->
-										<!-- 分享  -->
+										
 									</td>
 								</tr>
 								<tr>
@@ -733,7 +740,7 @@
 <script type="text/javascript" src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="../js/plugin/layer/layer.js"></script>
 <script type="text/javascript" src="../js/common.js"></script>
-
+<script type="text/javascript" src="../js/home.js"></script>
 
 <!-- 纯前端模拟接口用 php开发删除 start-->
 <script src="http://cdn.bootcss.com/jquery-mockjax/1.6.2/jquery.mockjax.min.js"></script>

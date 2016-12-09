@@ -130,3 +130,13 @@ $.mockjax({
     "retMsg": "用户名或密码错误！"
   }
 });
+
+
+//home.js使用以下数据
+$.mockjax({
+  url: "http://localhost/shop/home/123.html",
+  responseText: {
+    "errNum": 0,//0 为成功 1为失败
+    "retMsg": "操作成功！"
+  }
+});

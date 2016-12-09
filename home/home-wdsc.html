@@ -202,13 +202,13 @@
 					<dl class="fore5">
 						<dt >账号管理</dt>
 						<dd >
-							<a href="#" target="_self">修改密码</a>
+							<a href="./home-xgmm.html" target="_self">修改密码</a>
 						</dd>
 						<dd >
-							<a href="#" target="_self">修改邮箱</a>
+							<a href="./home-xgyx.html" target="_self">修改邮箱</a>
 						</dd>
 						<dd >
-							<a href="#" target="_self">地址管理</a>
+							<a href="./home-dzgl.html" target="_self">地址管理</a>
 						</dd>
 					</dl>
 				</div>
@@ -216,74 +216,101 @@
 			</div>
 			<div id="layer_main">
 				<div class="hd layer_box">
-					<h3>预存款充值</h3>
-					<a href="./home-yckcz-form.html" class="xx-btn xx-btn-red" style="position:absolute;top:14px;left: 111px;">去充值</a>
+					<h3>我的收藏</h3>
 				</div>
 				<div class="order_main layer_box">
-					<div class="mt">
-						<ul class="extra-l">
-							<li class="fore1"><a href="#" class="txt curr">全部明细</a></li>
-						</ul>
-						<div class="extra-r">
-							未支付金额：0.1
-						</div>	
-						<div class="extra-r" style="margin-right: 5px;">
-							可用金额：0.1
-						</div>	
-					</div>
 					<div class="mc">
 						<table class="order order-table-style">
 							<thead>
 								<tr>
-									<th>充值单号</th>
-									<th>创建时间</th>
-									<th>支付方式</th>
-									<th>充值金额(元)</th>
-									<th>状态</th>
+									<th class="w10"></th>
+									<th></th>
+									<th>商品名称</th>
+									<th>店铺信息</th>
+									<th>价格</th>
+									<th>收藏时间</th>
+									<th>收藏人气</th>
 									<th>操作</th>
 								</tr>
 							</thead>
 							<tbody>
-
+								<!-- S 商品列表 -->
 								<tr>
 									<td>
-										YC161115000079
-									</td>
-									<td >
-										2016-11-15 16:48:26
 									</td>
 									<td>
-										在线支付
+										<div class="goods-pic-small">
+											<a href="#" target="_blank"><img src="http://localhost/shopnc/data/upload/shop/store/goods/1/1_04418242684128103_60.jpg" width="60" height="60"></a>
+										</div>
 									</td>
 									<td>
-										+0.01
+										<dl class="goods-name">
+											<dt><a href="#" target="_blank">春装 披肩式 超短款 针织 衫开衫 女装 青鸟 灰色</a></dt>
+											<dd>
+											</dd>
+										</dl>
 									</td>
 									<td>
-										已成功
+										<p>官方店铺</p>
+									</td>
+									<td class="goods-price">
+										<i>¥129.00</i>
 									</td>
 									<td>
-										
+										<p>2016-12-06</p>
+									</td>
+									<td>
+										<p>21</p>
+									</td>
+									<td>
+										<p><a href="#" class="order-btn-rad">去购买</a></p>
+										<!-- // 描述：使<a>标签按钮具备同步提交post请求功能，比如取消订单，删除某信息 处理成功后刷新页面
+										// data-active="oredr_id|delete" 会被转化为 post提交的data 数组[oredr_id,delete] 给php处理 返回数据格式请参考 
+										//   {
+										//     "errNum": 0,//0 为成功 1为失败
+										//     "retMsg": "操作成功！"
+										//   }
+										// 使用：data api <a href="url" data-active="oredr_id|delete" data-plugin="ajaxbutton">取消订单</a> -->
+										<p><a href="http://localhost/shop/home/123.html" data-active="oredr_id|remove" data-plugin="ajaxbutton">取消收藏</a></p>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										YC161115000079
-									</td>
-									<td >
-										2016-11-15 16:48:26
 									</td>
 									<td>
-										在线支付
+										<div class="goods-pic-small">
+											<a href="#" target="_blank"><img src="http://localhost/shopnc/data/upload/shop/store/goods/1/1_04418242684128103_60.jpg" width="60" height="60"></a>
+										</div>
 									</td>
 									<td>
-										+0.01
+										<dl class="goods-name">
+											<dt><a href="#" target="_blank">春装 披肩式 超短款 针织 衫开衫 女装 青鸟 灰色</a></dt>
+											<dd>
+											</dd>
+										</dl>
 									</td>
 									<td>
-										待付款
+										<p>官方店铺</p>
+									</td>
+									<td class="goods-price">
+										<i>¥129.00</i>
 									</td>
 									<td>
-										<p><a href="#" class="order-btn-rad">支付</a></p>
-										<p><a href="javascript:if(confirm('确实要删除吗?'))location='http://www.jstimes.com/index.php?fun=formservice&tg=shanchu_ysfk&DH=YC161115000077'" class="order-btn-rad" >删除</a></p>
+										<p>2016-12-06</p>
+									</td>
+									<td>
+										<p>21</p>
+									</td>
+									<td>
+										<p><a href="#" class="order-btn-rad">去购买</a></p>
+										<!-- // 描述：使<a>标签按钮具备同步提交post请求功能，比如取消订单，删除某信息 处理成功后刷新页面
+										// data-active="oredr_id|delete" 会被转化为 post提交的data 数组[oredr_id,delete] 给php处理 返回数据格式请参考 
+										//   {
+										//     "errNum": 0,//0 为成功 1为失败
+										//     "retMsg": "操作成功！"
+										//   }
+										// 使用：data api <a href="url" data-active="oredr_id|delete" data-plugin="ajaxbutton">取消订单</a> -->
+										<p><a href="http://localhost/shop/home/123.html" data-active="oredr_id|remove" data-plugin="ajaxbutton">取消收藏</a></p>
 									</td>
 								</tr>
 							</tbody>
@@ -438,7 +465,7 @@
 <script type="text/javascript" src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="../js/plugin/layer/layer.js"></script>
 <script type="text/javascript" src="../js/common.js"></script>
-
+<script type="text/javascript" src="../js/home.js"></script>
 
 <!-- 纯前端模拟接口用 php开发删除 start-->
 <script src="http://cdn.bootcss.com/jquery-mockjax/1.6.2/jquery.mockjax.min.js"></script>
