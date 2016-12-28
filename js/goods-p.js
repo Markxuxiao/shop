@@ -82,6 +82,22 @@ $(function(){
 
 });
 
+$(function(){
+    $('a[Jsmark="addcart_taochan"]').click(function(){
+        var goods_id = $(this).attr('data-goods_id');
+        G.addcart(goods_id, 1);
+    });
+});
+
+//套餐tab
+$(function(){
+    $("#taochan-package").slide({ delayTime:0, switchLoad:"_src",titOnClassName:"current",trigger:"click"});
+})
+
+
+
+
+
 
 $(document).ready(function(){
     //热销排行切换

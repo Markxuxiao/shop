@@ -13,6 +13,14 @@
 .m-form .tip{padding-top:10px;}
 .m-form .tip input{margin:0 5px 3px 0;}
 
+
+.m-form .quantity-form{position: relative; overflow: hidden; height: 22px; width: 80px;display: inline-block;*display:inline;*zoom:1;}
+.m-form .quantity-form .decrement.disabled, .m-form .quantity-form .increment.disabled{cursor: default; color: #e9e9e9;}
+.m-form .quantity-form .decrement{float: left;}
+.m-form .quantity-form .decrement, .m-form .quantity-form .increment{border: 1px solid #cacbcb; border-right: 0; height: 18px; line-height: 18px; padding: 1px 0; width: 16px; text-align: center; color: #666; margin: 0; background: #fff;}
+.m-form .quantity-form .itxt{position: absolute; left: 17px; top: 0; border: 1px solid #cacbcb; width: 42px; height: 18px; line-height: 18px; text-align: center; padding: 1px; margin: 0; font-size: 12px; font-family: verdana; color: #333; -webkit-appearance: none;}
+.m-form .quantity-form .increment{float: right; border: 1px solid #cacbcb; border-left: 0; color: #666;}
+
 /* 表单项属性
 ------------------------------------------- */
 input[type="text"], input[type="password"], input.text, input.password { font: 12px/20px Tahoma; color: #777; background-color: #FFF; vertical-align: middle; display: inline-block; height: 20px; padding: 2px 4px; border: solid 1px #CCC; outline: 0 none;}
@@ -203,7 +211,7 @@ td.norecord {
 .order-table-style tbody th a {color: #3f8bbd;}
 .order-table-style tbody td { background-color: #FFF; text-align: center; padding: 12px 0;}
 .order-table-style tfoot td { color: #5F718B;border-top: solid 1px #C4D5E0; background-color: #FFF; padding: 5px 0 6px 0;}
-
+.order-table-style tbody tr.group td{border-bottom-width: 1px;border-bottom-style: dashed;border-bottom-color: #ccc;} 
 
 .order tbody.pay { box-shadow: 0 3px 0 rgba(204,204,204,0.15); }
 .order tbody tr td.sep-row { height: 18px; padding:0; border:0;}

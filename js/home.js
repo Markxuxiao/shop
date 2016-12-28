@@ -135,3 +135,87 @@
     
 
 }(jQuery);
+
+$(function(){
+
+  // 取消订单
+  $('.order').find(".remove").click(function(e){
+    e.preventDefault();
+    var $this = $(this);
+    layer.confirm('确定取消此订单吗?', {icon: 3, title:'提示'}, function(index){
+      var url = $this.attr('href')
+      var data = $this.attr('data-active').split('|')
+      $.ajax({
+        type: "POST",
+        data:data,
+        dataType: "json",
+        async:false, 
+        url: url,
+        error: function (err) {err.responseText},
+        success: function (data){
+          if (!data.errNum) {
+            layer.msg(data.retMsg)
+            setTimeout(function(){window.location.reload()},2000)
+          }else{
+            layer.msg(data.retMsg)
+          }
+        }
+      });
+
+      layer.close(index);
+    });
+    
+
+
+
+
+  })
+
+});
+
+
+
+
+$(function(){
+      var MAX= parseInt($('em.max').html());
+      /**
+       * 减少数量
+       */
+      function decrease_quantity(){
+          var item = $(this).next();
+          item.attr('data-changed',item.val());
+          var orig = Number(item.val());
+          if(orig > 1){
+              item.val(orig - 1);
+              item.keyup();
+          }
+      }
+      $('.quantity-form').on('click','.decrement',decrease_quantity);
+
+      /**
+       * 增加数量
+       */
+      function add_quantity(){
+          var item = $(this).prev();
+          item.attr('data-changed',item.val());
+          var orig = Number(item.val());
+          if(orig<MAX){
+            item.val(orig + 1);
+            item.keyup();
+          }
+
+      }
+      $('.quantity-form').on('click','.increment',add_quantity);
+
+      /**
+       * 修改数量
+       */
+      function change_quantity(){
+          if(this.value>MAX){ this.value = MAX};
+          // 更新-号样式
+          if(this.value>1){$(this).prev().removeClass('disabled')}else{$(this).prev().addClass('disabled')};
+      }
+      $('.quantity-form').on('keyup','.itxt',change_quantity);
+
+
+})

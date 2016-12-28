@@ -94,10 +94,13 @@ $(function(){
     });
     //商品单选
     $('input[Jsmark="eachGoodsCheckBox"]').on('click',function(){
+        var _parent = $(this).parent().parent();
+        var text ="tr[nc_group='" +_parent.attr('nc_group')+"']";
+        var _parentGroup = $(text);
         if (!$(this).attr('checked')) {
             $('#selectAll').attr('checked',false);
-            $(this).parent().parent().removeClass('active');
-        }else{$(this).parent().parent().addClass('active');}
+            _parentGroup.removeClass('active');
+        }else{_parentGroup.addClass('active');}
         calc_cart_price();
     });
 
@@ -142,7 +145,7 @@ $(function(){
                     window.location.reload();    //刷新
                 } else {
                     $('tr[nc_group="'+cart_id+'"]').remove();//移除本商品或本套装
-                    if (parent_tr.children('tr').length == 2) {//只剩下店铺名头和店铺合计尾，则全部移除
+                    if (parent_tr.find('tr').length == 2) {//只剩下店铺名头和店铺合计尾，则全部移除
                         parent_tr.remove();
                     }
                     calc_cart_price();

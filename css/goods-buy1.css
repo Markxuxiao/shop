@@ -29,6 +29,7 @@ label.error i { margin-right: 4px;}
 .goods-cart-table-style tbody th .store-sale em { font-size: 12px; line-height: 14px; color: #FFF; background-color: #090; vertical-align: middle; display: inline-block; height: 14px; padding: 2px 6px; border-radius: 10px; margin-right: 4px;}
 .goods-cart-table-style tbody tr td {/* background-color: #FFF; */padding: 8px 0;text-align: center;border-bottom: solid 1px #DDD;}
 .goods-cart-table-style tbody tr.shop-list td {/* background-color: #f9f9f9; */}
+.goods-cart-table-style tbody tr.group td {border-bottom-width: 1px;border-bottom-style: dashed;border-bottom-color: #ccc;}
 .goods-cart-table-style tbody tr td.pd-account { background-color: #FFAA01; padding: 2px;}
 .goods-cart-table-style tfoot td {background: #F9F9F9;text-align: right;height: 30px;padding: 20px;}
 
@@ -62,7 +63,9 @@ label.error i { margin-right: 4px;}
 .goods-cart-store-account dl dt{color: #333; width: 300px;}
 .goods-cart-all-account em{font-size: 22px; color: #D93600; margin: 0 5px;}
 
-
+.goods-cart-table-style .goods-taochan-title {text-align: left;}
+.goods-cart-table-style .goods-taochan-title span {background-color: red;color: #fff;}
+.goods-cart-table-style .goods-taochan-title span em {color: yellow;}
 
 
 .goods-cart-table-style a.add-substract-key { font: 14px/14px Arial; color: #777; text-decoration: none; background-color: #F5F5F5; letter-spacing: normal; word-spacing: normal; text-align: center; vertical-align: middle; display: inline-block; width: 14px; height: 14px; margin: 0 4px; border: solid 1px; border-color: #DCDCDC #DCDCDC #B3B3B3 #DCDCDC; cursor: pointer; *display: inline/*IE6,7*/; *zoom: 1;}

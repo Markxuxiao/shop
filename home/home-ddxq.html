@@ -150,7 +150,7 @@
 					<dl class="fore2">
 						<dt >交易操作</dt>
 						<dd >
-							<a href="../goods-cart.html" target="_self">我的购物车</a>
+							<a href="../goods-buy1.html" target="_self">我的购物车</a>
 						</dd>
 						<dd >
 							<a href="#" target="_self">已买到的商品</a>
@@ -216,42 +216,13 @@
 			</div>
 			<div id="layer_main">
 				<div class="hd layer_box">
-					<h3>我的订单</h3>
+					<h3>订单详情</h3>
 				</div>
 				<div class="order_main layer_box">
 					<div class="mt">
 						<ul class="extra-l">
-							<li class="fore1"><a href="#" class="txt curr">全部订单</a></li>
-							<li><a href="#" id="ordertoPay" class="txt">待付款</a></li>
-							<li><a href="#" id="ordertoReceive"  class="txt">待收货</a></li>
-							<li><a href="#" id="ordertoComment" target="_blank" class="txt">待评价</a><a href="#"><em>4</em></a></li>
-							
+							<li class="fore1"><a href="#" class="txt curr">订单状态</a></li>
 						</ul>
-
-						<div class="extra-r">
-							<form>
-								<div class="search">
-									<input id="ip_keyword" type="text" class="itxt" placeholder="订单号">
-									<button class="search-btn">搜索<b></b></button>
-								</div>
-							</form>
-						</div>
-						<div class="extra-r">
-							<div class="select">
-								<span>状态查询：</span>
-								<!-- data-url="123.html?"+option的value =  接口地址-->
-								<select name="STATE_TYPE" data-url="123.html?" data-plugin="selectGoUrl">
-									<option value="all">所有订单</option>
-									<option selected="selected" value="线上销售订单-待付款">待付款</option>
-									<option value="线上销售订单-待确认">待确认</option>
-									<option value="线上销售订单-待发货">待发货</option>
-									<option value="线上销售订单-已发货">已发货</option>
-									<option value="线上销售订单-待收货">待收货</option>
-									<option value="线上销售订单-已完成">已完成</option>
-									<option value="线上销售订单-已取消">已取消</option>
-								</select>
-							</div>
-						</div>
 					</div>
 					<div class="mc">
 						<table class="order order-table-style">
@@ -278,12 +249,6 @@
 										<!-- store_name -->
 										<span class="fl ml10">
 										<a href="#" target="_blank" title="官方店铺">官方店铺</a></span>
-										<!-- QQ -->
-										<span class="fl" member_id="1">
-										<!-- wang wang -->
-										</span>
-										<!-- 订单查看 -->
-										<span class="fl ml10"><a href="#" target="_blank">查看订单</a></span>
 									</th>
 								</tr>
 								<!-- S 商品列表 -->
@@ -304,7 +269,6 @@
 									</td>
 									<td class="goods-price w120">
 										<i>¥129.00 x 1</i>
-										<p><a href="home-thh-form.html">申请退\换货</a></p>
 									</td>
 									<td class="w120 bdl" rowspan="3">
 										<p class="goods-pay" title="支付方式：在线付款">
@@ -324,8 +288,10 @@
 										// data-active="oredr_id|delete" 会被转化为 post提交的data 数组[oredr_id,delete] 给php处理 返回数据格式请参考 
 										//   {
 										//     "errNum": 0,//0 为成功 1为失败
-										//     "retMsg": "操作成功！" -->
-										<p><a class="remove" href="http://localhost/shop/home/123.html" data-active="oredr_id|remove">取消订单</a></p>
+										//     "retMsg": "操作成功！"
+										//   }
+										// 使用：data api <a href="url" data-active="oredr_id|delete" data-plugin="ajaxbutton">取消订单</a> -->
+										<p><a href="http://localhost/shop/home/123.html" data-active="oredr_id|remove" data-plugin="ajaxbutton">取消订单</a></p>
 										<!-- 已付款 -->
 										<p><span style="color:#999">已付款</span></p>
 										<p><a href="#">查看物流</a></p>
@@ -336,7 +302,7 @@
 										<p><span style="color:#999">已完成</span></p>
 										<p><a href="#" class="order-btn-rad" >去评价</a></p>
 										<!-- <p><span style="color:#999">已评价</span></p> -->
-										
+										<p><a href="#">申请退\换货</a></p>
 										<!-- 已取消 -->
 										<p><span style="color:#999">已取消</span></p>
 
@@ -359,108 +325,6 @@
 									</td>
 									<td class="goods-price w120">
 										<i>¥179.00 x 1</i>
-										<p><a href="home-thh-form.html">申请退\换货</a></p>
-									</td>
-								</tr>
-								<tr>
-									<td class="w10 bdl">
-									</td>
-									<td class="w70">
-										<div class="goods-pic-small">
-											<a href="#" target="_blank"><img src="http://localhost/shopnc/data/upload/shop/store/goods/1/1_04418242684128103_60.jpg" width="60" height="60"></a>
-										</div>
-									</td>
-									<td>
-										<dl class="goods-name">
-											<dt><a href="#" target="_blank">正品 2014春装新款 女 绣花针织衫 开衫外套浮桑初 蓝色</a></dt>
-											<dd>
-											</dd>
-										</dl>
-									</td>
-									<td class="goods-price w120">
-										<i>¥189.00 x 1</i>
-										<p><a href="home-thh-form.html">申请退\换货</a></p>
-									</td>
-								</tr>
-							</tbody>
-							<tbody>
-								<tr>
-									<td colspan="19" class="sep-row">
-									</td>
-								</tr>
-								<tr>
-									<th colspan="19">
-										<span class="fl ml10">
-										<!-- order_sn -->
-								            订单号：
-										<span class="goods-num"><em>8000000000000401</em></span></span>
-										<!-- order_time -->
-										<span class="fl ml20">下单时间：<em class="goods-time">2016-11-21 13:53:26</em></span>
-										<!-- store_name -->
-										<span class="fl ml10">
-										<a href="#" target="_blank" title="官方店铺">官方店铺</a></span>
-										<!-- QQ -->
-										<span class="fl" member_id="1">
-										<!-- wang wang -->
-										</span>
-										<!-- 订单查看 -->
-										<span class="fl ml10"><a href="#" target="_blank">查看订单</a></span>
-									</th>
-								</tr>
-								<!-- S 商品列表 -->
-								<tr>
-									<td class="w10 bdl">
-									</td>
-									<td class="w70">
-										<div class="goods-pic-small">
-											<a href="#" target="_blank"><img src="http://localhost/shopnc/data/upload/shop/store/goods/1/1_04418242684128103_60.jpg" width="60" height="60"></a>
-										</div>
-									</td>
-									<td>
-										<dl class="goods-name">
-											<dt><a href="#" target="_blank">春装 披肩式 超短款 针织 衫开衫 女装 青鸟 灰色</a></dt>
-											<dd>
-											</dd>
-										</dl>
-									</td>
-									<td class="goods-price w120">
-										<i>¥129.00 x 1</i>
-									</td>
-									<td class="w120 bdl" rowspan="3">
-										<p class="goods-pay" title="支付方式：在线付款">
-											在线付款
-										</p>
-										<p class="goods-price">
-											<strong>¥497.00</strong>
-										</p>
-										<p class="goods-freight">
-								        	（免运费）
-										</p>
-									</td>
-									<td class="bdl bdr w120" rowspan="3">
-										
-										<!-- 未付款状态 -->
-										<p><a href="#" class="order-btn-rad">去付款</a></p>
-										
-									</td>
-								</tr>
-								<tr>
-									<td class="w10 bdl">
-									</td>
-									<td class="w70">
-										<div class="goods-pic-small">
-											<a href="#" target="_blank"><img src="http://localhost/shopnc/data/upload/shop/store/goods/1/1_04418242684128103_60.jpg" width="60" height="60"></a>
-										</div>
-									</td>
-									<td>
-										<dl class="goods-name">
-											<dt><a href="#" target="_blank">2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色</a></dt>
-											<dd>
-											</dd>
-										</dl>
-									</td>
-									<td class="goods-price w120">
-										<i>¥179.00 x 1</i>
 									</td>
 								</tr>
 								<tr>
@@ -483,173 +347,50 @@
 									</td>
 								</tr>
 							</tbody>
-							<tbody>
-								<tr>
-									<td colspan="19" class="sep-row">
-									</td>
-								</tr>
-								<tr>
-									<th colspan="19">
-										<span class="fl ml10">
-										<!-- order_sn -->
-								            订单号：
-										<span class="goods-num"><em>8000000000000401</em></span></span>
-										<!-- order_time -->
-										<span class="fl ml20">下单时间：<em class="goods-time">2016-11-21 13:53:26</em></span>
-										<!-- store_name -->
-										<span class="fl ml10">
-										<a href="#" target="_blank" title="官方店铺">官方店铺</a></span>
-										<!-- QQ -->
-										<span class="fl" member_id="1">
-										<!-- wang wang -->
-										</span>
-										<!-- 订单查看 -->
-										<span class="fl ml10"><a href="#" target="_blank">查看订单</a></span>
-									</th>
-								</tr>
-								<!-- S 商品列表 -->
-								<tr>
-									<td class="w10 bdl">
-									</td>
-									<td class="w70">
-										<div class="goods-pic-small">
-											<a href="#" target="_blank"><img src="http://localhost/shopnc/data/upload/shop/store/goods/1/1_04418242684128103_60.jpg" width="60" height="60"></a>
-										</div>
-									</td>
-									<td>
-										<dl class="goods-name">
-											<dt><a href="#" target="_blank">春装 披肩式 超短款 针织 衫开衫 女装 青鸟 灰色</a></dt>
-											<dd>
-											</dd>
-										</dl>
-									</td>
-									<td class="goods-price w120">
-										<i>¥129.00 x 1</i>
-									</td>
-									<td class="w120 bdl" rowspan="5">
-										<p class="goods-pay" title="支付方式：在线付款">
-											在线付款
-										</p>
-										<p class="goods-price">
-											<strong>¥497.00</strong>
-										</p>
-										<p class="goods-freight">
-								        	（免运费）
-										</p>
-									</td>
-									<td class="bdl bdr w120" rowspan="5">
-										<p>
-											<span style="color:#999">已取消</span><br>
-										</p>
-										<!-- 取消订单 -->
-										<!-- 物流跟踪 -->
-										<!-- 投诉 -->
-										<!-- 取消订单 -->
-										<!-- 收货 -->
-										<!-- 评价 -->
-										<!-- 已经评价 -->
-										<!-- 锁定-->
-										<!-- 分享  -->
-									</td>
-								</tr>
-								<tr class="group">
-									<td class="w10 bdl">
-									</td>
-									<td colspan="2">
-										<dl class="goods-name">
-											<dt><a href="#" target="_blank">促销套餐的名字</a></dt>
-											<dd>
-											</dd>
-										</dl>
-									</td>
-									<td class="goods-price w120">
-										<i>¥179.00 x 1</i>
-									</td>
-								</tr>
-								<tr class="group">
-									<td class="w10 bdl">
-									</td>
-									<td class="w70">
-										<div class="goods-pic-small">
-											<a href="#" target="_blank"><img src="http://localhost/shopnc/data/upload/shop/store/goods/1/1_04418242684128103_60.jpg" width="60" height="60"></a>
-										</div>
-									</td>
-									<td>
-										<dl class="goods-name">
-											<dt><a href="#" target="_blank">正品 2014春装新款 女 绣花针织衫 开衫外套浮桑初 蓝色</a></dt>
-											<dd>
-											</dd>
-										</dl>
-									</td>
-									<td class="goods-price w120">
-										<i>¥189.00 x 1</i>
-									</td>
-								</tr>
-								<tr class="group_end">
-									<td class="w10 bdl">
-									</td>
-									<td class="w70">
-										<div class="goods-pic-small">
-											<a href="#" target="_blank"><img src="http://localhost/shopnc/data/upload/shop/store/goods/1/1_04418242684128103_60.jpg" width="60" height="60"></a>
-										</div>
-									</td>
-									<td>
-										<dl class="goods-name">
-											<dt><a href="#" target="_blank">2014春款打底毛衫拼色毛衣 长袖套头针织衫 莺 绿色</a></dt>
-											<dd>
-											</dd>
-										</dl>
-									</td>
-									<td class="goods-price w120">
-										<i>¥179.00 x 1</i>
-									</td>
-								</tr>
-								<tr>
-									<td class="w10 bdl">
-									</td>
-									<td class="w70">
-										<div class="goods-pic-small">
-											<a href="#" target="_blank"><img src="http://localhost/shopnc/data/upload/shop/store/goods/1/1_04418242684128103_60.jpg" width="60" height="60"></a>
-										</div>
-									</td>
-									<td>
-										<dl class="goods-name">
-											<dt><a href="#" target="_blank">正品 2014春装新款 女 绣花针织衫 开衫外套浮桑初 蓝色</a></dt>
-											<dd>
-											</dd>
-										</dl>
-									</td>
-									<td class="goods-price w120">
-										<i>¥189.00 x 1</i>
-									</td>
-								</tr>
-							</tbody>
-							<tbody>
-							      <tr>
-							        <td colspan="20" class="norecord">暂无符合条件的数据记录</td>
-							      </tr>
-							</tbody>
-							<tfoot>
-								<tr>
-									<td colspan="19">
-										<div class="pagination">
-											<ul>
-												<li><span>首页</span></li>
-												<li><span>上一页</span></li>
-												<li><span class="currentpage">1</span></li>
-												<li><a href="#"><span>2</span></a></li>
-												<li><a href="#"><span>下一页</span></a></li>
-												<li><a href="#"><span>末页</span></a></li>
-											</ul>
-										</div>
-									</td>
-								</tr>
-							</tfoot>
 						</table>
 
 					</div>
-				</div>	
+
+					<div class=" margin-t20">
+						<div class="mt">
+							<ul class="extra-l">
+								<li><a href="#" class="txt curr">收货地址</a></li>
+							</ul>
+						</div>
+						<div class="mc">
+							收货人：xxx  1213123123   湖北省份武汉市东西湖区
+						</div>
+					</div>
+
+					<div class=" margin-t20">
+						<div class="mt">
+							<ul class="extra-l">
+								<li><a href="#" class="txt curr">物流信息</a></li>
+							</ul>
+						</div>
+						<div class="mc">
+							<div>2016-1-1 12:30  已发货</div>
+							<div>2016-1-1 12:30  已出库</div>
+							<div>2016-1-1 12:30  已达某某地</div>
+						</div>
+					</div>
+
+					<div class=" margin-t20">
+						<div class="mt">
+							<ul class="extra-l">
+								<li><a href="#" class="txt curr">活动信息</a></li>
+							</ul>
+						</div>
+						<div class="mc">
+							<div>根据需求删减信息</div>
+
+						</div>
+					</div>
+				</div>
+
+				
 			</div>
+
 		</div>
 	</div>
 </div>

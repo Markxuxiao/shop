@@ -43,7 +43,7 @@ div.zoomMask { position:absolute; background:url(../images/goods/mask.png)repeat
 
 .goods-p-introduces .meta { width: 560px;}
 .goods-p-key { width: 560px; border-top: solid 1px #EEE; padding-top: 6px; margin-top: 4px;}
-.goods-p-introduces .meta dl, .goods-p-key dl { font-size: 0; *word-spacing:-1px/*IE6ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â£ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â7*/;}
+.goods-p-introduces .meta dl, .goods-p-key dl { font-size: 0; *word-spacing:-1px/*IE6ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â£ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â7*/;}
 .goods-p-introduces .meta dl dt, .goods-p-introduces .meta dl dd,
 .goods-p-key dl dt, .goods-p-key dl dd { font-size: 12px; line-height: 20px; vertical-align: top; letter-spacing: normal; word-spacing: normal; display: inline-block; *display: inline/* IE6,7 */; min-height: 20px; padding: 4px 0; *zoom:1;}
 .goods-p-introduces .meta dl dt, .goods-p-key dl dt { font-family: simsun; text-align: right; width: 13%; margin-right: 1%;}
@@ -59,7 +59,7 @@ div.zoomMask { position:absolute; background:url(../images/goods/mask.png)repeat
 .goods-p-introduces .meta .promotion-info em { color: #690; vertical-align: middle; margint: 2px 0 12px 0;}
 .goods-p-introduces .meta .promotion-info span { color: #999; vertical-align: middle;}
 
-.goods-p-key ul { font-size: 0; *word-spacing:-1px/*IE6ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â£ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â7*/;}
+.goods-p-key ul { font-size: 0; *word-spacing:-1px/*IE6ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â£ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â7*/;}
 .goods-p-key ul li { vertical-align: top; letter-spacing: normal; word-spacing: normal; display: inline-block;  margin-right: 10px; position: relative; z-index: 1;}
 .goods-p-key ul li { *display: inline/*IE6,7*/; *zoom:1;}
 .goods-p-key ul li a { display: block; min-height: 30px; padding: 1px; border: 1px solid #E7E7E7; cursor: pointer;}
@@ -119,7 +119,7 @@ div.zoomMask { position:absolute; background:url(../images/goods/mask.png)repeat
 .goods-p-shop-info .title { background-color: #F5F5F5; padding: 5px 10px; border: solid 1px #E6E6E6;}
 .goods-p-shop-info .title h4 { font: 600 14px/20px "Microsoft Yahei"; color: #555;}
 .goods-p-shop-info .content { border: solid #E6E6E6; border-width: 0 1px 1px;}
-.goods-p-shop-info .content dl { font-size: 0; *word-spacing:-1px/*IE6ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â£ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â7*/; display: block; border-bottom: solid 1px #E6E6E6; padding: 6px 0;}
+.goods-p-shop-info .content dl { font-size: 0; *word-spacing:-1px/*IE6ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â£ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â7*/; display: block; border-bottom: solid 1px #E6E6E6; padding: 6px 0;}
 .goods-p-shop-info .content dl dt { font-size: 12px; color: #666; vertical-align: top; letter-spacing: normal; word-spacing: normal; text-align: right; display: inline-block; *display: inline/*IE7*/; width: 68px; *zoom:1;}
 .goods-p-shop-info .content dl dd { font-size: 12px; color: #333; vertical-align: top; letter-spacing: normal; word-spacing: normal; white-space: nowrap; text-overflow: ellipsis; display: inline-block; *display: inline/*IE7*/; width: 130px; *width: 125px; overflow: hidden; zoom: 1;}
 .goods-p-shop-info .all-rate .rating { background: url(../images/goods/grate.png) no-repeat 0 -18px ; vertical-align: middle; display: inline-block; *display: inline/*IE7*/; width: 79px; height: 17px; *zoom:1;}
@@ -148,6 +148,102 @@ div.zoomMask { position:absolute; background:url(../images/goods/mask.png)repeat
 .goods-p-shop-info .no-border { border: 0!important; padding-bottom: 0!important;}
 /*.goods-p-shop-info end*/
 
+
+/*.goods-p-package start*/
+.goods-p-package .goods-title-nav {
+    position: relative;
+}
+.goods-p-package .goods-title-nav a.more {
+    position: absolute;
+    right: 12px;
+    top: 7px;
+}
+.goods-p-package .content {
+    background-color: #FFF;
+    border: solid #DDD;
+    border-width: 0 1px 1px;
+    margin-bottom: 10px;
+}
+.goods-p-package .content .p-box {
+    float: left;
+    width: 964px;
+    height: 231px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-right: 1px solid #ccc;
+}
+.goods-p-package .p-list {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.goods-p-package .p-list .item {
+    float: left;
+    display: block;
+    padding: 0 5px;
+    width: 134px;
+    height: 190px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+}
+.goods-p-package .p-list .item.plus {
+    width: 23px;
+    /* margin: 5px; */
+}
+.goods-p-package .p-list i.plus {
+    margin-top: 50px;
+}
+.goods-p-package .p-list .item .p-img {
+    margin-bottom: 5px;
+}
+.goods-p-package .p-list .item .p-img img {
+    width: 134px;
+    height: 134px;
+}
+.goods-p-package .p-list .item .p-name {
+    height: 36px;
+    overflow: hidden;
+}
+.goods-p-package .content .equal-box {
+    float: left;
+    width: 23px;
+    height: 23px;
+    margin-left: 10px;
+    position: relative;
+}
+.goods-p-package .content .equal-box i.equal{
+    position: absolute;
+    top: 71px;
+}
+i.equal {
+    display: block;
+    width: 23px;
+    height: 23px;
+    overflow: hidden;
+    background: url(../images/goods/equal.png) no-repeat;
+}
+i.plus {
+    display: block;
+    width: 23px;
+    height: 23px;
+    overflow: hidden;
+    background: url(../images/goods/plus.png) no-repeat;
+}
+.goods-p-package .content .infos {
+    float: right;
+    width: 175px;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.goods-p-package .content .infos .xx-btn {
+    margin-top: 5px;
+}
+/*.goods-p-package end*/
+
+
 /*.goods-p-main start*/
 .goods-p-main {
     float: right;
@@ -156,7 +252,7 @@ div.zoomMask { position:absolute; background:url(../images/goods/mask.png)repeat
 }
 
 .goods-title-nav { margin-top: 7px;}
-.goods-title-nav ul { font-size: 0; *word-spacing:-1px/*IE6Ã£â‚¬Â7*/; background-color: #FCFCFC; border: solid #D7D7D7 1px;}
+.goods-title-nav ul { font-size: 0; *word-spacing:-1px/*IE6ÃƒÂ£Ã¢â€šÂ¬Ã‚Â7*/; background-color: #FCFCFC; border: solid #D7D7D7 1px;}
 .goods-title-nav ul li { vertical-align: top; letter-spacing: normal; word-spacing: normal; display: inline-block;}
 .goods-title-nav ul li { *display: inline/*IE6,7*/;}
 .goods-title-nav ul li a { font: normal 14px/20px "Microsoft Yahei"; text-decoration:none; color:#777; background-color: #F5F5F5; display: block; padding: 6px 15px 5px 15px; border-style: solid; border-color: #D7D7D7; border-width: 0 1px 0 0;}
@@ -167,7 +263,7 @@ div.zoomMask { position:absolute; background:url(../images/goods/mask.png)repeat
 .goods-info-content .top { padding: 9px; margin-bottom: 20px; border: solid #D7D7D7; border-width: 0 1px 1px;}
 
 
-.goods-p-main .goods-sort { *word-spacing:-1px/*IE6Ã£â‚¬Â7*/; background-color: #FFF; border: solid #DDD; border-width: 0 1px 1px; padding:10px 0; margin-bottom: 10px;}
+.goods-p-main .goods-sort { *word-spacing:-1px/*IE6ÃƒÂ£Ã¢â€šÂ¬Ã‚Â7*/; background-color: #FFF; border: solid #DDD; border-width: 0 1px 1px; padding:10px 0; margin-bottom: 10px;}
 .goods-p-main .goods-sort li { font-size: 12px; line-height: 20px; letter-spacing: normal; word-spacing: normal; text-overflow : ellipsis; white-space: nowrap; display: inline-block; width: 23%; padding: 0 0 0 2%; margin: 0; overflow: hidden;}
 .goods-p-main .goods-sort li { *display: inline; }
 
@@ -183,7 +279,7 @@ div.zoomMask { position:absolute; background:url(../images/goods/mask.png)repeat
 .goods-p-comment .rate sub { font: 16px/20px arial; vertical-align: bottom; margin-right: 6px;}
 .goods-p-comment .rate span { color: #999; display: block; clear: both;}
 .goods-p-comment .percent { vertical-align: middle; display: inline-block; *display: inline; *zoom:1;}
-.goods-p-comment .percent dl { font-size: 0; *word-spacing:-1px/*IE6Ã£â‚¬Â7*/;}
+.goods-p-comment .percent dl { font-size: 0; *word-spacing:-1px/*IE6ÃƒÂ£Ã¢â€šÂ¬Ã‚Â7*/;}
 .goods-p-comment .percent dt { font-size: 12px; line-height: 20px; vertical-align: top; letter-spacing: normal; word-spacing: normal; display: inline-block; width: 80px; height: 20px;}
 .goods-p-comment .percent dt { *display: inline/*IE6,7*/;}
 .goods-p-comment .percent dt em { color: #999; margin-left: 4px;}
@@ -197,7 +293,7 @@ div.zoomMask { position:absolute; background:url(../images/goods/mask.png)repeat
 .goods-p-recommend .title { background-color: #FFF; height: 20px; padding: 5px 10px; border-bottom: solid 2px #D93600;}
 .goods-p-recommend .title h4 { font: 14px/20px "Microsoft Yahei"; color: #333; margin-left: 6px;}
 .goods-p-recommend .content { overflow: hidden; }
-.goods-p-recommend .content ul { font-size: 0; *word-spacing:-1px/*IE6Ã£â‚¬Â7*/; white-space: nowrap; padding: 10px 0 5px 0; margin-left: -5px;}
+.goods-p-recommend .content ul { font-size: 0; *word-spacing:-1px/*IE6ÃƒÂ£Ã¢â€šÂ¬Ã‚Â7*/; white-space: nowrap; padding: 10px 0 5px 0; margin-left: -5px;}
 .goods-p-recommend .content ul li { font-size: 12px; vertical-align: top; letter-spacing: normal; word-spacing: normal; display: inline-block; *display: inline/*IE7*/; width: 20%; padding: 10px 0 5px 0;  border-left: dotted 1px #E6E6E6; *zoom:1;}
 .goods-p-recommend .content ul li dl { text-align: center; width: 100%; padding-top:120px; margin:0px auto; position:relative; z-index:1;}
 .goods-p-recommend .content ul li .goods-pic { background:#FFF; width:120px; height:120px; margin-left: -60px; position:absolute; top: 0px; left: 50%; }
